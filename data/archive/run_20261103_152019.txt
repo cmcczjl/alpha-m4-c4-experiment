@@ -1,0 +1,8 @@
+$ python3 work/check_python_env.py
+
+Python 版本: 3.11.15 (main, Mar 17 2026, 02:17:12) [GCC 14.2.0]
+版本信息: 3.11.15
+可执行路径: /usr/local/bin/python3
+平台: Linux-6.8.0-139-generic-x86_64-with-glibc2.41
+环境检查: OK
+

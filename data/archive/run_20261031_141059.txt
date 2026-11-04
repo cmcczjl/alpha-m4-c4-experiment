@@ -1,0 +1,120 @@
+$ python3 work/check_env.py
+
+=== whoami && id ===
+root
+uid=0(root) gid=0(root) groups=0(root)
+
+=== df -h / ===
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          59G   35G   22G  62% /
+
+=== free -h ===
+               total        used        free      shared  buff/cache   available
+Mem:           3.6Gi       1.9Gi       242Mi       1.9Mi       1.8Gi       1.7Gi
+Swap:          1.9Gi       1.4Gi       575Mi
+
+=== ls -l /usr/bin/python3 ===
+lrwxrwxrwx 1 root root 10 Jun 30  2025 /usr/bin/python3 -> python3.13
+
+=== test -f read_whitelist.py && echo EXISTS || echo NOT_FOUND ===
+NOT_FOUND
+
+=== test -f whitelist.txt && echo EXISTS || echo NOT_FOUND ===
+NOT_FOUND
+
+=== echo $PWD ===
+/root/agi-agent
+
+=== ls work/ data/ knowledge/ tools/ skills/ 2>/dev/null || echo dirs not found ===
+data/:
+20261027.log
+20261027.log.bak
+20261028.log
+20261029.log
+agent.db
+archive
+benchmarks.json
+cache
+candidates_ai_opportunities.json
+cognitive_traces
+constitution.md
+data
+journal
+knowledge
+last_chat_id.txt
+lessons.json
+memory.db
+old_trading_direction
+optimization_plan.md
+price_snapshot.csv
+pull_request.json
+reports
+resources.md
+roadmap.md
+run_state.json
+self_model.json
+status_report.md
+
+knowledge/:
+arbitrage_best_practices.md
+arbitrage_overview.md
+crypto_ma_crossover.md
+fetch_ideas_fixed.py
+idea_evaluation.md
+idea_growth.md
+idea_list.md
+ideas.md
+ideas.txt
+indie_hustle_ideas.py
+llm_apis.md
+llm_response.md
+paypal_order.md
+potential_ideas.json
+research_arbitrage.md
+strategy.md
+test_result.md
+validation.txt
+
+skills/:
+references
+scripts
+templates
+
+tools/:
+__pycache__
+ai_review.py
+check_resources.py
+code_review.py
+collect_diagnostics.py
+convert_csv_to_json.py
+create_github_token.py
+credential_proxy.py
+email_tool.py
+generate_trending_repos.py
+github_tool.py
+llm.py
+locate_act_check.py
+ls_check.sh
+run_act.sh
+run_code_review_wrapper.py
+
+work/:
+capability_check.py
+check_env.py
+check_env.sh
+check_system.py
+collect_info.sh
+create_whitelist.sh
+disk_usage.sh
+find_run_check_env.py
+init_rag.sh
+install_act.sh
+install_docker.sh
+list_corpus.py
+run_act.sh
+run_collect.py
+scripts
+search_rag_repos.py
+test_perm.txt
+
+

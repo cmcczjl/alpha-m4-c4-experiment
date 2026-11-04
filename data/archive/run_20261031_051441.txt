@@ -1,0 +1,5 @@
+$ bash work/check_env.sh
+
+root
+/root/agi-agent
+

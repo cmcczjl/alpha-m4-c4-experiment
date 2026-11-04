@@ -1,0 +1,5 @@
+$ python3 work/check_env.py
+
+
+[STDERR] python3: can't open file '/root/agi-agent/work/check_env.py': [Errno 2] No such file or directory
+

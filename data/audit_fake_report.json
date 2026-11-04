@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-11-02T10:19:40.451184Z",
+  "scanned_files": 137,
+  "fake_files": [
+    {
+      "path": "data/output/digest_20261101_014333.json",
+      "hits": [
+        "example\\.(com|org|net|io)"
+      ],
+      "size": 735
+    },
+    {
+      "path": "data/output/news_digest.json",
+      "hits": [
+        "example\\.(com|org|net|io)",
+        "\\bgenerated\\s+(news\\s+digest\\s+|entry\\s+|content\\s+|placeholder\\s+|sample\\s+)",
+        "news\\s+digest\\s+item\\s+\\d+",
+        "\\bitem\\s+\\d+\\b"
+      ],
+      "size": 722
+    },
+    {
+      "path": "data/output/news_digest.md",
+      "hits": [
+        "example\\.(com|org|net|io)",
+        "\\bgenerated\\s+(news\\s+digest\\s+|entry\\s+|content\\s+|placeholder\\s+|sample\\s+)",
+        "news\\s+digest\\s+item\\s+\\d+",
+        "\\bitem\\s+\\d+\\b"
+      ],
+      "size": 545
+    },
+    {
+      "path": "tools/workflow_news_digest.py",
+      "hits": [
+        "example\\.(com|org|net|io)",
+        "\\bgenerated\\s+(news\\s+digest\\s+|entry\\s+|content\\s+|placeholder\\s+|sample\\s+)",
+        "news\\s+digest\\s+item\\s+\\d+",
+        "\\bitem\\s+\\d+\\b"
+      ],
+      "size": 1857
+    },
+    {
+      "path": "scripts/fetch_documents.py",
+      "hits": [
+        "example\\.(com|org|net|io)"
+      ],
+      "size": 852
+    },
+    {
+      "path": "scripts/generate_paypal_link.py",
+      "hits": [
+        "example\\.(com|org|net|io)"
+      ],
+      "size": 3128
+    }
+  ],
+  "clean_files": 131,
+  "summary": "扫描 137 个产出文件，发现 6 个含占位符/模板句/保留域名 （占比 4%）。这些文件曾经通过验收但内容为假（reward hacking），必须用真实内容重做。"
+}

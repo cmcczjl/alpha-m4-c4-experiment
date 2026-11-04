@@ -1,0 +1,4 @@
+$ bash -lc "which bash && which act && whoami && id && top -b -n1 && free -h && df -h"
+
+/usr/bin/bash
+

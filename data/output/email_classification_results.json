@@ -1,0 +1,32 @@
+[
+    {
+        "email_id": "msg_001",
+        "timestamp": "2026-11-02T03:34:12.831477",
+        "original_subject": "Security Alert: Login detected",
+        "assigned_category": "transactional/security"
+    },
+    {
+        "email_id": "msg_002",
+        "timestamp": "2026-11-02T03:34:12.831493",
+        "original_subject": "Top 10 AI trends in 2024",
+        "assigned_category": "internal/work"
+    },
+    {
+        "email_id": "msg_003",
+        "timestamp": "2026-11-02T03:34:12.831501",
+        "original_subject": "Your order has shipped",
+        "assigned_category": "transactional/shipping"
+    },
+    {
+        "email_id": "msg_004",
+        "timestamp": "2026-11-02T03:34:12.831510",
+        "original_subject": "50% OFF EVERYTHING!",
+        "assigned_category": "promotional"
+    },
+    {
+        "email_id": "msg_005",
+        "timestamp": "2026-11-02T03:34:12.831517",
+        "original_subject": "Meeting Invitation: Q3 Planning",
+        "assigned_category": "internal/work"
+    }
+]

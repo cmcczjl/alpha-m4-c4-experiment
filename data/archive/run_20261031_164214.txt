@@ -1,0 +1,8 @@
+$ python3 scripts/collect_rag_corpus.py --sources upwork_faq,industry_whitepaper,client_case_study --output scripts/rag_corpus/
+
+Created /root/agi-agent/scripts/rag_corpus/upwork_faq.txt
+Created /root/agi-agent/scripts/rag_corpus/industry_whitepaper.txt
+Created /root/agi-agent/scripts/rag_corpus/client_case_study.txt
+
+Summary: 6 document(s) now reside in /root/agi-agent/scripts/rag_corpus
+

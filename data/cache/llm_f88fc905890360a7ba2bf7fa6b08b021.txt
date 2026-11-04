@@ -1,0 +1,19 @@
+
+
+[RUN] ls -la && echo "---DISK---" && df -h . && echo "---MEMORY---" && free -m && echo "---TOOLS---" && which python3 bash curl jq n8n make node npm 2>&1 && echo "---ACCOUNT---" && whoami && id && echo "---WORK_DIR---" && ls -la work/ 2>&1 && echo "---DATA_DIR---" && ls -la data/ 2>&1 && echo "---REPO---" && git log --oneline -5 2>&1 && echo "---PROGRESS---" && ls logs/ 2>&1 | tail -10
+...
+[RUN] 执行结果：
+```
+total 68
+drwxr-xr-x 1 agent agent 4096 Jul 12 14:23 .
+drwxr-xr-x 1 agent agent 4096 Jul 12 14:23 ..
+-rw-r--r-- 1 agent agent  197 Jul 12 14:23 bounty_db.json
+drwxr-xr-x 2 agent agent 4096 Jul 12 14:22 data
+drwxr-xr-x 1 agent agent 4096 Jul 12 14:22 logs
+drwxr-xr-x 1 agent agent 4096 Jul 12 14:22 scripts
+drwxr-xr-x 1 agent agent 4096 Jul 12 14:22 tools
+drwxr-xr-x 2 agent agent 4096 Jul 12 14:23 work
+-rw-r--r-- 1 agent agent  231 Jul 12 14:22 requirements.txt
+```
+
+[CONTEXT] 磁盘/内存正常，工具可用（python3/bash/curl/jq/node/npm），无 n8n/Make 二进制，git 仓库存在，进度日志可见。上轮 `search_bounty.py` 返回 0 leads。外部：Bounty 平台无新数据写入。卡点：脚本未找到有效 bounty（可能查询条件过严或 API 返回空）。

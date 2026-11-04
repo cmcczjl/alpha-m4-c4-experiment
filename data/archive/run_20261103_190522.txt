@@ -1,0 +1,4 @@
+$ python3 work/create_deliverable.py
+
+✅ 打包完成: deliverable.zip
+

@@ -1,0 +1,17 @@
+$ python3 work/capability_check.py
+
+{
+  "network": {
+    "status": "success",
+    "details": "HTTP 200"
+  },
+  "file_system": {
+    "status": "success",
+    "details": "Written to work/test_perm.txt"
+  },
+  "pip": {
+    "status": "success",
+    "details": "Collecting tqdm\n  Using cached tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)\nDownloading tqdm-4.70.1-py3-none-any.whl (80 kB)\nInstalling collected packages: tqdm\nSuccessfully installed tqdm-4.70.1\nWAR"
+  }
+}
+

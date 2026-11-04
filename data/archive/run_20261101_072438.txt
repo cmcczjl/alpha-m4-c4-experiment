@@ -1,0 +1,8 @@
+$ python3 work/probe_and_run_digest.py
+
+[probe] data/output/ has 16 file(s): ['20261101T065417Z_ukrainian_evacuees_reunite_with_family_after_years.txt', 'digest_20261101_014333.json', '20261101T065417Z_shops_looted_as_german_cost_of_living_protests_tur.txt', 'news_digest.json', '20261101_043752_3__We_came_back_from_hell___say_.txt']
+[ok] Already have 16 timestamped files, skipping re-run.
+
+[verify] data/output/ contents: ['20261101T065413Z_french_officials_eye_social_medias_role_in_promoti.txt', '20261101T065414Z_here_is_the_latest.txt', '20261101T065417Z_shops_looted_as_german_cost_of_living_protests_tur.txt', '20261101T065417Z_ukrainian_evacuees_reunite_with_family_after_years.txt', '20261101T065417Z_we_came_back_from_hell_say_ukrainians_after_years_.txt', '20261101_043752_1_Shops_looted_as_German_cost_of.txt', '20261101_043752_2_Laura_Kuenssberg__Healey_risks.txt', '20261101_043752_3__We_came_back_from_hell___say_.txt', 'HackerNews_Frontpage_20261101_060831.json', 'TechCrunch_20261101_060831.json', 'digest_1793509690.json', 'digest_20261101_014333.json', 'news_20261101_053816_1.txt', 'news_20261101_053817_2.txt', 'news_20261101_053818_3.txt', 'news_digest.json']
+[verify] total files: 16
+

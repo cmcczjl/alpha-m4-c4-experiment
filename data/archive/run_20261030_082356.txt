@@ -1,0 +1,13 @@
+$ python3 work/test_whoami.py
+
+Command: whoami
+Return code: 0
+stdout: root
+stderr: 
+----------------------------------------
+Command: id
+Return code: 0
+stdout: uid=0(root) gid=0(root) groups=0(root)
+stderr: 
+----------------------------------------
+

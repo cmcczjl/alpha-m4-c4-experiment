@@ -1,0 +1,27 @@
+$ python3 scripts/run_local_rag_demo.py
+
+🔎 Query: What is Retrieval‑Augmented Generation?
+
+📄 Retrieved document snippets:
+- Introduction to RAG (id: doc1)
+- FastAPI quick start (id: doc3)
+
+📝 Generated answer:
+
+**Question:** What is Retrieval‑Augmented Generation?
+
+**Relevant documents:**
+[Introduction to RAG]
+Retrieval‑Augmented Generation (RAG) combines a large language
+model with an external knowledge source. The retriever fetches
+relevant documents, and the generator produces a response
+conditioned on both the query and the retrieved texts.
+---
+[FastAPI quick start]
+FastAPI is a modern, fast (high‑performance) web framework for
+building APIs with Python 3.7+ based on standard Python type hints.
+It uses Pydantic for data validation and Starlette for the ASGI
+toolkit.
+
+**Answer:** Based on the above excerpts, the answer to your query is ...
+

@@ -1,0 +1,19 @@
+$ ls data
+
+20261027.log
+20261027.log.bak
+20261028.log
+20261029.log
+agent.db
+archive
+credentials.yaml
+journal
+knowledge
+last_chat_id.txt
+lessons.json
+old_trading_direction
+price_snapshot.csv
+resources.md
+roadmap.md
+status_report.md
+

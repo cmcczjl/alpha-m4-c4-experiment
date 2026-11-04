@@ -1,0 +1,4 @@
+$ python3 work/workflow_rss_to_summary.py
+
+Generated 3 summary file(s) in data/output
+

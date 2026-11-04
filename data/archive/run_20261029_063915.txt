@@ -1,0 +1,45 @@
+$ python3 work/ai_review.py --pr 1
+
+代码质量反馈：
+- 变量命名从 `add` 改为 `add_numbers`，语义更清晰。
+- 参数之间增加了空格，更符合 PEP 8 风格。
+- 增加了 docstring，有利于文档生成和后续维护。
+
+潜在问题：
+- 函数名从 `add` 改为 `add_numbers`，如果已有代码调用 `add(...)`，会直接报 `NameError` 或 `AttributeError`。
+- 未定义输入类型限制。如果传入字符串，会执行拼接；如果传入不可相加类型，会抛出异常。
+- 没有测试，无法保证该函数在项目中是否仍被正确调用。
+
+建议改进：
+1. 如果这是公共 API，考虑保持向后兼容：
+```python
+def add_numbers(a, b):
+    """Add two numbers."""
+    return a + b
+
+add = add_numbers
+```
+
+2. 增加类型注解：
+```python
+from numbers import Number
+
+def add_numbers(a: Number, b: Number) -> Number:
+    """Add two numbers."""
+    return a + b
+```
+
+3. 如果需要更严格的行为，可以显式限制类型：
+```python
+def add_numbers(a: int | float, b: int | float) -> int | float:
+    """Add two numbers."""
+    return a + b
+```
+
+4. 补充测试：
+```python
+def test_add_numbers():
+    assert add_numbers(1, 2) == 3
+    assert add_numbers(1.5, 2.5) == 4.0
+```
+

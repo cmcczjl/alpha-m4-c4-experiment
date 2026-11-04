@@ -1,0 +1,492 @@
+[
+  {
+    "date": "2026-10-29T15:12:33.443647",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 0.0,
+      "web_fetch": 0.5,
+      "pr_analysis": 0.0,
+      "doc_writing": 0.0
+    },
+    "total": 1.5,
+    "max": 5.0,
+    "delta_vs_last": null,
+    "best_ever": 1.5
+  },
+  {
+    "date": "2026-10-30T06:58:59.419061",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 0.33,
+      "doc_writing": 0.4
+    },
+    "total": 3.73,
+    "max": 5.0,
+    "delta_vs_last": 2.23,
+    "best_ever": 1.5
+  },
+  {
+    "date": "2026-10-30T10:08:11.437542",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 1.0
+    },
+    "total": 5.0,
+    "max": 5.0,
+    "delta_vs_last": 1.27,
+    "best_ever": 3.73
+  },
+  {
+    "date": "2026-10-30T13:58:28.916446",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 0.7
+    },
+    "total": 4.7,
+    "max": 5.0,
+    "delta_vs_last": -0.3,
+    "best_ever": 5.0
+  },
+  {
+    "date": "2026-10-31T02:36:58.712832",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 0.33,
+      "doc_writing": 0.7
+    },
+    "total": 4.03,
+    "max": 5.0,
+    "delta_vs_last": -0.67,
+    "best_ever": 5.0
+  },
+  {
+    "date": "2026-10-31T08:16:56.510185",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 0.3,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 1.0
+    },
+    "total": 4.3,
+    "max": 5.0,
+    "delta_vs_last": 0.27,
+    "best_ever": 5.0
+  },
+  {
+    "date": "2026-10-31T12:22:53.849280",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 0.33,
+      "doc_writing": 1.0
+    },
+    "total": 4.33,
+    "max": 5.0,
+    "delta_vs_last": 0.03,
+    "best_ever": 5.0
+  },
+  {
+    "date": "2026-10-31T16:42:43.511608",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 0.4
+    },
+    "total": 4.4,
+    "max": 5.0,
+    "delta_vs_last": 0.07,
+    "best_ever": 5.0
+  },
+  {
+    "date": "2026-10-31T21:07:12.322758",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 0.3,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 0.7
+    },
+    "total": 4.0,
+    "max": 5.0,
+    "delta_vs_last": -0.4,
+    "best_ever": 5.0
+  },
+  {
+    "date": "2026-11-01T01:33:48.709401",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 1.0
+    },
+    "total": 5.0,
+    "max": 5.0,
+    "delta_vs_last": 1.0,
+    "best_ever": 5.0
+  },
+  {
+    "date": "2026-11-01T01:44:20.291998",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 1.0
+    },
+    "total": 5.0,
+    "max": 5.0,
+    "delta_vs_last": 0.0,
+    "best_ever": 5.0
+  },
+  {
+    "date": "2026-11-01T01:51:16.943129",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 1.0
+    },
+    "total": 5.0,
+    "max": 5.0,
+    "delta_vs_last": 0.0,
+    "best_ever": 5.0
+  },
+  {
+    "date": "2026-11-01T06:08:47.254158",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 0.3
+    },
+    "total": 4.3,
+    "max": 5.0,
+    "delta_vs_last": -0.7,
+    "best_ever": 5.0
+  },
+  {
+    "date": "2026-11-01T10:13:42.084593",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 0.7
+    },
+    "total": 4.7,
+    "max": 5.0,
+    "delta_vs_last": 0.4,
+    "best_ever": 5.0
+  },
+  {
+    "date": "2026-11-01T13:21:08.681899",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 1.0
+    },
+    "total": 5.0,
+    "max": 5.0,
+    "delta_vs_last": 0.3,
+    "best_ever": 5.0
+  },
+  {
+    "date": "2026-11-01T17:19:57.925116",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 1.0
+    },
+    "total": 5.0,
+    "max": 5.0,
+    "delta_vs_last": 0.0,
+    "best_ever": 5.0
+  },
+  {
+    "date": "2026-11-02T00:56:29.445402",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 1.0
+    },
+    "total": 5.0,
+    "max": 5.0,
+    "delta_vs_last": 0.0,
+    "best_ever": 5.0
+  },
+  {
+    "date": "2026-11-02T03:51:54.503698",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 1.0
+    },
+    "total": 5.0,
+    "max": 5.0,
+    "delta_vs_last": 0.0,
+    "best_ever": 5.0
+  },
+  {
+    "date": "2026-11-02T07:20:48.751977",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 1.0
+    },
+    "total": 5.0,
+    "max": 5.0,
+    "delta_vs_last": 0.0,
+    "best_ever": 5.0
+  },
+  {
+    "date": "2026-11-02T07:25:12.572375",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 0.33,
+      "doc_writing": 0.7
+    },
+    "total": 4.03,
+    "max": 5.0,
+    "delta_vs_last": -0.97,
+    "best_ever": 5.0
+  },
+  {
+    "date": "2026-11-02T11:33:27.690890",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 1.0,
+      "fake_data_redteam": 1.0
+    },
+    "total": 6.0,
+    "max": 6.0,
+    "delta_vs_last": 1.97,
+    "best_ever": 5.0
+  },
+  {
+    "date": "2026-11-02T15:30:07.898838",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 0.3,
+      "fake_data_redteam": 1.0
+    },
+    "total": 5.3,
+    "max": 6.0,
+    "delta_vs_last": -0.7,
+    "best_ever": 6.0
+  },
+  {
+    "date": "2026-11-02T19:21:03.332333",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 0.33,
+      "doc_writing": 1.0,
+      "fake_data_redteam": 1.0
+    },
+    "total": 5.33,
+    "max": 6.0,
+    "delta_vs_last": 0.03,
+    "best_ever": 6.0
+  },
+  {
+    "date": "2026-11-02T23:39:54.568059",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 0.7,
+      "fake_data_redteam": 1.0
+    },
+    "total": 5.7,
+    "max": 6.0,
+    "delta_vs_last": 0.37,
+    "best_ever": 6.0
+  },
+  {
+    "date": "2026-11-03T03:29:59.386296",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 1.0,
+      "fake_data_redteam": 1.0
+    },
+    "total": 6.0,
+    "max": 6.0,
+    "delta_vs_last": 0.3,
+    "best_ever": 6.0
+  },
+  {
+    "date": "2026-11-03T03:31:35.193215",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 0.33,
+      "doc_writing": 1.0,
+      "fake_data_redteam": 1.0
+    },
+    "total": 5.33,
+    "max": 6.0,
+    "delta_vs_last": -0.67,
+    "best_ever": 6.0
+  },
+  {
+    "date": "2026-11-03T06:57:57.657580",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 0.3,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 0.4,
+      "fake_data_redteam": 1.0
+    },
+    "total": 4.7,
+    "max": 6.0,
+    "delta_vs_last": -0.63,
+    "best_ever": 6.0
+  },
+  {
+    "date": "2026-11-03T07:01:51.878015",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 0.33,
+      "doc_writing": 0.7,
+      "fake_data_redteam": 1.0
+    },
+    "total": 5.03,
+    "max": 6.0,
+    "delta_vs_last": 0.33,
+    "best_ever": 6.0
+  },
+  {
+    "date": "2026-11-03T07:03:57.130044",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 0.7,
+      "fake_data_redteam": 1.0
+    },
+    "total": 5.7,
+    "max": 6.0,
+    "delta_vs_last": 0.67,
+    "best_ever": 6.0
+  },
+  {
+    "date": "2026-11-03T11:25:24.927139",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 1.0,
+      "fake_data_redteam": 1.0
+    },
+    "total": 6.0,
+    "max": 6.0,
+    "delta_vs_last": 0.3,
+    "best_ever": 6.0
+  },
+  {
+    "date": "2026-11-03T15:21:22.184341",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 0.33,
+      "doc_writing": 1.0,
+      "fake_data_redteam": 1.0
+    },
+    "total": 5.33,
+    "max": 6.0,
+    "delta_vs_last": -0.67,
+    "best_ever": 6.0
+  },
+  {
+    "date": "2026-11-03T17:49:25.536363",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 1.0,
+      "pr_analysis": 1.0,
+      "doc_writing": 1.0,
+      "fake_data_redteam": 1.0
+    },
+    "total": 6.0,
+    "max": 6.0,
+    "delta_vs_last": 0.67,
+    "best_ever": 6.0
+  },
+  {
+    "date": "2026-11-03T21:56:26.896514",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 0.5,
+      "pr_analysis": 1.0,
+      "doc_writing": 0.0,
+      "fake_data_redteam": 1.0
+    },
+    "total": 4.5,
+    "max": 6.0,
+    "delta_vs_last": -1.5,
+    "best_ever": 6.0
+  },
+  {
+    "date": "2026-11-03T23:53:38.538584",
+    "scores": {
+      "github_api": 1.0,
+      "code_gen": 1.0,
+      "web_fetch": 0.5,
+      "pr_analysis": 0.33,
+      "doc_writing": 0.0,
+      "fake_data_redteam": 1.0
+    },
+    "total": 3.83,
+    "max": 6.0,
+    "delta_vs_last": -0.67,
+    "best_ever": 6.0
+  }
+]

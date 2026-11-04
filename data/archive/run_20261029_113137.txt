@@ -1,0 +1,3 @@
+$ bash tools/ls_check.sh
+
+[拒绝] 只允许安全命令，收到: bash tools/ls_check.sh

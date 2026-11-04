@@ -1,0 +1,10 @@
+$ python3 work/github_action.py --pr 1 --repo dummy/placeholder
+
+--- Reviewing PR #1 in dummy/placeholder ---
+[CRITICAL] app.py:5 - bug
+Message: Potential bug: division by zero not handled.
+
+[MINOR] app.py:10 - style
+Message: Use type hints for better readability.
+
+

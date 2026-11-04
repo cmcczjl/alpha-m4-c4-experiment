@@ -1,0 +1,15 @@
+$ python3 work/inspect_json.py
+
+--- JSON Structure Inspection ---
+Root type: <class 'dict'>
+Keys: ['generated_at', 'source', 'items']
+Sample Key 'generated_at' type: <class 'str'>
+
+--- Raw Head (First 500 chars) ---
+{
+  "generated_at": "2026-11-01T02:36:39.064443Z",
+  "source": "https://news.google.com/rss",
+  "items": [
+    "2026 Elections Live Updates: Candidates Campaign in Battleground States on Final Weekend - The New York Times: <ol><li><a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE9YR1owcUlLb3d1ajhFeWJacmU2aXAwV1",
+    "Virginia and D.C. sue to block construction of Trump arch - NPR: <ol><li><a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE9uUFZpekxGX1haSlJXNUMzU29KaUF1WT",
+

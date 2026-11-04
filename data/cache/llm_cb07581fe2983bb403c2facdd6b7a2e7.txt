@@ -1,0 +1,5 @@
+
+
+```bash
+ls /home/user/agent_workspace/ && df -h / | tail -1 && whoami && id
+```

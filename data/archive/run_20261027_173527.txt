@@ -1,0 +1,14 @@
+$ python3 work/arbitrage_monitor.py
+
+
+[STDERR] Traceback (most recent call last):
+  File "/root/agi-agent/work/arbitrage_monitor.py", line 160, in <module>
+    test_arbitrage_with_static_prices()
+  File "/root/agi-agent/work/arbitrage_monitor.py", line 146, in test_arbitrage_with_static_prices
+    spread1 = calculate_spread(
+              ^^^^^^^^^^^^^^^^^
+  File "/root/agi-agent/work/arbitrage_monitor.py", line 64, in calculate_spread
+    buy_fee = buy_price * EXCHANGES[buy_exchange['symbol'].split('/')[0]]['fee_rate']
+                          ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'BTC'
+

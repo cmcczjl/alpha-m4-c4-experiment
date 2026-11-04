@@ -1,0 +1,4 @@
+1. 环境状态：服务器资源未知，可用工具未知，账户状态未知
+2. 上轮结果：执行bash tools/run_act.sh被拒绝，错误代码404，错误信息为"Model 'qwen-2' not found"
+3. 外部信号：无新动态
+4. 当前卡点：无法执行bash tools/run_act.sh，且模型qwen-2未找到

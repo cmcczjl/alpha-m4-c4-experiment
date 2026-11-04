@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+import time
+import os
+import csv
+
+output_dir = "data/output"
+os.makedirs(output_dir, exist_ok=True)
+time.sleep(10)
+output_path = os.path.join(output_dir, "form_result.csv")
+with open(output_path, "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow([time.strftime("%Y-%m-%d %H:%M:%S")])

@@ -1,0 +1,4 @@
+$ python3 scripts/workflow_news_digest.py
+
+Successfully wrote 9 entries to data/output/digest_1793509690.json
+

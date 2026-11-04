@@ -1,0 +1,54 @@
+$ python3 tools/workflow_email_classifier.py
+
+{
+  "total_classified": 6,
+  "results": [
+    {
+      "original_subject": "Your password has been reset",
+      "category": "unknown",
+      "confidence": 0.0,
+      "matched_keywords": []
+    },
+    {
+      "original_subject": "Invoice #12345 for your recent purchase",
+      "category": "finance",
+      "confidence": 0.17,
+      "matched_keywords": [
+        "invoice"
+      ]
+    },
+    {
+      "original_subject": "50% off sale - Limited time only!",
+      "category": "marketing",
+      "confidence": 0.17,
+      "matched_keywords": [
+        "sale"
+      ]
+    },
+    {
+      "original_subject": "Server maintenance scheduled for tonight",
+      "category": "technical",
+      "confidence": 0.17,
+      "matched_keywords": [
+        "maintenance"
+      ]
+    },
+    {
+      "original_subject": "Interview invitation for Senior Engineer position",
+      "category": "hr",
+      "confidence": 0.2,
+      "matched_keywords": [
+        "interview"
+      ]
+    },
+    {
+      "original_subject": "New product newsletter: What's coming in 2024",
+      "category": "marketing",
+      "confidence": 0.17,
+      "matched_keywords": [
+        "newsletter"
+      ]
+    }
+  ]
+}
+

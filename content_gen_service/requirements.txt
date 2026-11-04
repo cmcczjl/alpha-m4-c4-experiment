@@ -1,0 +1,5 @@
+flask  
+requests  
+python-dotenv  
+
+content_gen_service/app.py

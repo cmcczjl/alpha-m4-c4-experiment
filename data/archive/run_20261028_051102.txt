@@ -1,0 +1,11 @@
+$ pip3 install -r content_gen_service/requirements.txt && python3 content_gen_service/app.py
+
+
+[STDERR] 
+[notice] A new release of pip is available: 26.0.1 -> 26.2.2
+[notice] To update, run: pip install --upgrade pip
+ERROR: Invalid requirement: 'content_gen_service/app.py': Expected semicolon (after name with no version specifier) or end
+    content_gen_service/app.py
+                       ^ (from line 5 of content_gen_service/requirements.txt)
+Hint: It looks like a path. File 'content_gen_service/app.py' does not exist.
+

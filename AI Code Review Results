@@ -1,0 +1,7 @@
+\n")
+    for r in reviews:
+        print(f"[{r.get('type')}] {r.get('file')}:{r.get('line')} -> {r.get('comment')}")
+
+if __name__ == "__main__":
+    main()
+```

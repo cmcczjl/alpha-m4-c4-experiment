@@ -1,0 +1,4 @@
+$ python3 scripts/news_digest.py https://feeds.bbci.co.uk/news/rss.xml --limit 3
+
+已保存 3 条摘要到: data/output/https_feeds.bbci.co.uk_news_rss.xml_digest.json
+

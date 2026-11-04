@@ -1,0 +1,23 @@
+$ python3 data/output/check_summaries.py
+
+Found 17 files in data/output/
+[WARN] data/output/20261101T065417Z_ukrainian_evacuees_reunite_with_family_after_years.txt: Content found but no timestamp detected.
+[OK] data/output/digest_20261101_082523_2.txt: Content length 222, Timestamp detected.
+[WARN] data/output/20261101T065417Z_shops_looted_as_german_cost_of_living_protests_tur.txt: Content found but no timestamp detected.
+[WARN] data/output/20261101_075503_0_The_AI_cost_of_JavaScript_frameworks.txt: Content found but no timestamp detected.
+[OK] data/output/digest_20261101_082523_0.txt: Content length 186, Timestamp detected.
+[WARN] data/output/20261101_043752_3__We_came_back_from_hell___say_.txt: Content found but no timestamp detected.
+[WARN] data/output/20261101_043752_2_Laura_Kuenssberg__Healey_risks.txt: Content found but no timestamp detected.
+[WARN] data/output/20261101_043752_1_Shops_looted_as_German_cost_of.txt: Content found but no timestamp detected.
+[WARN] data/output/20261101_075503_2_Data_centers_are_now_a_midterm_issue__ev.txt: Content found but no timestamp detected.
+[WARN] data/output/20261101T065417Z_we_came_back_from_hell_say_ukrainians_after_years_.txt: Content found but no timestamp detected.
+[WARN] data/output/20261101T065413Z_french_officials_eye_social_medias_role_in_promoti.txt: Content found but no timestamp detected.
+[WARN] data/output/news_20261101_053817_2.txt: Content found but no timestamp detected.
+[WARN] data/output/20261101T065414Z_here_is_the_latest.txt: Content found but no timestamp detected.
+[WARN] data/output/news_20261101_053818_3.txt: Content found but no timestamp detected.
+[OK] data/output/digest_20261101_082523_1.txt: Content length 305, Timestamp detected.
+[WARN] data/output/news_20261101_053816_1.txt: Content found but no timestamp detected.
+[WARN] data/output/20261101_075503_1_Brazilian_Court_Sanctions_Lawyers_for_Pr.txt: Content found but no timestamp detected.
+
+Summary: 3/17 valid files.
+

@@ -1,0 +1,3 @@
+
+
+[RUN] ls -la && echo "---" && whoami && echo "---" && pwd && echo "---" && df -h / && echo "---" && free -h && echo "---" && cat /etc/os-release 2>/dev/null | head -3

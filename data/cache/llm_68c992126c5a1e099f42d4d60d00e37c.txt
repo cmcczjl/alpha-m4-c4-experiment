@@ -1,0 +1,7 @@
+The user wants OBSERVE stage output: list environment status (server resources, available tools, account status), previous round result (already given), external signals, current blockage. Must not infer, must use real commands via [RUN] to verify. We need to run commands like `df -h`, `free -h`, `ls /usr/bin`, `whoami`, `id`, `docker info` etc. Also check installed tools: maybe `act`, `docker`, `python3`. Must output facts only, no judgment. Use RUN tags.
+
+We need to produce output within 300 Chinese characters. Provide sections 1-4.
+
+We must not "brainstorm". Must run commands.
+
+Let's execute needed commands.[RUN] df -h

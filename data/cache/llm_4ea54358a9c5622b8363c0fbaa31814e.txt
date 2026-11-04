@@ -1,0 +1,22 @@
+## OBSERVE
+
+**1. 环境状态**
+- python3 可用（上轮成功执行 `python3 work/diagnose_m4.py`）
+- 文件系统可读写（脚本读取了 work/package_deliverable.py 73 行）
+- 标准库可用：os=True, pathlib=True
+- 未执行命令验证白名单/权限状态，无法确认其他工具可用性
+
+**2. 上轮结果**
+- 脚本 `work/diagnose_m4.py` 诊断 `work/package_deliverable.py`
+- 发现 L55 引用 `Path("work/M4_output")` 作为 source_dir
+- L56 检查目录是否存在，不存在则退出
+- 脚本中未发现任何 makedirs/mkdir 调用
+- 诊断结论：缺目录创建逻辑
+
+**3. 外部信号**
+- 无新信号（本轮未执行任何外部信息获取命令）
+
+**4. 当前卡点**
+- `work/package_deliverable.py` 依赖 `work/M4_output` 目录存在但未创建该目录
+- 脚本在目录不存在时直接 return，无法继续执行
+- 修复点已定位：L55 之前需加 `os.makedirs`

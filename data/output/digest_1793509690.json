@@ -1,0 +1,74 @@
+[
+  {
+    "title": "HackerTube: YouTube built from videos recommended by HN",
+    "link": "https://karpathy.bearblog.dev/hacker-tube/",
+    "summary": "<a href=\"https://news.ycombinator.com/item?id=50319510\">Comments</a>",
+    "source": "https://news.ycombinator.com/rss",
+    "timestamp": "2026-11-01T05:08:08.632525",
+    "digest": "Brief: HackerTube: YouTube built from videos recommended ..."
+  },
+  {
+    "title": "An Italian farmer found some unknown seeds in his attic and planted them",
+    "link": "https://www.smithsonianmag.com/science-nature/italian-farmer-found-unknown-seeds-attic-with-nothing-lose-planted-them-result-biblical-180989644/",
+    "summary": "<a href=\"https://news.ycombinator.com/item?id=50320963\">Comments</a>",
+    "source": "https://news.ycombinator.com/rss",
+    "timestamp": "2026-11-01T05:08:08.632537",
+    "digest": "Brief: An Italian farmer found some unknown seeds in his ..."
+  },
+  {
+    "title": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
+    "link": "https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf",
+    "summary": "<a href=\"https://news.ycombinator.com/item?id=50319143\">Comments</a>",
+    "source": "https://news.ycombinator.com/rss",
+    "timestamp": "2026-11-01T05:08:08.632542",
+    "digest": "Brief: TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8..."
+  },
+  {
+    "title": "The AI boom spawns job market for data-center liaisons",
+    "link": "https://www.semafor.com/article/10/30/2026/the-ai-boom-spawns-job-market-for-data-center-liaisons",
+    "summary": "<p>Article URL: <a href=\"https://www.semafor.com/article/10/30/2026/the-ai-boom-spawns-job-market-for-data-center-liaisons\">https://www.semafor.com/article/10/30/2026/the-ai-boom-spawns-job-market-for-data-center-liaisons</a></p>\n<p>Comments URL: <a href=\"https://news.ycombinator.com/item?id=50322830\">https://news.ycombinator.com/item?id=50322830</a></p>\n<p>Points: 1</p>\n<p># Comments: 0</p>",
+    "source": "https://hnrss.org/newest",
+    "timestamp": "2026-11-01T05:08:09.003508",
+    "digest": "Brief: The AI boom spawns job market for data-center liai..."
+  },
+  {
+    "title": "Screen Capture for macOS – Open-source sticky-aware scrolling capture",
+    "link": "https://github.com/nasadunadu/screen-capture-macos",
+    "summary": "<p>Article URL: <a href=\"https://github.com/nasadunadu/screen-capture-macos\">https://github.com/nasadunadu/screen-capture-macos</a></p>\n<p>Comments URL: <a href=\"https://news.ycombinator.com/item?id=50322819\">https://news.ycombinator.com/item?id=50322819</a></p>\n<p>Points: 1</p>\n<p># Comments: 0</p>",
+    "source": "https://hnrss.org/newest",
+    "timestamp": "2026-11-01T05:08:09.003521",
+    "digest": "Brief: Screen Capture for macOS – Open-source sticky-awar..."
+  },
+  {
+    "title": "Show HN: LanesMac – A scrolling tiling window manager for macOS",
+    "link": "https://lanesmac.com",
+    "summary": "<p>Article URL: <a href=\"https://lanesmac.com\">https://lanesmac.com</a></p>\n<p>Comments URL: <a href=\"https://news.ycombinator.com/item?id=50322817\">https://news.ycombinator.com/item?id=50322817</a></p>\n<p>Points: 1</p>\n<p># Comments: 0</p>",
+    "source": "https://hnrss.org/newest",
+    "timestamp": "2026-11-01T05:08:09.003527",
+    "digest": "Brief: Show HN: LanesMac – A scrolling tiling window mana..."
+  },
+  {
+    "title": "Sunday Daily Thread: What's everyone working on this week?",
+    "link": "https://www.reddit.com/r/Python/comments/1xennpj/sunday_daily_thread_whats_everyone_working_on/",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><h1>Weekly Thread: What's Everyone Working On This Week? 🛠️</h1> <p>Hello <a href=\"https://www.reddit.com/r/Python\">r/Python</a>! It's time to share what you've been working on! Whether it's a work-in-progress, a completed masterpiece, or just a rough idea, let us know what you're up to!</p> <h1>How it Works:</h1> <ol> <li><strong>Show &amp; Tell</strong>: Share your current projects, completed works, or future ideas.</li> <li><strong>Discuss</strong>: Get feedback, find collaborators, or just chat about your project.</li> <li><strong>Inspire</strong>: Your project might inspire someone else, just as you might get inspired here.</li> </ol> <h1>Guidelines:</h1> <ul> <li>Feel free to include as many details as you'd like. Code snippets, screenshots, and links are all welcome.</li> <li>Whether it's your job, your hobby, or your passion project, all Python-related work is welcome here.</li> </ul> <h1>Example Shares:</h1> <ol> <li><strong>Machine Learning Model</strong>: Working on a ML model to predict stock prices. Just cracked a 90% accuracy rate!</li> <li><strong>Web Scraping</strong>: Built a script to scrape and analyze news articles. It's helped me understand media bias better.</li> <li><strong>Automation</strong>: Automated my home lighting with Python and Raspberry Pi. My life has never been easier!</li> </ol> <p>Let's build and grow together! Share your journey and learn from others. Happy coding! 🌟</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/AutoModerator\"> /u/AutoModerator </a> <br /> <span><a href=\"https://www.reddit.com/r/Python/comments/1xennpj/sunday_daily_thread_whats_everyone_working_on/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/Python/comments/1xennpj/sunday_daily_thread_whats_everyone_working_on/\">[comments]</a></span>",
+    "source": "https://www.reddit.com/r/python/.rss",
+    "timestamp": "2026-11-01T05:08:10.505431",
+    "digest": "Brief: Sunday Daily Thread: What's everyone working on th..."
+  },
+  {
+    "title": "Sunday Daily Thread: What's everyone working on this week?",
+    "link": "https://www.reddit.com/r/Python/comments/1xkp2bx/sunday_daily_thread_whats_everyone_working_on/",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><h1>Weekly Thread: What's Everyone Working On This Week? 🛠️</h1> <p>Hello <a href=\"https://www.reddit.com/r/Python\">r/Python</a>! It's time to share what you've been working on! Whether it's a work-in-progress, a completed masterpiece, or just a rough idea, let us know what you're up to!</p> <h1>How it Works:</h1> <ol> <li><strong>Show &amp; Tell</strong>: Share your current projects, completed works, or future ideas.</li> <li><strong>Discuss</strong>: Get feedback, find collaborators, or just chat about your project.</li> <li><strong>Inspire</strong>: Your project might inspire someone else, just as you might get inspired here.</li> </ol> <h1>Guidelines:</h1> <ul> <li>Feel free to include as many details as you'd like. Code snippets, screenshots, and links are all welcome.</li> <li>Whether it's your job, your hobby, or your passion project, all Python-related work is welcome here.</li> </ul> <h1>Example Shares:</h1> <ol> <li><strong>Machine Learning Model</strong>: Working on a ML model to predict stock prices. Just cracked a 90% accuracy rate!</li> <li><strong>Web Scraping</strong>: Built a script to scrape and analyze news articles. It's helped me understand media bias better.</li> <li><strong>Automation</strong>: Automated my home lighting with Python and Raspberry Pi. My life has never been easier!</li> </ol> <p>Let's build and grow together! Share your journey and learn from others. Happy coding! 🌟</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/AutoModerator\"> /u/AutoModerator </a> <br /> <span><a href=\"https://www.reddit.com/r/Python/comments/1xkp2bx/sunday_daily_thread_whats_everyone_working_on/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/Python/comments/1xkp2bx/sunday_daily_thread_whats_everyone_working_on/\">[comments]</a></span>",
+    "source": "https://www.reddit.com/r/python/.rss",
+    "timestamp": "2026-11-01T05:08:10.505447",
+    "digest": "Brief: Sunday Daily Thread: What's everyone working on th..."
+  },
+  {
+    "title": "Pushing ThreadingHTTPServer past toy use: long-lived streams, a semaphore cap, and when to give up a",
+    "link": "https://www.reddit.com/r/Python/comments/1xk4n1t/pushing_threadinghttpserver_past_toy_use/",
+    "summary": "<!-- SC_OFF --><div class=\"md\"><p>I’ve been running a small home media server for about a year, written entirely with the standard library: <code>http.server.ThreadingHTTPServer</code>, <code>http.client</code>, <code>urllib</code>, <code>threading</code>, <code>queue</code>. No framework and no third-party packages. It’s about 3k lines and serves a handful of my own devices (phone, TV, laptop, tablet). I picked stdlib-only on purpose so it would run anywhere with a bare Python and nothing to upgrade, but the server has grown into things the stdlib server probably wasn’t meant for, and I’d like a reality check from people who’ve been here.</p> <p><strong>What the traffic looks like</strong></p> <ul> <li>Mostly short JSON requests (library, history, search), which are fine.</li> <li>Byte-range proxying of large media files, so connections stay open for minutes.</li> <li>Live HLS: for each live stream a client watches, I run one “watcher” thread that follows the upstream playlist, plus 4 worker threads pulling segments ahead of the player through a <code>queue.PriorityQueue</code>, with a <code>threading.Condition</code> to wake request handlers waiting for a segment. A TV can sit on one of these for hours.</li> </ul> <p><strong>What I’ve done so far</strong></p> <p>Capping concurrency, because thread-per-connection with no limit worried me:</p> <pre><code>class Server(ThreadingHTTPServer): daemon_threads = True slots = threading.BoundedSemaphore(MAX_CONN) if MAX_CONN else None def process_request(self, request, client_address): # don't stall the accept loop: if no slot frees up quickly, answer 503 and close if self.slots and not self.slots.acquire(timeout=0.2): request.sendall(b&quot;HTTP/1.1 503 Service Unavailable\\r\\nRetry-After: 10\\r\\n&quot; b&quot;Connection: close\\r\\nContent-Length: 0\\r\\n\\r\\n&quot;) self.shutdown_request(request) return super().process_request(request, client_address) def process_request_thread(self, request, client_address): try: super().process_request_thread(request, client_address) finally: if self.slots: self.slots.release() </code></pre> <p>Also:</p> <ul> <li>A small keep-alive pool of <code>http.client.HTTPSConnection</code> objects per upstream host (up to 8 idle per host, behind a lock), because opening a fresh TLS connection per media segment was the slowest part.</li> <li>State lives in JSON files, written to <code>file.tmp</code> and then <code>os.replace()</code> so a crash mid-write can’t corrupt anything. Every read-modify-write goes through one module-level <code>threading.Lock</code>.</li> </ul> <p><strong>What I’m unsure about</strong></p> <ol> <li><strong>Is the semaphore in</strong> <code>process_request</code> <strong>the right place?</strong> It counts connections, not work. A client holding one hours-long live connection costs the same slot as a 5 ms JSON call. Would two pools be saner, one for streaming paths and one for everything else? Is that possible without rewriting the server class?</li> <li><strong>Clients that disappear.</strong> When a TV is switched off mid-stream, sometimes I get <code>BrokenPipeError</code>/<code>ConnectionResetError</code> right away, and sometimes the handler thread sits in <code>wfile.write()</code> until the socket timeout. What do people set for timeouts on long-lived responses, so dead clients are dropped without killing slow-but-alive ones?</li> <li><strong>Background threads per stream.</strong> Five threads per live stream is fine for 1–2 streams, but it feels wasteful. Is anyone running a single asyncio loop in a side thread just for the upstream fetching, while keeping the threaded HTTP front end? Or does mixing the two models end up worse than picking one?</li> <li><strong>The single lock for JSON state.</strong> It’s simple and correct, but every library write serializes behind it. At this scale I doubt it matters. At what point did you move to <code>sqlite3</code>, which is still stdlib, and was it worth it?</li> <li><strong>The honest question:</strong> at what point is stdlib-only a liability rather than a virtue? I know aiohttp/Starlette would make the streaming parts nicer. I’m trying to work out whether I’ve hit that point or am just bothered by how the code looks.</li> </ol> <p>I’m not chasing scale. This will never serve more than ~10 clients. I mostly want to know which of these are real problems and which are fine at this size. War stories welcome.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/lovespeedtest\"> /u/lovespeedtest </a> <br /> <span><a href=\"https://www.reddit.com/r/Python/comments/1xk4n1t/pushing_threadinghttpserver_past_toy_use/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/Python/comments/1xk4n1t/pushing_threadinghttpserver_past_toy_use/\">[comments]</a></span>",
+    "source": "https://www.reddit.com/r/python/.rss",
+    "timestamp": "2026-11-01T05:08:10.505451",
+    "digest": "Brief: Pushing ThreadingHTTPServer past toy use: long-liv..."
+  }
+]

@@ -1,0 +1,3 @@
+We need to output observations only, facts. Must not infer. Need to list:
+
+1. 环境状态: need to run commands to see server resources, tools, account status. Must use [RUN] to execute commands. Let's try basic commands: uname, df -h, free -h, whoami, ls /usr/bin, maybe which python3.We will execute commands.[RUN] uname -a

@@ -1,0 +1,4 @@
+
+
+```[RUN] ls -la && pwd && whoami && df -h && free -m
+```

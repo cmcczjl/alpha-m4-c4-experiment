@@ -1,0 +1,28 @@
+")
+    try:
+        # 获取两边价格
+        binance = fetch_best_prices(EXCHANGES['binance'])
+        kraken = fetch_best_prices(EXCHANGES['kraken'])
+        if not binance or not kraken:
+            print("Failed to fetch price data. Exiting.")
+            return
+
+        # 计算套利
+        net_profit, binance_ask, kraken_bid, fee_binance, fee_kraken = compute_arbitrage(binance, kraken)
+
+        print(f"Binance ask: ${binance_ask:.2f}  (fee {fee_binance:.2f})")
+        print(f"Kraken bid: ${kraken_bid:.2f}   (fee {fee_kraken:.2f})")
+        print(f"Transfer fee: ${TRANSFER_FEE_USD:.2f}")
+        print(f"Net profit: ${net_profit:.2f}")
+
+        if net_profit >= PROFIT_THRESHOLD_USD:
+            print("Arbitrage opportunity detected! Logging.")
+            log_opportunity(datetime.datetime.utcnow(), binance_ask, kraken_bid, net_profit, fee_binance, fee_kraken)
+        else:
+            print("No profitable arbitrage opportunity at this time.")
+    except Exception as e:
+        print("Unhandled exception:", e)
+        traceback.print_exc(file=sys.stdout)
+
+if __name__ == "__main__":
+    main()

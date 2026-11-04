@@ -1,0 +1,21 @@
+$ python3 work/ai_review.py --pr 1 --repo dummy/placeholder
+
+{
+  "review": [
+    {
+      "file": "app.py",
+      "line": 5,
+      "type": "bug",
+      "message": "Potential bug: division by zero not handled.",
+      "severity": "critical"
+    },
+    {
+      "file": "app.py",
+      "line": 10,
+      "type": "style",
+      "message": "Use type hints for better readability.",
+      "severity": "minor"
+    }
+  ]
+}
+

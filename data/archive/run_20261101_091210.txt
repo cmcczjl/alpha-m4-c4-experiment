@@ -1,0 +1,4 @@
+$ python3 scripts/workflow_news_digest.py
+
+Generated 15 summary files in data/output
+

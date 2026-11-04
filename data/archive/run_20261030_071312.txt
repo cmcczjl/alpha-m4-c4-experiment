@@ -1,0 +1,4 @@
+$ python3 work/check_apt.py
+
+使用 apt …
+

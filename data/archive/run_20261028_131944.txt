@@ -1,0 +1,5 @@
+$ python3 knowledge/indie_hustle_ideas.py
+
+
+[STDERR] 未找到搜索结果
+

@@ -1,0 +1,39 @@
+$ cat data/pricing.md
+
+# Pricing Overview (M3 Service Quote)
+
+## Tier 1 – Starter  
+**Price:** **$45** (one‑time)  
+**Scope:**  
+- Core feature set (up to 5,000 API calls / month)  
+- Standard SLA (response within 48 h)  
+- Email support (business hours)  
+- Access to public documentation & SDKs  
+
+## Tier 2 – Professional  
+**Price:** **$120** (one‑time)  
+**Scope:**  
+- Full feature set (up to 50,000 API calls / month)  
+- Premium SLA (response within 24 h)  
+- Priority email & chat support  
+- Dedicated onboarding session  
+- Quarterly performance review  
+
+## Tier 3 – Enterprise  
+**Price:** **$270** (one‑time)  
+**Scope:**  
+- Unlimited API usage & custom integrations  
+- 24/7 enterprise‑grade SLA (response within 4 h)  
+- Dedicated Technical Account Manager (TAM)  
+- Custom SLAs & compliance reports  
+- On‑site training (up to 2 days)  
+
+## Care Plan (Optional)  
+**Price:** **$90 / month**  
+**Includes:**  
+- Continuous monitoring & health checks  
+- Proactive issue resolution  
+- Monthly usage analytics & optimization recommendations  
+- Unlimited support tickets (any channel)  
+
+---

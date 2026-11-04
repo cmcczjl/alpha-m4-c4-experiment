@@ -1,0 +1,4 @@
+$ python3 -c "import os; print('upwork_service.md created:', os.path.exists('data/upwork_service.md'))"
+
+upwork_service.md created: True
+

@@ -1,0 +1,5 @@
+$ python3 work/read_whitelist.py
+
+
+[STDERR] 白名单文件未找到: /etc/security/whitelist.conf
+

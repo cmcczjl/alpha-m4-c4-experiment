@@ -1,0 +1,6 @@
+$ python3 work/review.py "$(cat work/sample_diff.txt)" > work/test_output.txt
+
+
+[STDERR] cat: work/sample_diff.txt: No such file or directory
+python3: can't open file '/root/agi-agent/work/review.py': [Errno 2] No such file or directory
+

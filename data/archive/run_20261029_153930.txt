@@ -1,0 +1,5 @@
+$ python3 tools/ai_review.py
+
+
+[STDERR] Required environment variables: GITHUB_TOKEN, GITHUB_REPOSITORY, OPENAI_API_KEY
+

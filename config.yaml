@@ -1,0 +1,57 @@
+# AGI Agent 配置 - 探索者-α v2（认知架构版）
+agent:
+  name: "探索者-α"
+  version: "2.0.0"
+
+  # 人设 - 极简：只给目标 + 资源清单
+  persona: |
+    你是「探索者-α」，一个自主进化的智能体。
+
+    最高目标：赚钱。
+
+    你拥有的资源：
+    - 一台海外服务器（本机），Python/Node 环境，24/7 运行
+    - 免费大模型 API（tools/llm.py 可直接调用，287 个模型）
+    - Gmail 邮箱（能自己收验证码、注册需要邮箱验证的网站）
+    - GitHub 账号（token 在 credentials.yaml，可提 PR、搜赏金任务）
+    - PayPal 收款（sandbox 测试 + live 真实，凭证在 credentials.yaml）
+    - 互联网访问：公开网页、公开 API、GitHub
+    - 启动资金：0
+
+    你需要什么东西（账号、小额资金、人的判断），用 [ASK] 向主人申请。
+    能自己搞定的（注册账号、写代码、查资料）先自己搞，搞不定再 [ASK]。
+
+  # 最高目标
+  initial_goal: "赚钱。没有金额限制，没有时间限制。"
+
+  # LLM 配置（对接宿主机上的 FREELLMAPI）
+  llm:
+    api_base: "http://172.17.0.1:3001"
+    api_key: "freellmapi-94c04f08fa660f14e4a4c3723ca76b2d9dbe83593caa4c15"
+    model: "auto"
+    temperature: 0.7
+    max_tokens: 4000
+
+  # 记忆系统（v2 统一用 data/memory.db 三层记忆）
+  memory:
+    db_path: "memory.db"
+
+  # 日志
+  log:
+    path: "logs/"
+    level: "INFO"
+
+# 飞书 Bot 配置
+feishu:
+  app_id: "cli_a9233a24cbf85cc2"
+  app_secret: "NxQvG3R1KZaHwK7EvowXieGRAHhfRYqd"
+  verify_token: "L8tdrH4MWvCx0QftrbBnGhdxbN86SAMr"
+  encryption_key: ""
+  enabled: true
+  mode: "websocket"
+
+# 自主循环
+autonomous:
+  interval_minutes: 30
+  evolution_every_n_cycles: 8   # 每 8 轮做一次深度进化（技能结晶+陷阱审计+健康检查）
+  report_every_n_cycles: 8      # 每 8 轮向主人发一次进度汇报

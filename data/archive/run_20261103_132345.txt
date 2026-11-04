@@ -1,0 +1,8 @@
+$ python3 scripts/validate_m2.py
+
+验收失败，未满足以下条件：
+- 缺少 src/ 目录
+- 缺少 tests/ 目录
+- README.md 不存在或未包含关键字 'M2'
+- M2_DELIVERABLES.txt 不存在或未标记为 ACCEPTED
+

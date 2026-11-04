@@ -1,0 +1,5 @@
+$ python3 scripts/collect_rag_corpus.py
+
+Collected 9 documents in /root/agi-agent/scripts/rag_corpus
+Hit rate: 33.33%
+

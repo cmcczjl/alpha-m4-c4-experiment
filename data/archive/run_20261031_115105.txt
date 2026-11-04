@@ -1,0 +1,15 @@
+$ python3 work/run_collect.py
+
+Running corpus collection...
+=== collect_rag_corpus.py output ===
+Created 6 documents in '/root/agi-agent/scripts/rag_corpus':
+ - doc1.txt
+ - doc2.txt
+ - doc3.txt
+ - prompt_engineering.md
+ - rag_overview.md
+ - vector_db_guide.md
+
+检索检查脚本 scripts/retrieval_check.py 未找到，跳过检索质量验证。
+✅ 所有步骤完成。
+

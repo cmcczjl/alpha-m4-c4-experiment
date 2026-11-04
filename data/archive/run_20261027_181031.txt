@@ -1,0 +1,14 @@
+$ python3 work/arbitrage_monitor_full.py
+
+[BTC/USDT] Error fetching order book: binance GET https://api.binance.com/api/v3/exchangeInfo 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+Failed to fetch order books from both exchanges.
+
+[STDERR] Traceback (most recent call last):
+  File "/root/agi-agent/work/arbitrage_monitor_full.py", line 161, in <module>
+    [FILE]
+     ^^^^
+NameError: name 'FILE' is not defined
+

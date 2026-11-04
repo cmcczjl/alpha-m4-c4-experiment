@@ -1,0 +1,12 @@
+{
+  "updated_at": "2026-10-29T09:39:53.976121",
+  "lessons": [
+    {
+      "hypothesis": "创建可运行的 GitHub Action 脚本文件 work/github_action.py 并本地测试运行",
+      "reason": "通过在脚本开头动态加入上级目录实现了对 tools.llm 的可靠导入；使用 argparse 明确必需参数防止运行时缺失；在解析 LLM 返回的 JSON 时加入异常捕获，保证即使模型返回非 JSON 也能给出可读错误信息。",
+      "keywords": [
+        "2026-10-29"
+      ]
+    }
+  ]
+}

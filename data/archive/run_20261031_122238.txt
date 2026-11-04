@@ -1,0 +1,8 @@
+$ python3 scripts/fetch_documents.py
+
+Fetched https://www.example.com -> rag_corpus/doc_1.html
+Fetched https://www.iana.org/domains/reserved -> rag_corpus/doc_3.html
+Fetched 2 documents.
+
+[STDERR] Failed to fetch https://www.wikipedia.org: 403 Client Error: Forbidden for url: https://www.wikipedia.org/
+

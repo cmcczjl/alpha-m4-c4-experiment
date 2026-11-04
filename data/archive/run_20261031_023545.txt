@@ -1,0 +1,11 @@
+$ bash work/run_act.sh
+
+[INFO]  not found, attempting installation via pip...
+
+[STDERR] work/run_act.sh: line 8: act: command not found
+ERROR: Could not find a version that satisfies the requirement act (from versions: none)
+
+[notice] A new release of pip is available: 26.0.1 -> 26.2.2
+[notice] To update, run: pip install --upgrade pip
+ERROR: No matching distribution found for act
+

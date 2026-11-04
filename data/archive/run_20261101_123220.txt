@@ -1,0 +1,4 @@
+$ python3 scripts/workflow_news_digest.py
+
+News digest written to data/output/news_digest.json
+

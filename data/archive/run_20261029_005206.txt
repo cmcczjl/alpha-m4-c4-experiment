@@ -1,0 +1,5 @@
+$ python3 scripts/generate_paypal_link.py
+
+
+[STDERR] 错误: 'client_id'
+

@@ -1,0 +1,44 @@
+[
+  {
+    "full_name": "bishaldofo/upwork-faq-sample",
+    "description": "upwork-faq",
+    "stars": 0,
+    "language": "HTML",
+    "url": "https://github.com/bishaldofo/upwork-faq-sample"
+  },
+  {
+    "full_name": "parththirwani/UpworkAPP",
+    "description": "TopBar, Header, FAQs",
+    "stars": 0,
+    "language": "TypeScript",
+    "url": "https://github.com/parththirwani/UpworkAPP"
+  },
+  {
+    "full_name": "QIU-Guanzong/upwork-faq-chat-sample",
+    "description": "Fictional product-guide chatbot sample with source-grounded answers and a responsive UI",
+    "stars": 0,
+    "language": "JavaScript",
+    "url": "https://github.com/QIU-Guanzong/upwork-faq-chat-sample"
+  },
+  {
+    "full_name": "haroldjacob1987/upwork-at-glasswall",
+    "description": "Repo to hold documents, FAQs, Presentations and scripts related to the how Glasswall uses Upwork resources",
+    "stars": 0,
+    "language": null,
+    "url": "https://github.com/haroldjacob1987/upwork-at-glasswall"
+  },
+  {
+    "full_name": "berdyshevol/upwork-demo-w7-faq-page-with-searchable-accordion-phase",
+    "description": "Upwork demo prototype for: FAQ page with searchable accordion (phase-4.1 env test)",
+    "stars": 0,
+    "language": "TypeScript",
+    "url": "https://github.com/berdyshevol/upwork-demo-w7-faq-page-with-searchable-accordion-phase"
+  },
+  {
+    "full_name": "Fobboss/platto-helpdesk-bot",
+    "description": "Telegram + OpenAI helpdesk bot: instant FAQ (/faq), concise AI answers, auto-tagging (billing/tech/sales), per-user stats (/stats), optional Google Sheets logging, and cost guards (tokens/timeout/retries). English-first, Upwork demo ready.",
+    "stars": 0,
+    "language": "Python",
+    "url": "https://github.com/Fobboss/platto-helpdesk-bot"
+  }
+]

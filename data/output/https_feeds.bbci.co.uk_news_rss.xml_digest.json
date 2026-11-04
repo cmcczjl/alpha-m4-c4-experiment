@@ -1,0 +1,21 @@
+{
+  "url": "https://feeds.bbci.co.uk/news/rss.xml",
+  "fetched_at": "2026-11-01T11:59:58",
+  "entries": [
+    {
+      "timestamp": "2026-11-01T11:59:58",
+      "title": "Shops looted as German cost of living protests turn violent",
+      "summary": "The protests in cities across Germany - including Berlin, Hamburg and Frankfurt - came on the same day hundreds of thousands also protested in France."
+    },
+    {
+      "timestamp": "2026-11-01T11:59:58",
+      "title": "Healey risks breaking minimum wage promise for younger workers",
+      "summary": "The Chancellor has suggested that younger workers might not receive the same minimum wage as others before the next election."
+    },
+    {
+      "timestamp": "2026-11-01T11:59:58",
+      "title": "Democrats are used to heartbreak in Texas - could Talarico turn the tide?",
+      "summary": "The state's $500m Senate race may be the most closely watched in the US midterms, and is about far more than control of Congress."
+    }
+  ]
+}

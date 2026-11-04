@@ -1,0 +1,6 @@
+$ python3 scripts/collect_rag_corpus.py
+
+Created/updated /root/agi-agent/scripts/rag_corpus/doc1.txt
+Created/updated /root/agi-agent/scripts/rag_corpus/doc2.txt
+Created/updated /root/agi-agent/scripts/rag_corpus/doc3.txt
+

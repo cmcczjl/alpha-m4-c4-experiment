@@ -1,0 +1,5 @@
+The user wants OBSERVE stage, list facts: environment status (server resources, available tools, account status), last round result (python3 work/find_run_check_env.py produced no output), external signals (market/community/competitor new dynamics), current blockage.
+
+We must not infer, must verify via commands. We need to run commands to get environment info: maybe `df -h`, `free -h`, `ls -R` etc. Also check available tools: list of binaries? Could run `which` for python3, git, find, grep. Account status: current user, id. Also check if we have internet? maybe ping? But external signals need market info - cannot fetch without internet? Possibly we cannot get external data; we can state none observed.
+
+We must not hallucinate. Use [RUN] to execute commands. Let's run some commands.[RUN] echo "User: $(whoami)"; id]

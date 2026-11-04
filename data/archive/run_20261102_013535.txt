@@ -1,0 +1,4 @@
+$ python3 tools/workflow_news_digest.py
+
+SUCCESS: 3 条摘要已写入 data/output/news_digest.json 和 data/output/news_digest.md
+

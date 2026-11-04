@@ -1,0 +1,5 @@
+$ python3 work/read_files.py
+
+
+[STDERR] python3: can't open file '/root/agi-agent/work/read_files.py': [Errno 2] No such file or directory
+

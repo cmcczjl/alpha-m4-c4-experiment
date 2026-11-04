@@ -1,0 +1,5 @@
+$ bash work/run_search_n8n.sh
+
+
+[STDERR] work/run_search_n8n.sh: line 2: search_repos: command not found
+

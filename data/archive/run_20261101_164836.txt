@@ -1,0 +1,7 @@
+$ python3 work/research_market.py
+
+Searching for: n8n automation workflow expert
+Searching for: Make.com scenario builder
+Searching for: RAG workflow automation agent
+Successfully saved 0 requirements to data/market_research/requirements.md
+

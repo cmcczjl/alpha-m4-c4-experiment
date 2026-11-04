@@ -1,0 +1,4 @@
+$ python3 scripts/validate_m2.py
+
+FAIL: 缺少必需字段: result, id
+

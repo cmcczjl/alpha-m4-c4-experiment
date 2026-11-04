@@ -1,0 +1,17 @@
+$ python3 work/package_deliverable.py
+
+[OK] 输出目录已就绪: /root/agi-agent/work/M4_output
+[WARN] 源目录不存在，跳过: /root/agi-agent/work/M4
+[WARN] 源目录不存在，跳过: /root/agi-agent/work/models
+[WARN] 源目录不存在，跳过: /root/agi-agent/work/reports
+[WARN] 未找到任何源文件，将生成空 manifest
+[OK] 已复制 0 个文件到 /root/agi-agent/work/M4_output
+[OK] Manifest 已写入: /root/agi-agent/work/M4_output/manifest.json
+[OK] 交付包已生成: /root/agi-agent/work/M4_output/M4_deliverable.zip
+
+===== M4 打包完成 =====
+输出目录 : /root/agi-agent/work/M4_output
+文件数量 : 0
+Zip 包   : /root/agi-agent/work/M4_output/M4_deliverable.zip
+Manifest : /root/agi-agent/work/M4_output/manifest.json
+

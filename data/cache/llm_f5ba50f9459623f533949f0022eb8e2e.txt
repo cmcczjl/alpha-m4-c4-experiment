@@ -1,0 +1,21 @@
+**环境状态**  
+[RUN] uname -a [/RUN]  
+[RUN] whoami [/RUN]  
+[RUN] id [/RUN]  
+[RUN] df -h [/RUN]  
+[RUN] free -m [/RUN]  
+[RUN] which act || echo "act not found" [/RUN]  
+[RUN] act --version 2>&1 || echo "act command unavailable" [/RUN]  
+[RUN] ls -1 /usr/local/bin | head -n 20 [/RUN]  
+
+**上轮结果**  
+执行 `bash work/run_view_download.sh` 返回：  
+```
+bash: view_download_desc.sh: No such file or directory
+```  
+
+**外部信号**  
+截至目前未检测到新的市场、社区或竞品动态。  
+
+**当前卡点**  
+缺失 `view_download_desc.sh` 文件导致 `work/run_view_download.sh` 脚本执行中止。  

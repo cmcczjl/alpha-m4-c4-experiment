@@ -1,0 +1,5 @@
+We need to obey developer instruction: "只陈述事实，不做判断". List: 1. 环境状态：服务器资源、可用工具、账户状态. 2. 上轮结果：cat data/pricing.md (the content is given). 3. 外部信号: 市场/社区/竞品新动态 (we have no data, but must not fabricate). So we can say none observed. 4. 当前卡点: 什么阻止了进展. We need to state facts, not judgments. We need to verify environment state via commands. Must use [RUN] to execute commands. So we need to run commands: top -b -n1 | head -n10, free -h, df -h, whoami, id, git --version, curl -Is https://github.com | head -n1. Use [RUN] tags. Then capture output. Then present observations.
+
+We need to ensure we don't exceed 300 Chinese characters. Provide bullet points.
+
+Let's execute.[RUN] top -b -n1 | head -n10

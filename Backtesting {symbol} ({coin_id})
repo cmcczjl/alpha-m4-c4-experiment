@@ -1,0 +1,23 @@
+")
+    df = fetch_daily_prices(coin_id, DAYS)
+    signals = generate_signals(df)
+    results = backtest(df, signals)
+
+    print(f"Final equity: ${results['final_equity']:.2f}")
+    print(f"Total return: {results['total_return']*100:.2f}%")
+    print(f"CAGR: {results['cagr']*100:.2f}%")
+    print(f"Max drawdown: {results['max_drawdown']*100:.2f}%")
+    print(f"Sharpe ratio: {results['sharpe']:.2f}")
+    print(f"Win rate: {results['win_rate']*100:.2f}%")
+    print("\n")
+
+def main():
+    for coin_id, symbol in COINS.items():
+        try:
+            run_backtest_for_coin(coin_id, symbol)
+        except Exception as e:
+            print(f"Error processing {symbol}: {e}", file=sys.stderr)
+
+if __name__ == "__main__":
+    main()
+```

@@ -1,0 +1,5 @@
+$ python3 work/review.py
+
+
+[STDERR] ❌ GITHUB_EVENT_PATH not set. Exiting.
+

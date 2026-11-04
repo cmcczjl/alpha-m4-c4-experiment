@@ -1,0 +1,6 @@
+$ python3 scripts/news_digest_workflow.py
+
+Created: data/output/news_20261101_053816_1.txt
+Created: data/output/news_20261101_053817_2.txt
+Created: data/output/news_20261101_053818_3.txt
+

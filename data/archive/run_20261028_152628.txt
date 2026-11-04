@@ -1,0 +1,4 @@
+$ python3 -c "import yaml, pathlib, os; print(yaml.safe_load(open('data/credentials.yaml')))"
+
+{'email': {'imap_host': 'imap.gmail.com', 'imap_port': 993, 'username': 'wfxyzhaijl@gmail.com', 'password': 'sjfr azkt qhxg pdjy'}, 'paypal': {'email': 'wfxyzhaijl@gmail.com', 'password': 'Qaz258369@@@', 'note': '新IP登录会触发2FA，手机验证码用 [ASK] 找主人'}}
+

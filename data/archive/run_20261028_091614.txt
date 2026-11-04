@@ -1,0 +1,18 @@
+$ pip3 install --quiet transformers torch && python3 tools/generate_copy.py "Eco‑friendly reusable water bottle"
+
+
+[STDERR] ownload.py", line 211, in _process_response
+    for chunk in chunks:
+  File "/usr/local/lib/python3.11/site-packages/pip/_internal/network/utils.py", line 65, in response_chunks
+    for chunk in response.raw.stream(
+  File "/usr/local/lib/python3.11/site-packages/pip/_vendor/urllib3/response.py", line 622, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/pip/_vendor/urllib3/response.py", line 560, in read
+    with self._error_catcher():
+  File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/usr/local/lib/python3.11/site-packages/pip/_vendor/urllib3/response.py", line 455, in _error_catcher
+    raise ProtocolError("Connection broken: %r" % e, e)
+pip._vendor.urllib3.exceptions.ProtocolError: ("Connection broken: OSError(28, 'No space left on device')", OSError(28, 'No space left on device'))
+

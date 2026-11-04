@@ -1,0 +1,8 @@
+$ python3 work/list_zip_md5.py
+
+validate.sh: 878ff5f42105daf2d1ae5db4da72d104
+README.md: 7cf12c8d86f646540f6332d2120b9984
+upwork_service.md: dfb26c5351f9e07553250618bea61ba5
+example_output.txt: a5ed24aee25a6e4e6af23105c4216c35
+index.html: c327cdb220f8bb8a751f117c9d9e9f8e
+

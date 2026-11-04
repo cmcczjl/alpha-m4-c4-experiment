@@ -1,0 +1,11 @@
+")
+    print(f"Start Capital: ${stats['starting_capital']:.2f}")
+    print(f"End Capital:   ${stats['ending_capital']:.2f}")
+    print(f"Total Return:  {stats['total_return_pct']:.2f}%")
+    print(f"Trades executed: {stats['total_trades']}")
+    print(f"Win rate: {stats['win_rate_pct']:.2f}%")
+    print(f"Trade log saved to: {TRADE_LOG}")
+
+if __name__ == "__main__":
+    main()
+---

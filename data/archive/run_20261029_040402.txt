@@ -1,0 +1,5 @@
+$ python3 -c "
+
+
+[STDERR] /bin/sh: 1: Syntax error: Unterminated quoted string
+

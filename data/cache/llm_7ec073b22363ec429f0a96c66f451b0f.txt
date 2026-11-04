@@ -1,0 +1,22 @@
+
+
+[RUN] echo $SHELL && ls -la && python3 --version && which n8n make || true
+[RUN] curl -s http://localhost:5678/api/v1/flows 2>/dev/null | head -c 200 || echo "n8n not reachable"
+[RUN] curl -s -o /dev/null -w "%{http_code}" https://duckduckgo.com/html/?q=test 2>/dev/null || echo "DDG blocked"
+
+---
+
+**1. 环境状态**
+- 待验证：shell可用、Python3版本、目录结构、n8n实例状态、网络连通性
+- 待执行上述命令确认
+
+**2. 上轮结果**
+`python3 scripts/validate_m2.py` 输出：FAIL: 缺少必需字段: result, id
+
+**3. 外部信号**
+- 待验证市场动态
+
+**4. 当前卡点**
+- validate脚本检查result/id字段失败
+- 路线图提示：同一焦点重复失败≥5轮需换方向
+- 待执行命令确认实际权限/环境

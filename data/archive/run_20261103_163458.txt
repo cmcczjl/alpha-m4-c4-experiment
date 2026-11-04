@@ -1,0 +1,5 @@
+$ python3 work/find_pricing.py
+
+找到文件：
+/root/agi-agent/data/pricing.md
+

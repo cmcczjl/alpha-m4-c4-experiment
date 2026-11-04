@@ -1,0 +1,3 @@
+$ bash work/fetch_requirements.sh
+
+(无输出)

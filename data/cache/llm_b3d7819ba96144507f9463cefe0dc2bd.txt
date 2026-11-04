@@ -1,0 +1,1 @@
+<|tool_call_start|>[bash(command='ls -la /'), bash(command='ls -la /data/output/ 2>/dev/null; echo "---"; cat /data/output/news_digest.json 2>/dev/null | head -50'), bash(command='ps aux | grep -E "python|n8n|make" | head -20')]<|tool_call_end|>

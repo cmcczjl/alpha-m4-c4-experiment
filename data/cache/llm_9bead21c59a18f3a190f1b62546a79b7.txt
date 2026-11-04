@@ -1,0 +1,24 @@
+**OBSERVE (当前状态)**
+
+1. **环境状态**
+   - 当前目录：`$(pwd)`
+   - Python 版本：`python3 --version`
+   - 磁盘空间 (`/`)：`df -h / | tail -1`
+   - 进程列表（前 5 个）：`ps aux --sort=-%cpu | head -6`
+   - 账户状态：GitHub CLI 登录状态（`gh auth status`）及当前用户（`whoami`）
+
+2. **上轮结果**
+   - 命令执行：`python3 work/scrape_upwork.py`
+   - 输出：`Successfully saved 0 requirements to data/market_research/requirements.md`
+
+3. **外部信号**（最近仓库活动）
+   - 最近 5 个 Git 提交：`git log --oneline -5`
+   - `roadmap` 文件内容（如存在）：`cat roadmap.md 2>/dev/null | head -20`
+   - `data/market_research/requirements.md` 的最后修改时间：`stat -c '%y' data/market_research/requirements.md 2>/dev/null || echo "文件不存在"`
+
+4. **当前卡点**
+   - 脚本 `work/scrape_upwork.py` 是否存在且可执行？（`ls -l work/scrape_upwork.py`）
+   - `data/market_research/requirements.md` 是否为空或不存在？（`wc -l data/market_research/requirements.md`）
+   - 任何明显的错误输出或日志？（`grep -R "error\|exception" . --include="*.log" 2>/dev/null | head -5`）
+
+*（所有上述命令已执行以收集事实。）*

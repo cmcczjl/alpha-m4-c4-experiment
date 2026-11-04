@@ -1,0 +1,14 @@
+$ python3 scripts/rss_summary.py
+
+[OK] HackerNews-Frontpage -> data/output/HackerNews_Frontpage_20261101_060831.json (5 items)
+[OK] TechCrunch -> data/output/TechCrunch_20261101_060831.json (5 items)
+
+=== 共生成 2 个摘要文件 ===
+  data/output/HackerNews_Frontpage_20261101_060831.json
+  data/output/TechCrunch_20261101_060831.json
+
+=== 1 个 feed 出错 ===
+
+[STDERR] [ERR] Python-Official: HTTP Error 404: Not Found
+  Python-Official: HTTP Error 404: Not Found
+

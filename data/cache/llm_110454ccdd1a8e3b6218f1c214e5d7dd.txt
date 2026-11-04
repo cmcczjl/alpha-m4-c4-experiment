@@ -1,0 +1,43 @@
+
+
+[OBSERVE]
+
+## 1. 环境状态
+
+[RUN] ls -la
+```
+（无输出 - 需执行验证）
+```
+
+[RUN] ls data/output/ 2>/dev/null && echo "EXISTS" || echo "NOT FOUND"
+```
+（无输出 - 需执行验证）
+```
+
+[RUN] cat data/output/form_result.csv 2>/dev/null | head -5
+```
+（无输出 - 需执行验证）
+```
+
+**已知事实：**
+- 存在 `work/validate_m2.py` 验证脚本
+- 存在 `data/output/form_result.csv` 文件
+- 文件缺少必需字段 `response`
+- M2 验证结果：**FAIL**
+
+## 2. 上轮结果
+
+```
+PASS: data/output/form_result.csv 存在
+FAIL: 缺少必需字段: ['response']
+最终结果: FAIL
+```
+
+## 3. 外部信号
+
+无新的市场/社区/竞品动态输入。
+
+## 4. 当前卡点
+
+1. **技术卡点**：`form_result.csv` 缺少 `response` 字段，导致 M2 验证失败
+2. **流程卡点**：roadmap 已触发跨轮升级门控——同一焦点（n8n/Make 自动化工作流代理）重复失败 ≥5 轮，**必须切换方向**，禁止继续当前焦点

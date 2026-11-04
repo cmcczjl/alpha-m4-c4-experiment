@@ -1,0 +1,30 @@
+$ python3 work/check_system.py
+
+top - 06:16:00 up 13 days,  3:25,  0 users,  load average: 0.36, 0.27, 0.29
+Tasks:  10 total,   1 running,   9 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 31.8 us, 13.6 sy,  0.0 ni, 54.5 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :   3724.0 total,    243.2 free,   1903.1 used,   1873.5 buff/cache     
+MiB Swap:   1988.0 total,    576.7 free,   1411.3 used.   1820.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+      1 root      20   0    1056     44     24 S   0.0   0.0   0:25.13 docker-+
+      7 root      20   0    3012   1216   1212 S   0.0   0.0   0:00.00 sleep
+1426165 root      20   0  307856 221112  21912 S   0.0   5.8   0:06.54 python3
+               total        used        free      shared  buff/cache   available
+Mem:           3.6Gi       1.9Gi       242Mi       7.6Mi       1.8Gi       1.8Gi
+Swap:          1.9Gi       1.4Gi       576Mi
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          59G   35G   23G  61% /
+tmpfs            64M     0   64M   0% /dev
+shm             1.0G     0  1.0G   0% /dev/shm
+/dev/vda2        59G   35G   23G  61% /root/.hermes/images
+tmpfs            64M     0   64M   0% /run
+tmpfs           512M  303M  210M  60% /tmp
+tmpfs           256M     0  256M   0% /var/tmp
+tmpfs           4.0K     0  4.0K   0% /proc/acpi
+root
+uid=0(root) gid=0(root) groups=0(root)
+git version 2.47.3
+HTTP/2 200 
+
+

@@ -1,0 +1,4 @@
+$ python3 work/validate_news_digest.py
+
+ERROR: JSON root is not a list
+

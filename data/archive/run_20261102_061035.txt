@@ -1,0 +1,4 @@
+$ python3 work/scripts/validate_m2.py
+
+M2 validation failed: Missing README.md at /root/agi-agent/work/README.md
+

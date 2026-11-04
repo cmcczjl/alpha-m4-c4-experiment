@@ -1,0 +1,5 @@
+$ python3 - <<'PY'\nimport requests, re, json, os\nurl = 'https://www.indiehackers.com/post/12-ways-to-make-money-with-openai-api-2023-04-03'\nresp = requests.get(url, timeout=15)\nresp.raise_for_status()\n# 简单提取 <li> 项目\nitems = re.findall(r'<li[^>]*>(.*?)</li>', resp.text, re.S)\nideas = []\nfor it in items:\n    # 去除 HTML 标签\n    txt = re.sub(r'<[^>]+>', '', it).strip()\n    if txt and re.search(r'\\d+\\. ', txt):\n        ideas.append(txt)\n# 保存\nos.makedirs('knowledge', exist_ok=True)\nwith open('knowledge/potential_ideas.json', 'w', encoding='utf-8') as f:\n    json.dump(ideas, f, ensure_ascii=False, indent=4)\nprint('Extracted', len(ideas), 'ideas')\nPY]
+
+
+[STDERR] /bin/sh: 1: Syntax error: "(" unexpected
+

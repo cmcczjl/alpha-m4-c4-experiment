@@ -1,0 +1,6 @@
+$ python3 work/search_ddg.py
+
+Search results saved to data/search_results.md
+---
+No results found or blocked by captcha.
+

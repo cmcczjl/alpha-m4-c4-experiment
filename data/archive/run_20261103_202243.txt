@@ -1,0 +1,4 @@
+$ python3 work/next_step_info.py
+
+Next step: Please specify the desired deliverable format and the position in the value chain for the solution.
+

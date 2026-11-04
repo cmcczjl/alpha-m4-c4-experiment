@@ -1,0 +1,4 @@
+$ python3 tools/email_tool.py check
+
+ERROR: email 凭证不完整
+

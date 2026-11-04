@@ -1,0 +1,7 @@
+$ python3 work/check_env.py
+
+Module 'n8n' import failed: No module named 'n8n'
+Module 'make' import failed: No module named 'make'
+File 'data/market_leads.json' exists and is readable.
+File 'work/search_bounty.py' exists and is readable.
+

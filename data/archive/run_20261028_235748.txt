@@ -1,0 +1,12 @@
+$ python3 -c "import os, yaml, json; import pathlib, sys; p=pathlib.Path('data/credentials.yaml'); print(p.read_text() if p.exists() else 'No file')"
+
+free_llm:
+  api_key: "FREE_LLM_API_KEY_123456"
+  endpoint: "https://api.freellm.example.com/v1/completions"
+paypal:
+  client_id: "YOUR_PAYPAL_CLIENT_ID"
+  secret: "YOUR_PAYPAL_SECRET"
+email:
+  address: "explorer@example.com"
+  password: "emailpassword"
+

@@ -1,0 +1,7 @@
+We need to output observations: environment state (server resources, available tools, account status), last round result (the command timed out), external signals (market/community/competitor new dynamics), current bottleneck (what blocks progress). Must not make assumptions, must use [RUN] to verify facts. We need to check environment: maybe we can run commands like `df -h`, `free -m`, `ls /usr/bin`, `whoami`, etc. Also check available tools: maybe `bash`, `curl`, `python3`. We'll run some commands.
+
+We must not guess about allowed commands; we need to run them. Let's run `whoami`, `id`, `df -h`, `free -m`, `ls /usr/bin | head`, maybe `which bash`, `which curl`, `which python3`. Also check if we have internet connectivity: maybe ping? Could try `curl -I https://www.google.com`. Also check account status: maybe check if we have root? Use `id`. Also check environment variables.
+
+We'll output observations limited to 300 Chinese characters. Need to be factual.
+
+Let's run commands.[RUN] whoami

@@ -1,0 +1,1 @@
+The user wants OBSERVE stage: list environment state, last round result, external signals, current blocker. Must not infer, must use real commands to verify. We need to run commands like `ls`, `cat`, `python3 -c` to check environment. We need to check server resources, available tools, account status. Let's run some commands.[RUN] echo test

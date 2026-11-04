@@ -1,0 +1,137 @@
+{
+  "scan_timestamp": "2026-10-30T12:41:36+08:00",
+  "candidates": [
+    {
+      "id": "C1",
+      "name": "AI Agent 集成/RAG 知识库服务",
+      "logic": "企业需将文档/流程接入 AI，日均 31 单、中位 $30/h、GSV +50%，单价 $800–6,000",
+      "verification_cost": "低",
+      "evidence_urls": [
+        "https://www.upwatcher.io/market/ai/",
+        "https://digiko.io/money/ai-freelance-pay-in-2026-what-upwork-and-fiverr-actually-report",
+        "https://betonai.net/the-10-highest-earning-ai-automation-gigs-on-fiverr-upwork-in-june-2026-what-is-actually-selling-real-earnings-data-and-the-gig-templates-that-convert/",
+        "https://flconsole.com/blog/upwork-in-demand-skills"
+      ],
+      "mvp_48h_feasible": true,
+      "fit_score": 9,
+      "notes": "匹配海外服务器+LLM路由能力，零启动资金可接单，用 Coze/Dify 免费层完成原型，不涉及数据外传，移动公司内部渠道可转 B2B 客户"
+    },
+    {
+      "id": "C2",
+      "name": "x402 API 聚合转售",
+      "logic": "1118+ API 上架、USDC 结算、边际成本≈0，垂直领域聚合",
+      "verification_cost": "中",
+      "evidence_urls": [
+        "https://payapi.market/",
+        "https://agentic.market/",
+        "https://www.coinbase.com/developer-platform/discover/launches/agentic-market",
+        "https://githubbounties.xyz/"
+      ],
+      "mvp_48h_feasible": true,
+      "fit_score": 8,
+      "notes": "海外服务器可直接部署，免费 LLM 聚合降低边际成本，与现有 FREELLMAPI 模式高度复用；USDC 结算无 KYC 门槛；需理解 x402 协议栈"
+    },
+    {
+      "id": "C3",
+      "name": "GitHub Bounty Sniper",
+      "logic": "84 个有效赏金 $40K 总值，AI 自动评估→生成 PR→拿赏金，与审查能力协同",
+      "verification_cost": "低",
+      "evidence_urls": [
+        "https://bountyos.rovidev.com/en/github-bounty-board?full=1&sort=newest",
+        "https://github.com/tari-project/bounties",
+        "https://githubbounties.xyz/"
+      ],
+      "mvp_48h_feasible": true,
+      "fit_score": 8,
+      "notes": "直接复用主 α 的审查能力；赏金金额 $100–5K 不等；需关注竞争度（高分赏金有更多竞争者）；不碰灰产"
+    },
+    {
+      "id": "C4",
+      "name": "n8n/Make 自动化工作流代理",
+      "logic": "16 单/天、$25/h，客户付 $300–1,800 搭建 + $400–800/月维护",
+      "verification_cost": "低",
+      "evidence_urls": [
+        "https://betonai.net/the-10-highest-earning-ai-automation-gigs-on-fiverr-upwork-in-june-2026-what-is-actually-selling-real-earnings-data-and-the-gig-templates-that-convert/",
+        "https://flconsole.com/blog/upwork-in-demand-skills",
+        "https://www.upwatcher.io/market/ai/"
+      ],
+      "mvp_48h_feasible": true,
+      "fit_score": 8,
+      "notes": "与 AI Agent 集成服务互补；移动端公司渠道可触达中小企业主；零启动资金；可叠加订阅收入"
+    },
+    {
+      "id": "C5",
+      "name": "AI Wrapper 微 SaaS",
+      "logic": "WrapFast $15K MRR、Toolbox $10K/月，Next.js+Stripe+LLM 一天上线",
+      "verification_cost": "低",
+      "evidence_urls": [
+        "https://www.mrrstory.com/stories/how-i-quit-my-9-to-5-to-build-a-15k-ios-boilerplate-and-surf-every-day",
+        "https://note.com/yuki0627/n/n985db0884e5f?hl=en",
+        "https://www.thetoolnerd.com/p/the-openclaw-wrapper-bubble-how-10-penclaw-startupso",
+        "https://neodrop.ai/channel/_YJS36yhwgz"
+      ],
+      "mvp_48h_feasible": true,
+      "fit_score": 7,
+      "notes": "验证成本低（用 Next.js + Stripe + LLM API 一天可上线）；但竞争激烈，需选利基市场；移动公司内部渠道可作为首个垂直场景"
+    },
+    {
+      "id": "C6",
+      "name": "跨境信息差套利",
+      "logic": "海外领先 3-6 月，小红书/知识星球卖 $9.9–99，成本≈0",
+      "verification_cost": "低",
+      "evidence_urls": [
+        "https://cloud.tencent.com/developer/article/2657425",
+        "http://wen.jy6d.com/v_202601111220446592.html",
+        "https://cloud.tencent.com/developer/article/2649977"
+      ],
+      "mvp_48h_feasible": true,
+      "fit_score": 7,
+      "notes": "利用海外服务器获取一手信息，国内社交渠道分发；零启动资金；但规模天花板明显，需持续追热点；不涉及灰产"
+    },
+    {
+      "id": "C7",
+      "name": "垂直行业 AI Agent 咨询/验证",
+      "logic": "EvenUp $1.5B、Harvey $5B ARR，客单价 $500–5K/月、留存 90%+",
+      "verification_cost": "高",
+      "evidence_urls": [
+        "https://ideaproof.io/guides/vertical-ai-agents",
+        "https://kanopylabs.com/blog/vertical-ai-agent-startup-playbook",
+        "https://www.foundra.ai/key-reads/vertical-ai-agents-regulated-industries-2026-first-time-founder-opportunity-map",
+        "https://bvp.com/atlas/building-vertical-ai-an-early-stage-playbook-for-founders"
+      ],
+      "mvp_48h_feasible": false,
+      "fit_score": 6,
+      "notes": "高天花板但启动慢，需行业知识 + 合规投入；适合有移动公司渠道对接律所/建筑公司的场景；不直接可做，但可先做'垂直 Agent 咨询'接单验证需求"
+    },
+    {
+      "id": "C8",
+      "name": "Poe Bot Creator",
+      "logic": "$0.001–10/千条消息，Stripe 结算，垂直 bot 被动收入",
+      "verification_cost": "低",
+      "evidence_urls": [
+        "https://help.poe.com/hc/en-us/articles/21921312368020-Poe-Creator-Monetization-FAQs",
+        "https://poe.com/pages/earnings-tos"
+      ],
+      "mvp_48h_feasible": true,
+      "fit_score": 6,
+      "notes": "平台审核风险需考虑；收入规模有限（$10–200/月/bot），适合批量多 bot 策略；可作为副业补充"
+    },
+    {
+      "id": "C9",
+      "name": "PromptBase/FlowGPT 批量创作",
+      "logic": "24 万 prompt、Top seller $2K–8K/月，自引流零手续费",
+      "verification_cost": "低",
+      "evidence_urls": [
+        "https://stackviv.ai/blog/prompt-marketplaces-sharing",
+        "https://www.duckdblab.com/en/post/ai-prompt-engineering-marketplace/",
+        "https://framekit.ai/blog/best-places-to-sell-ai-prompts-2026",
+        "https://promptedincome.com/blog/how-to-sell-ai-prompts"
+      ],
+      "mvp_48h_feasible": true,
+      "fit_score": 5,
+      "notes": "收入天花板较低（$200–800/月），适合作为副业或流量入口；与主业务不冲突；需要持续生产量"
+    }
+  ],
+  "top3": ["C1", "C2", "C3"],
+  "scan_summary": "经全渠道扫描（Upwork/Fiverr 实时数据、Indie Hackers 收入案例、x402 市场、垂直 AI Agent 文献、国内信息差套利教程），筛选出 9 个可落地商机。TOP3：AI Agent 集成/RAG 服务、x402 API 聚合、GitHub Bounty Sniper。"
+}

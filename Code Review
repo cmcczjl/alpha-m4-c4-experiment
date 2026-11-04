@@ -1,0 +1,122 @@
+\n")
+    print(review)
+
+
+if __name__ == "__main__":
+    main()
+```
+
+[FILE]
+work/test_review_action.py
+---
+```python
+import json
+import builtins
+from unittest import mock
+
+import pytest
+
+# Import the module under test
+import review_action
+
+
+# --------------------------------------------------------------------------- #
+# Mock data
+# --------------------------------------------------------------------------- #
+MOCK_DIFF = """diff --git a/file.py b/file.py
+index e69de29..4b825dc 100644
+--- a/file.py
++++ b/file.py
+@@ -0,0 +1,5 @@
++def hello(name):
++    print(f"Hello, {name}")
++
++hello("world")
+"""
+
+MOCK_REVIEW = """Mock Review:
+- No obvious syntax errors detected.
+- Consider adding type hints.
+- Ensure added functions have unit tests.
+"""
+
+# --------------------------------------------------------------------------- #
+# Tests
+# --------------------------------------------------------------------------- #
+def test_review_code_with_mock_key():
+    """When OPENAI_API_KEY is missing we should get the deterministic mock."""
+    review = review_action.review_code(MOCK_DIFF, api_key=None)
+    assert "Mock Review" in review
+    assert "- No obvious syntax errors detected." in review
+
+
+def test_review_code_calls_openai(monkeypatch):
+    """When a key is provided the function should call OpenAI's endpoint."""
+    dummy_key = "sk-test"
+
+    # Prepare a fake response object mimicking openai.ChatCompletion.create return
+    class DummyChoice:
+        def __init__(self, content):
+            self.message = type("Message", (), {"content": content})
+
+    class DummyResponse:
+        def __init__(self, content):
+            self.choices = [DummyChoice(content)]
+
+    def fake_chat_completion_create(*, model, messages, temperature, max_tokens):
+        # Verify that the payload contains the diff we sent
+        assert any(MOCK_DIFF in m["content"] for m in messages)
+        return DummyResponse("Great code! Add docstrings.")
+
+    # Patch the openai module inside review_action
+    mock_openai = mock.MagicMock()
+    mock_openai.ChatCompletion.create = fake_chat_completion_create
+    monkeypatch.setitem(review_action.__dict__, "openai", mock_openai)
+
+    # Now call the internal helper (bypassing the mock‑mode guard)
+    review = review_action._call_openai_api(MOCK_DIFF, dummy_key)
+    assert "Great code! Add docstrings." in review
+
+
+@mock.patch("requests.get")
+def test_get_pr_diff_success(mock_get):
+    """Ensure get_pr_diff returns the diff body when GitHub responds 200."""
+    mock_resp = mock.Mock()
+    mock_resp.status_code = 200
+    mock_resp.text = MOCK_DIFF
+    mock_get.return_value = mock_resp
+
+    diff = review_action.get_pr_diff(
+        owner="octocat", repo="hello-world", pr_number=42, token="ghp_dummy"
+    )
+    assert diff == MOCK_DIFF
+    # Verify correct URL and headers were used
+    mock_get.assert_called_once()
+    args, kwargs = mock_get.call_args
+    assert "api.github.com/repos/octocat/hello-world/pulls/42" in args[0]
+    assert kwargs["headers"]["Authorization"] == "token ghp_dummy"
+
+
+@mock.patch("requests.get")
+def test_get_pr_diff_failure(mock_get):
+    """When GitHub returns non‑200 we raise RuntimeError."""
+    mock_resp = mock.Mock()
+    mock_resp.status_code = 404
+    mock_resp.text = "Not Found"
+    mock_get.return_value = mock_resp
+
+    with pytest.raises(RuntimeError) as excinfo:
+        review_action.get_pr_diff(
+            owner="octocat", repo="missing", pr_number=1, token="ghp_dummy"
+        )
+    assert "Failed to fetch PR diff" in str(excinfo.value)
+```
+
+[FILE]
+requirements.txt
+---
+```
+requests>=2.28
+openai>=1.0
+pytest>=7.0
+```

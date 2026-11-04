@@ -1,0 +1,10 @@
+$ bash -c "mkdir -p data && cat data/pricing.md"
+
+# Pricing Tiers
+
+| Tier      | Price      | Features          |
+|-----------|------------|-------------------|
+| Starter   | $45        | Basic features    |
+| Standard  | $120       | Standard features |
+| Advanced  | $270       | Advanced features |
+| Care Plan | $90/month  | Ongoing support   |

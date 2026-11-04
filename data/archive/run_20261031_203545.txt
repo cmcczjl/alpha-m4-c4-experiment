@@ -1,0 +1,6 @@
+$ bash work/run_search.sh
+
+
+[STDERR] work/run_search.sh: line 2: search_repos: command not found
+work/run_search.sh: line 3: ---: command not found
+

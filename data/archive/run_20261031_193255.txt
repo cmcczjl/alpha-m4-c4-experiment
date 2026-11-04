@@ -1,0 +1,13 @@
+$ python3 work/run_df.py
+
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          59G   35G   22G  62% /
+tmpfs            64M     0   64M   0% /dev
+shm             1.0G     0  1.0G   0% /dev/shm
+/dev/vda2        59G   35G   22G  62% /root/.hermes/images
+tmpfs            64M     0   64M   0% /run
+tmpfs           512M  303M  210M  60% /tmp
+tmpfs           256M     0  256M   0% /var/tmp
+tmpfs           4.0K     0  4.0K   0% /proc/acpi
+
+

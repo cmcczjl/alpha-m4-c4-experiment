@@ -1,0 +1,14 @@
+$ python3 work/collect_snapshot.py
+
+[binance] fetch error: binance GET https://api.binance.com/api/v3/exchangeInfo 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+[kraken] bid 80664.7 ask 80664.8
+
+[STDERR] Traceback (most recent call last):
+  File "/root/agi-agent/work/collect_snapshot.py", line 75, in <module>
+    work/arbitrage_check.py
+    ^^^^
+NameError: name 'work' is not defined
+

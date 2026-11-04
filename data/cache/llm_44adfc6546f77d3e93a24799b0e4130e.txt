@@ -1,0 +1,13 @@
+The user asks to output an observation with facts only, no judgment. Need to list: 1. 环境状态: server resources, available tools, account status. Must verify via real commands, not assume. So we need to run commands to get info. We have a shell? We can try to run commands using the tool? The system likely supports executing commands via [RUN] syntax. The instruction: any judgment about allowed commands must be verified via RUN. So we need to list environment state: maybe disk usage, memory, CPU, available tools like python3, etc. We'll need to run commands: `uname -a`, `df -h`, `free -h`, `which python3`, `python3 --version`, maybe list files. Also account status: whoami, id. Also list installed tools: maybe `ls /usr/bin`? But keep concise. Use [RUN] to execute commands.
+
+We also need to list "上轮结果": they gave output: Generated 3 summary file(s) in data/output. So we note that.
+
+External signals: market/community/competitor new dynamics. We cannot fabricate; we have no data. So we must state that no external signals observed (or no information). Must not guess.
+
+Current blockers: what prevents progress. We can only state observed blockers, e.g., missing environment variables, missing scripts, errors from previous attempts. From prior reflections, we saw missing OPENAI_KEY, missing view_download_desc.sh. But that's from prior reflections, which are part of context. So we can list those as observed blockers: missing OPENAI_KEY env var, missing script file.
+
+We must not add judgments, just state facts.
+
+We need to keep within 300 Chinese characters.
+
+Let's run commands.[RUN] uname -a

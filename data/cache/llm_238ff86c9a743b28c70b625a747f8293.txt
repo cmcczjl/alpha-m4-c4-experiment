@@ -1,0 +1,15 @@
+The user wants us to act as OBSERVE stage: only state facts, no judgement. Provide:
+
+1. Environment status: server resources, available tools, account status.
+
+2. Last round result: they gave output of ls commands, but truncated. Need to list that.
+
+3. External signals: market/community/competitor new dynamics. We have no data; we must state that no external signals observed (or none provided).
+
+4. Current bottleneck: what blocks progress. Must be factual: e.g., lack of whitelist file, unknown command permissions, no further output.
+
+We must not infer, only state facts. Must not make judgments. Must not exceed 300 Chinese characters.
+
+We need to mention environment resources: unknown unless we can run commands to check. We can run commands like `free -h`, `df -h`, `which python3`, `id`. But we need to actually execute? The instruction says we must verify via [RUN] commands. We can run them.
+
+Let's run `id`.[RUN] bash -lc "id"]

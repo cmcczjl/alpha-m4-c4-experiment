@@ -1,0 +1,47 @@
+$ bash -lc "ls -l /tmp && ls -l . | grep white_list_checker.py"
+
+---- 4 root root    140 Oct 30 00:55 hermes_rkernel_4d23f59bac89
+drwx------ 4 root root    140 Oct 28 01:01 hermes_rkernel_4d7996a01e8d
+drwx------ 4 root root    140 Oct 30 01:10 hermes_rkernel_504febe22a53
+drwx------ 4 root root    140 Oct 28 00:38 hermes_rkernel_54bfd60c51ab
+drwx------ 4 root root    140 Oct 29 12:37 hermes_rkernel_652ce2c94ca6
+drwx------ 4 root root    140 Oct 29 00:50 hermes_rkernel_6581fda58baa
+drwx------ 4 root root    140 Oct 28 03:40 hermes_rkernel_660e7a0f8dce
+drwx------ 4 root root    140 Oct 30 02:30 hermes_rkernel_6bd13a1dd4ae
+drwx------ 4 root root    140 Oct 28 03:47 hermes_rkernel_6ebab8a4c8d3
+drwx------ 4 root root    140 Oct 29 13:16 hermes_rkernel_6eeaacc8805e
+drwx------ 4 root root    140 Oct 30 00:20 hermes_rkernel_6fa1673e1a14
+drwx------ 4 root root    140 Oct 30 09:56 hermes_rkernel_711acc205758
+drwx------ 4 root root    140 Oct 29 02:49 hermes_rkernel_74528d2f0dcd
+drwx------ 4 root root    140 Oct 30 10:46 hermes_rkernel_75c0f80e17d8
+drwx------ 4 root root    140 Oct 29 09:41 hermes_rkernel_7b2b963d33de
+drwx------ 4 root root    140 Oct 29 03:04 hermes_rkernel_86cc1e28584c
+drwx------ 4 root root    140 Oct 30 07:36 hermes_rkernel_87b9a9bb6e30
+drwx------ 4 root root    140 Oct 29 15:52 hermes_rkernel_90f9443e3b7c
+drwx------ 4 root root    140 Oct 27 13:04 hermes_rkernel_93ad46c23ad7
+drwx------ 4 root root    140 Oct 27 17:04 hermes_rkernel_943ba359753e
+drwx------ 4 root root    140 Oct 30 02:07 hermes_rkernel_b49ec1d08a20
+drwx------ 4 root root    140 Oct 28 10:35 hermes_rkernel_b7fa7c87ae64
+drwx------ 4 root root    140 Oct 30 07:08 hermes_rkernel_b8b5b7f161ba
+drwx------ 4 root root    140 Oct 29 06:36 hermes_rkernel_ba422cd69277
+drwx------ 4 root root    140 Oct 29 10:20 hermes_rkernel_c91d2f6db4e9
+drwx------ 4 root root    140 Oct 29 10:04 hermes_rkernel_ced4b1db9ad6
+drwx------ 4 root root    140 Oct 28 02:45 hermes_rkernel_cff31f8931a9
+drwx------ 4 root root    140 Oct 30 08:20 hermes_rkernel_d0e0aa26ac77
+drwx------ 4 root root    140 Oct 27 11:47 hermes_rkernel_e0943f02aae5
+drwx------ 4 root root    140 Oct 30 06:27 hermes_rkernel_e6a603eb5e09
+drwx------ 4 root root    140 Oct 29 15:29 hermes_rkernel_e953dced0eba
+drwx------ 4 root root    140 Oct 28 14:26 hermes_rkernel_f3cc9e9b9bec
+drwx------ 4 root root    140 Oct 30 06:08 hermes_rkernel_f92903d4158d
+drwxr-xr-x 5 root root    140 Oct 26 07:40 lottery_test
+-rw-r--r-- 1 root root   1737 Oct 21 06:42 memory_update.md
+drwxr-xr-x 3 root root     60 Oct 27 10:03 node-addon-native-custom-loader-0
+drwxr-xr-x 3 root root     60 Oct 27 10:02 node-compile-cache
+-rw-r--r-- 1 root root   1317 Oct 24 19:09 test_output.log
+-rw-r--r-- 1 root root   2204 Oct 21 04:00 test_skill.md
+-rw-r--r-- 1 root root      0 Oct 29 15:48 tmpu3ytxb18.sqlite
+-rw-r--r-- 1 root root      0 Oct 18 16:20 trading_log.txt
+-rw-r--r-- 1 root root      0 Oct 18 16:16 trading_test.log
+drwxr-xr-x 2 root root    620 Oct 27 11:47 tsx-0
+drwxr-xr-x 3 root root     60 Oct 27 07:13 v8-compile-cache-0
+

@@ -1,0 +1,4 @@
+$ python3 scripts/test_wiki_api.py
+
+API Request failed: 403 Client Error: Forbidden for url: https://en.wikipedia.org/api/rest_v1/page/summary/Python_(programming_language)
+

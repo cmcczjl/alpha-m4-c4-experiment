@@ -1,0 +1,21 @@
+## OBSERVE
+
+**1. 环境状态**
+- 无法通过 [RUN] 实时验证（当前为纯文本交互，无命令执行通道）
+- 上轮命令 `python3 work/list_zip_md5.py` 成功执行并返回输出，表明 python3 可用、work/ 目录存在、脚本可运行
+
+**2. 上轮结果**
+`python3 work/list_zip_md5.py` 正常退出，输出 5 个文件 MD5：
+- validate.sh: `878ff5f4...d104`
+- README.md: `7cf12c8d...9984`
+- upwork_service.md: `dfb26c53...1ba5`
+- example_output.txt: `a5ed24ae...6c35`
+- index.html: `c327cdb2...9f8e`
+
+**3. 外部信号**
+- 本轮无新增外部信号输入（无市场/社区/竞品数据源接入）
+
+**4. 当前卡点**
+- roadmap 显示焦点方向 n8n/Make 自动化已持续 134 轮，M4 标记完成
+- 上轮产出为文件 MD5 校验列表，与"赚钱"最高目标之间无可见商业交付动作
+- 无用户新指令输入，无明确下一任务定义

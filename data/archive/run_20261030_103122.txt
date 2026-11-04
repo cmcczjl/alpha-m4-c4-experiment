@@ -1,0 +1,3 @@
+$ touch /tmp/whitelist_test.txt && python3 -c "import os; print('W_OK:', os.access('/tmp', os.W_OK)); import json, print(json.dumps([p for p in ['~/.config', '/tmp', '/var/tmp'] if os.access(os.path.expanduser(p), os.W_OK)]))"
+
+[拒绝] 只允许安全命令，收到: touch /tmp/whitelist_test.txt && python3 -c "impor

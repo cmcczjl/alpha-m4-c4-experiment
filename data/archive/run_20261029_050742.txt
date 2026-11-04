@@ -1,0 +1,16 @@
+$ python3 work/register_github.py
+
+GET https://github.com/join -> 403
+
+[STDERR] Traceback (most recent call last):
+  File "/root/agi-agent/work/register_github.py", line 71, in <module>
+    register()
+  File "/root/agi-agent/work/register_github.py", line 29, in register
+    token = get_token(session, join_url)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/agi-agent/work/register_github.py", line 19, in get_token
+    resp.raise_for_status()
+  File "/usr/local/lib/python3.11/site-packages/requests/models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://github.com/signup
+

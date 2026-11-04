@@ -1,0 +1,3 @@
+$ cat data/credentials.yaml 2>/dev/null | grep -A5 github; echo "---"; ls work/ 2>/dev/null; echo "---"; cat data/resources.md 2>/dev/null | grep -A3 "GitHub 账号"
+
+[拒绝] 只允许运行 python3/python/pip3 命令

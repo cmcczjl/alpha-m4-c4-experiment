@@ -1,0 +1,19 @@
+$ cat data/pricing.md
+
+# Pricing
+
+## Tiered Packages
+
+| Tier | Price | Deliverables | Timeline | Acceptance Criteria |
+|------|-------|--------------|----------|---------------------|
+| **Starter** | **$45** | • Basic project brief<br>• Initial design mockup (1 page)<br>• One round of revisions | 5 days | • Client approves design mockup |
+| **Standard** | **$120** | • All Starter deliverables<br>• Full design suite (up to 5 pages)<br>• Two rounds of revisions<br>• Final handoff files | 10 days | • All pages approved and handoff files delivered |
+| **Premium** | **$270** | • All Standard deliverables<br>• Unlimited revisions<br>• Interactive prototype<br>• SEO‑friendly content | 15 days | • Prototype approved; content meets SEO standards |
+
+## Care Plan
+
+| Plan | Price | Features |
+|------|-------|----------|
+| **Monthly Care** | **$90/month** | • 8 hours of support per month<br>• Bug fixes & updates<br>• Performance monitoring<br>• Quarterly review |
+
+---

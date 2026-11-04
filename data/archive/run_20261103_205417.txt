@@ -1,0 +1,4 @@
+$ python3 work/package_deliverable.py
+
+❌ 错误：找不到 M4 产出目录 /root/agi-agent/work/M4_output
+

@@ -1,0 +1,6 @@
+$ python3 work/gen_m1_service_package.py
+
+[OK] wrote data/m1_service_package.md (3508 chars)
+[OK] wrote data/m1_service_package.meta.json
+[META] {"file": "data/m1_service_package.md", "generated_at": "2026-11-04T00:25:06.774484+00:00", "tiers": 3, "prices": {"T1": 499, "T2": 1800, "T3": 4500}, "deliverable": "AutoReport Employee v0.1", "acceptance_field_count": 10}
+

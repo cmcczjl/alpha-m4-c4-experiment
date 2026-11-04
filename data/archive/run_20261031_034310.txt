@@ -1,0 +1,7 @@
+$ bash work/install_act.sh
+
+正在从 GitHub 下载并安装 act...
+
+[STDERR] work/install_act.sh: line 5: sudo: command not found
+curl: (23) Failure writing output to destination, passed 1378 returned 1349
+

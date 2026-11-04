@@ -1,0 +1,1 @@
+The user wants OBSERVE stage: list environment state, previous round result, external signals, current blockage. Must not infer, must run commands to verify. We need to execute commands like df -h, free -h, whoami, id, which python3, ls etc. Use [RUN] tags. We must output factual statements only, no judgments. So we need to run commands to gather info. Let's run commands.[RUN] id

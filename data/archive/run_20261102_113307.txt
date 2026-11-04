@@ -1,0 +1,4 @@
+$ python3 work/validate_m2.py
+
+FAIL: Missing columns: name, email, score.
+

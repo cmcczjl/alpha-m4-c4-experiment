@@ -1,0 +1,10 @@
+$ python3 work/check_gh_auth.py
+
+2026-11-03T18:34:48.132254 | output:
+
+Error: Command '['gh', 'auth', 'status']' returned non-zero exit status 1.
+error:
+You are not logged into any GitHub hosts. To log in, run: gh auth login
+--------------------------------------------------------------------------------
+
+

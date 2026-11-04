@@ -1,0 +1,4 @@
+$ test -f data/pricing.md && grep -c '\$45\|\$120\|\$270\|\$90' data/pricing.md
+
+8
+

@@ -1,0 +1,15 @@
+$ cat data/pricing.md
+
+# Service Tiers
+
+## Basic  
+**$45** – 2 hours of consulting + 1 deliverable.
+
+## Standard  
+**$120** – 5 hours of consulting + 3 deliverables + email support.
+
+## Premium  
+**$270** – 12 hours of consulting + 5 deliverables + priority support.
+
+## Care Plan  
+**$90 / month** – Unlimited support, quarterly check‑ins, and priority issue resolution.

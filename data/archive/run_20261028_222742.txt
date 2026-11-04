@@ -1,0 +1,8 @@
+$ python3 test_app.py
+
+
+[STDERR]   File "/root/agi-agent/test_app.py", line 1
+    ```python
+    ^
+SyntaxError: invalid syntax
+

@@ -1,0 +1,12 @@
+$ python3 tools/generate_trending_repos.py
+
+Fetching trending repositories from GitHub...
+CSV written to trending_repos.csv
+
+Sample output:
+name,full_name,html_url,stargazers_count,language,created_at,updated_at,description
+build-your-own-x,codecrafters-io/build-your-own-x,https://github.com/codecrafters-io/build-your-own-x,556774,Markdown,2018-05-09T12:03:18Z,2026-10-28T10:09:43Z,Master programming by recreating your favorite technologies from scratch.
+awesome,sindresorhus/awesome,https://github.com/sindresorhus/awesome,525973,,2014-07-11T13:42:37Z,2026-10-28T10:13:11Z,😎 Awesome lists about all kinds of interesting topics [NOTE: Pull requests are temporarily disabled until I have a chance to catch up with the existing ones]
+public-apis,public-apis/public-apis,https://github.com/public-apis/public-apis,492848,Python,2016-03-20T23:49:42Z,2026-10-28T10:15:52Z,A collective list of free APIs
+freeCodeCamp,freeCodeCamp/freeCodeCamp,https://github.com/freeCodeCamp/freeCodeCamp,458083,TypeScript,2014-12-24T17:49:19Z,2026-10-28T10:16:07Z,"freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free."
+

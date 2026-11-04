@@ -1,0 +1,10 @@
+$ python3 scripts/collect_rag_corpus.py
+
+Created 6 documents in '/root/agi-agent/scripts/rag_corpus':
+ - doc1.txt
+ - doc2.txt
+ - doc3.txt
+ - prompt_engineering.md
+ - rag_overview.md
+ - vector_db_guide.md
+

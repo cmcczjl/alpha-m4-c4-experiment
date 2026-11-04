@@ -1,0 +1,6 @@
+$ python3 work/list_corpus.py
+
+doc3.txt
+doc1.txt
+doc2.txt
+

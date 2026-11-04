@@ -1,0 +1,5 @@
+$ python3 work/ma_crossover.py
+
+
+[STDERR] python3: can't open file '/root/agi-agent/work/ma_crossover.py': [Errno 2] No such file or directory
+

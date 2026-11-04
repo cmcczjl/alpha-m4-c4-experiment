@@ -1,0 +1,5 @@
+$ python3 - <<'PY'\nimport yaml, os, json, sys, pathlib, textwrap\npath='data/credentials.yaml'\nif os.path.exists(path):\n    print(open(path).read())\nelse:\n    print('no file')\nPY]
+
+
+[STDERR] /bin/sh: 1: Syntax error: "(" unexpected
+

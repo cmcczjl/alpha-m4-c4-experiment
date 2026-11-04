@@ -1,0 +1,3 @@
+We need to output observations only: environment status, last round result, external signals, current blockage. Must not make assumptions, must verify with [RUN] commands if needed. We can't assume presence of tools. We need to check environment: list files, check if sudo exists, check available tools. Use [RUN] to execute commands. Let's try.
+
+[RUN] which sudo

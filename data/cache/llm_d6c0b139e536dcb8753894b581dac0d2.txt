@@ -1,0 +1,1 @@
+<|tool_call_start|>[exec(command='echo "=== 环境状态 ===" && whoami && id && ps aux | head -5 && free -h && df -h && ls -la /root/agi-agent/work/ 2>/dev/null || echo "work目录不存在" && python3 --version && which python3 && which pwd')]<|tool_call_end|>

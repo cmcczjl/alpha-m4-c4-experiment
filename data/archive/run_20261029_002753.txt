@@ -1,0 +1,6 @@
+$ python3 scripts/test_llm.py && python3 scripts/generate_paypal_link.py
+
+LLM response 已写入 knowledge/llm_response.md
+
+[STDERR] python3: can't open file '/root/agi-agent/scripts/generate_paypal_link.py': [Errno 2] No such file or directory
+

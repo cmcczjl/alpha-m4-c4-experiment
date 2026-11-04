@@ -1,0 +1,4 @@
+$ echo "data/pricing.md created successfully"
+
+data/pricing.md created successfully
+

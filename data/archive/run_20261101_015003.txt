@@ -1,0 +1,6 @@
+$ python3 work/check_env.py
+
+CPU: 2
+Terminal Width: 80cols
+Write Perm: True
+

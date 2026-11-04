@@ -1,0 +1,14 @@
+
+
+**1. 环境状态**  
+未执行命令验证，状态未知。
+
+**2. 上轮结果**  
+$ python3 scripts/validate_m2.py  
+[FAIL] data/output/https_feeds.bbci.co.uk_news_rss.xml_digest.json: Missing required keys: {'workflow_name', 'status', 'results'}
+
+**3. 外部信号**  
+无新动态。
+
+**4. 当前卡点**  
+JSON 输出文件缺少必需字段 `workflow_name`、`status`、`results`。

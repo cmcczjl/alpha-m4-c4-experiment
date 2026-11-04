@@ -1,0 +1,5 @@
+$ bash work/check_n8n_env.sh
+
+[n8n-env] FAIL: n8n not in PATH; checking common locations...
+[n8n-env] FAIL: n8n binary missing; install via npm i -g n8n
+

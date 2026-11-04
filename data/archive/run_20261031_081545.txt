@@ -1,0 +1,4 @@
+$ python3 scripts/collect_real_docs.py
+
+Collected 3 documents saved to /root/agi-agent/scripts/rag_corpus/
+

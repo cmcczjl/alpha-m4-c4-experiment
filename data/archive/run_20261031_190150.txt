@@ -1,0 +1,18 @@
+$ python3 work/search_upwork_repos.py
+
+找到 6 个仓库:
+  - bishaldofo/upwork-faq-sample (0 stars)
+    upwork-faq
+  - parththirwani/UpworkAPP (0 stars)
+    TopBar, Header, FAQs
+  - QIU-Guanzong/upwork-faq-chat-sample (0 stars)
+    Fictional product-guide chatbot sample with source-grounded answers and a responsive UI
+  - haroldjacob1987/upwork-at-glasswall (0 stars)
+    Repo to hold documents, FAQs, Presentations and scripts related to the how Glasswall uses Upwork res
+  - berdyshevol/upwork-demo-w7-faq-page-with-searchable-accordion-phase (0 stars)
+    Upwork demo prototype for: FAQ page with searchable accordion (phase-4.1 env test)
+  - Fobboss/platto-helpdesk-bot (0 stars)
+    Telegram + OpenAI helpdesk bot: instant FAQ (/faq), concise AI answers, auto-tagging (billing/tech/s
+
+结果已保存到: data/rag_corpus/upwork_repos.json
+

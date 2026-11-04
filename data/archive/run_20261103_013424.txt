@@ -1,0 +1,4 @@
+$ python3 work/search_bounty.py
+
+Saved 0 leads to data/market_leads.json
+

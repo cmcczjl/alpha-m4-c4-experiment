@@ -1,0 +1,7 @@
+$ bash work/check_disk.sh
+
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          59G   35G   22G  62% /
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           512M  303M  210M  60% /tmp
+

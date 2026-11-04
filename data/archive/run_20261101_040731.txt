@@ -1,0 +1,37 @@
+$ pip3 install feedparser && python3 work/rss_fetcher.py "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en"
+
+Requirement already satisfied: feedparser in /usr/local/lib/python3.11/site-packages (6.0.14)
+Requirement already satisfied: feedparser-sgmllib<3,>=2 in /usr/local/lib/python3.11/site-packages (from feedparser) (2.1.0)
+[
+    {
+        "title": "Attorneys for Alaska say 'meritless' Trump demand to set aside Senate ballots 'not even possible' - PBS",
+        "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPRVBtYkpCQVRWUnFLWEtrM1d5U1VYam1NS28tSlN5U05veXlOMEFvVnNGaFh2UlZOcnlxNk9tcnRzQTl6R3FYMmVZUDJZdmF3SUZROUxhYnJKTUpXaTZzczZsek5xWmhDM2U2MVQzWUlLQ0NJV3o5ZFVCVFFVTGZtVWdVZkF0WXl6blZRR0tLY2xCc2xVR29pemZJZmpUbXY3dTRjZU1aQjdKUHVfYk1vM3l4MDVua3ZOcjlWeGZPSUlqZnVOSmUzdnI5ONIB0AFBVV95cUxNNTFHWW9CSGlUalpqWC1TZlhXLVlITDlDSDBLV0pUSUU0ZGpLb2ptdENIQlNXdFg3UFZ1d0ZEcHZBbHNuT0d2djkwcWRoaS11RGJBQXN0YzFFYmF6X25STzRoRFR3c3ptRXBiX0p4bWF4Tkt3VnlPNWFNVG5VTllNREhpR1U0M01OSXdJU19qLVU4QkRtSjBUYldlSXlZVS1RR1R5RlM5OWdyR1NpUmprMEpRWFlmcHBaaV9sbGgyZ1hrT1hzY2JOamZ4SHBkRHpv?oc=5",
+        "published": "Sat, 31 Oct 2026 22:22:29 GMT"
+    },
+    {
+        "title": "Shops looted as German cost of living protests turn violent - BBC",
+        "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAtRTMtQlNJcjUxVG5zZmwySzJ6NkRoUEtqV0dkWE9INjZMVWVhd2NFaThYMzRPQWlNanM3cUFBYUVEUU9tcnZKWDJZNnJqb2xPdUw4M0VmdFlMMm8?oc=5",
+        "published": "Sun, 01 Nov 2026 01:59:57 GMT"
+    },
+    {
+        "title": "Virginia and D.C. sue to block construction of Trump arch - NPR",
+        "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9uUFZpekxGX1haSlJXNUMzU29KaUF1WTFzQm9wMGk3TlVCQklydzFxakRnV2xSZkk2dkFIQTF3aTNKVjhnTFY5dG5CLVJNeHJfUGIxcHFXQ3VDT19rcTVwUk5sTGx6aHUxVzFKZ2xmX0dON2lELTlFNmZGNA?oc=5",
+        "published": "Sat, 31 Oct 2026 22:48:51 GMT"
+    },
+    {
+        "title": "Advisor to Clyburn says El-Sayed can’t disinvite Stevens from unity event - The Hill",
+        "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNS2I4MlRnQnJ1cVlhRGRUb1pRQzJna1M5SGNtWlFQQ3U2cDNick1QNGxscjR3MzNxSlFEY3p0ZmMzeUMzXzBoRHZzN2VyM25EOUtMWlRxejhtWThlSjNSZV8tMHFtRUl0UTdxNURfOHV2X0tuT3RVWVllbjljcnZ4bmg4SdIBiAFBVV95cUxOWHNxTjh4SlJ4cVVtYkFDVW1qMDNfYmtUMmVlWFdxZDVHaThjUThMcnhWckM2THp6LTlFelRUbVBSemoxMFFNNG9INzZtQzl1eVZwVlFRMkJoNngyRlJPeXhfVEM1aTdqTTVNQndNN3pkaDZNSmNyc29SQk8tTmZYSEdLZXVxTWty?oc=5",
+        "published": "Sun, 01 Nov 2026 00:54:59 GMT"
+    },
+    {
+        "title": "Judge tosses Trump lawsuit against WSJ, Murdoch over Epstein story - Axios",
+        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFA0b1ZETFZIRE5mNmcxdlptSnlxRTljRWRMSjhIWXlLVGlqYmF1bWtZUDdxMkVhWjQwNGRoeER5V09idEtkdTVTTkU2N0ZpUU5RcW1jZl9taTZESWJueGJyTmU5S044ZVRnTUE?oc=5",
+        "published": "Sat, 31 Oct 2026 22:14:17 GMT"
+    }
+]
+
+[STDERR] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 26.0.1 -> 26.2.2
+[notice] To update, run: pip install --upgrade pip
+

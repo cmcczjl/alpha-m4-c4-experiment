@@ -1,0 +1,69 @@
+def hello():
+    return "Summarizer API with URL support is running."
+
+if __name__ == '__main__':
+    # Run on all interfaces, port 5000
+    app.run(host='0.0.0.0', port=5000)
+```
+
+`daily_news_summary.py`
+```python
+"""
+Fetches top 5 BBC News headlines, summarizes each article,
+and writes the results to daily_summary.md.
+"""
+
+import json
+import feedparser
+import requests
+from transformers import pipeline, AutoTokenizer, AutoModelForSeq2SeqLM
+import torch
+from newspaper import Article
+
+# Setup summarization pipeline
+MODEL_NAME = "sshleifer/distilbart-cnn-12-6"
+DEVICE = 0 if torch.cuda.is_available() else -1
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_NAME)
+summarizer = pipeline("summarization", model=model, tokenizer=tokenizer, device=DEVICE)
+
+def summarize_text(text: str) -> str:
+    summary_list = summarizer(
+        text, max_length=130, min_length=30, do_sample=False
+    )
+    return summary_list[0]["summary_text"]
+
+def fetch_and_summarize(url: str) -> str:
+    article = Article(url)
+    article.download()
+    article.parse()
+    return summarize_text(article.text)
+
+def main():
+    feed_url = "https://feeds.bbci.co.uk/news/rss.xml"
+    feed = feedparser.parse(feed_url)
+
+    summaries = []
+    for entry in feed.entries[:5]:
+        title = entry.title
+        link = entry.link
+        print(f"Summarizing: {title}")
+        try:
+            summary = fetch_and_summarize(link)
+            summaries.append((title, link, summary))
+        except Exception as e:
+            print(f"Failed to summarize {title}: {e}")
+
+    # Write markdown
+    with open("daily_summary.md", "w", encoding="utf-8") as f:
+        f.write(f"# Daily BBC News Summary ({feed.feed.title})\n\n")
+        for i, (title, link, summary) in enumerate(summaries, 1):
+            f.write(f"## {i}. {title}\n")
+            f.write(f"[Read full article]({link})\n\n")
+            f.write(f"{summary}\n\n---\n")
+
+    print("Daily summary written to daily_summary.md")
+
+if __name__ == "__main__":
+    main()
+```

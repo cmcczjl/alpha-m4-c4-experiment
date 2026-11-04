@@ -1,0 +1,44 @@
+$ bash -lc "pip3 install --quiet feedparser requests beautifulsoup4 && python3 scripts/workflow_news_digest_v1.py"
+
+e Massacre. It Still Weighs on Me.
+📄 Processing article: Ukrainians Are Fighting Russians Inside Underground Gas Pipes. I Went in One.
+📄 Processing article: Another Toll of the Violent Unrest in France: The Political Center
+📄 Processing article: Israel’s Election Is Unlikely to Change Its Policies and Global Isolation
+📄 Processing article: Taking the Saga of a Criminal Gang From Page to Screen to Opera Stage
+📄 Processing article: How Ukrainian Soldiers Are Moving Underground
+📄 Processing article: Colombia’s ‘Narcoterrorist’ Crackdown Raises Questions Over Killings
+📄 Processing article: Transylvania, Where Meadows Ripple and Dracula Legends Fade
+📄 Processing article: New ‘Call of Duty’ Game Draws Criticism for Using Footage of Deadly Seoul Crowd Crush
+📄 Processing article: How the Japanese Spy Drama ‘Vivant’ Became The Target of China’s Anger
+📄 Processing article: Oldest Recording of Louisiana’s Vanishing Creole Language Is Published
+📄 Processing article: An Arab Town in Israel Celebrates the Election but Wonders What Will Change
+📄 Processing article: A Powerful Mosquito-Hunting Laser Uses A.I. to Zap Winged Pests
+📄 Processing article: Newly Freed American Describes His Years in Russian Prison
+📄 Processing article: What Israeli Election Results Reveal About the Electorate
+📄 Processing article: No Clear Winner in Israel Election, Final Results Show
+📄 Processing article: Court Rejects Erin Patterson’s Appeal in Mushroom Murders Case
+📄 Processing article: Venezuelan Opposition Leader Thanks Trump But Marks Distance from Washington
+📄 Processing article: Cuba’s Foreign Minister: We’ll Outlast Trump
+📄 Processing article: The Perils of Glittering Skylines
+📄 Processing article: Why Miami Is a Destination for Latin America’s Political Exiles
+📄 Processing article: Trump and His Aides Helped Bolsonaro Flee Brazil and Enter U.S.
+📄 Processing article: A Marathon Runner’s Hard Lesson
+📄 Processing article: State Dept. to Shift Millions in Contraception Funding to Cover Energy Costs
+📄 Processing article: U.S. Hits Rwanda With New Sanctions Over a Conflict Trump Declared ‘Ended’
+📄 Processing article: Suspect in France Shootings Said He Targeted Muslims and Africans, Prosecutor Says
+📄 Processing article: Haiti Postpones Elections as Gang Violence Runs Rampant
+🔎 Fetching feed: https://feeds.bbci.co.uk/news/world/rss.xml
+📄 Processing article: Shops looted as German cost of living protests turn violent
+✔️  Written summary to data/output/20261101T065417Z_shops_looted_as_german_cost_of_living_protests_tur.txt
+📄 Processing article: 'We came back from hell', say Ukrainians after years in Russia-occupied front-line city
+✔️  Written summary to data/output/20261101T065417Z_we_came_back_from_hell_say_ukrainians_after_years_.txt
+📄 Processing article: Ukrainian evacuees reunite with family after years trapped in Russia-occupied city
+✔️  Written summary to data/output/20261101T065417Z_ukrainian_evacuees_reunite_with_family_after_years.txt
+✅ Finished. Produced 5 summary file(s).
+
+[STDERR] nt Error: Forbidden for url: https://www.nytimes.com/2026/10/29/climate/climate-marathon-running.html
+Failed to fetch https://www.nytimes.com/2026/10/29/us/politics/foreign-aid-divert-energy-contraceptives.html: 403 Client Error: Forbidden for url: https://www.nytimes.com/2026/10/29/us/politics/foreign-aid-divert-energy-contraceptives.html
+Failed to fetch https://www.nytimes.com/2026/10/29/world/africa/rwanda-sanctions-m23-congo.html: 403 Client Error: Forbidden for url: https://www.nytimes.com/2026/10/29/world/africa/rwanda-sanctions-m23-congo.html
+Failed to fetch https://www.nytimes.com/2026/10/29/world/europe/france-shootings-suspect.html: 403 Client Error: Forbidden for url: https://www.nytimes.com/2026/10/29/world/europe/france-shootings-suspect.html
+Failed to fetch https://www.nytimes.com/2026/10/29/world/americas/haiti-elections-postponed-violence.html: 403 Client Error: Forbidden for url: https://www.nytimes.com/2026/10/29/world/americas/haiti-elections-postponed-violence.html
+

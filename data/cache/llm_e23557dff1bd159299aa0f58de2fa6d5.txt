@@ -1,0 +1,31 @@
+**1. 环境状态**  
+- **服务器资源**  
+  - Filesystem 使用情况（`df -h`）  
+    ```
+    Filesystem      Size  Used Avail Use% Mounted on
+    /dev/root        30G   12G   16G  43% /
+    tmpfs           1.9G     0  1.9G   0% /dev/shm
+    ```
+  - 内存/交换使用情况（`free -h`）  
+    ```
+                  total        used        free      shared  buff/cache   available
+    Mem:           7.8G        2.1G        4.5G        120M        1.2G        5.4G
+    Swap:          2.0G          0B        2.0G
+    ```
+- **可用工具**（`which` 检查）  
+  - `python3` 位于 `/usr/bin/python3`，可执行。  
+  - 常用 shell 工具均在 `/usr/bin`（如 `ls`, `cat`, `mkdir`, `rm` 等）可用。  
+- **账户状态**（`whoami` / `id`）  
+  - 当前用户： `sandbox`  
+  - UID/GID: `uid=1000(sandbox) gid=1000(sandbox) groups=1000(sandbox)`  
+
+**2. 上轮结果**  
+- 已确认文件 `data/upwork_service.md` 存在 (`True`)。  
+
+**3. 外部信号**  
+- 在本工作目录及其子目录中未发现任何关于市场、社区或竞争对手动态的文件或记录（如 `news.txt`, `updates/` 等均不存在）。因此当前没有可观测的外部信号。  
+
+**4. 当前卡点**  
+- 关键脚本 `scripts/validate_m2.py` 不在项目根目录下（`ls scripts` 未列出该文件）。  
+- 依赖的可验收条件文件 `data/output/form_result.csv` 亦未生成（`ls data/output` 为空）。  
+- 这两个缺失直接阻止了里程碑 M2‑0 的验收步骤以及后续 M2‑1 实现的推进。

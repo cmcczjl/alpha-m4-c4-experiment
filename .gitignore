@@ -1,0 +1,6 @@
+secrets/
+data/credentials.yaml
+*.db
+*.sqlite
+__pycache__/
+logs/

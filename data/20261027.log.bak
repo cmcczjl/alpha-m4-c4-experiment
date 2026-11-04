@@ -1,0 +1,251 @@
+2026-10-27 10:23:24,167 [INFO] Found 1 existing knowledge files
+2026-10-27 10:23:24,167 [ERROR] LLM error: 'dict' object has no attribute 'message'
+2026-10-27 10:23:36,815 [INFO] Found 1 existing knowledge files
+2026-10-27 10:23:36,816 [ERROR] LLM error: cannot import name 'Message' from 'openai.types.chat.chat_completion' (/usr/local/lib/python3.11/site-packages/openai/types/chat/chat_completion.py)
+2026-10-27 10:24:12,969 [INFO] Found 1 existing knowledge files
+2026-10-27 10:24:13,007 [INFO] Lessons saved: 1 entries
+2026-10-27 11:54:31,678 [INFO] Found 1 existing knowledge files
+2026-10-27 11:54:31,692 [INFO] Lessons saved: 2 entries
+2026-10-27 11:57:01,052 [INFO] Initializing memory system:
+2026-10-27 11:57:01,053 [INFO]   DB: /root/agi-agent/data/data/agent.db
+2026-10-27 11:57:01,053 [INFO]   Journal: /root/agi-agent/data/data/journal
+2026-10-27 11:57:01,054 [INFO]   Lessons: /root/agi-agent/data/data/lessons.json
+2026-10-27 11:57:13,215 [INFO] Initializing memory system:
+2026-10-27 11:57:13,215 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 11:57:13,216 [INFO]   Journal: /root/agi-agent/data/data/journal
+2026-10-27 11:57:13,216 [INFO]   Lessons: /root/agi-agent/data/data/lessons.json
+2026-10-27 11:57:19,224 [INFO] Initializing memory system:
+2026-10-27 11:57:19,224 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 11:57:19,224 [INFO]   Journal: /root/agi-agent/data/data/journal
+2026-10-27 11:57:19,224 [INFO]   Lessons: /root/agi-agent/data/data/lessons.json
+2026-10-27 11:57:27,042 [INFO] Initializing memory system:
+2026-10-27 11:57:27,043 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 11:57:27,043 [INFO]   Journal: /root/agi-agent/data/data/journal
+2026-10-27 11:57:27,043 [INFO]   Lessons: /root/agi-agent/data/data/lessons.json
+2026-10-27 11:57:27,074 [INFO] Created knowledge file: risk_management.md
+2026-10-27 11:57:27,074 [INFO] Created knowledge file: statistical_inference.md
+2026-10-27 11:57:27,074 [INFO] Knowledge base initialized: 3 files
+2026-10-27 11:57:34,749 [INFO] Initializing memory system:
+2026-10-27 11:57:34,750 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 11:57:34,750 [INFO]   Journal: /root/agi-agent/data/data/journal
+2026-10-27 11:57:34,750 [INFO]   Lessons: /root/agi-agent/data/data/lessons.json
+2026-10-27 11:57:34,780 [INFO] Knowledge base initialized: 3 files
+2026-10-27 11:57:50,372 [INFO] Initializing memory system:
+2026-10-27 11:57:50,372 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 11:57:50,373 [INFO]   Journal: /root/agi-agent/data/data/journal
+2026-10-27 11:57:50,373 [INFO]   Lessons: /root/agi-agent/data/data/lessons.json
+2026-10-27 11:57:50,405 [INFO] Knowledge base initialized: 3 files
+2026-10-27 11:58:05,680 [INFO] Initializing memory system:
+2026-10-27 11:58:05,680 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 11:58:05,680 [INFO]   Journal: /root/agi-agent/data/data/journal
+2026-10-27 11:58:05,681 [INFO]   Lessons: /root/agi-agent/data/data/lessons.json
+2026-10-27 11:58:05,711 [INFO] Knowledge base initialized: 3 files
+2026-10-27 11:58:15,934 [INFO] Initializing memory system:
+2026-10-27 11:58:15,935 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 11:58:15,935 [INFO]   Journal: /root/agi-agent/data/data/journal
+2026-10-27 11:58:15,935 [INFO]   Lessons: /root/agi-agent/data/data/lessons.json
+2026-10-27 11:58:15,966 [INFO] Knowledge base initialized: 3 files
+2026-10-27 11:58:15,966 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:58:26,374 [INFO] Initializing memory system:
+2026-10-27 11:58:26,374 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 11:58:26,375 [INFO]   Journal: /root/agi-agent/data/data/journal
+2026-10-27 11:58:26,375 [INFO]   Lessons: /root/agi-agent/data/data/lessons.json
+2026-10-27 11:58:26,405 [INFO] Knowledge base initialized: 3 files
+2026-10-27 11:58:26,406 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:58:34,302 [INFO] Initializing memory system:
+2026-10-27 11:58:34,303 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 11:58:34,303 [INFO]   Journal: /root/agi-agent/data/data/journal
+2026-10-27 11:58:34,303 [INFO]   Lessons: /root/agi-agent/data/data/lessons.json
+2026-10-27 11:58:34,334 [INFO] Knowledge base initialized: 3 files
+2026-10-27 11:58:34,334 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:58:46,127 [INFO] Initializing memory system:
+2026-10-27 11:58:46,128 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 11:58:46,128 [INFO]   Journal: /root/agi-agent/data/data/journal
+2026-10-27 11:58:46,128 [INFO]   Lessons: /root/agi-agent/data/data/lessons.json
+2026-10-27 11:58:46,158 [INFO] Knowledge base initialized: 3 files
+2026-10-27 11:58:46,159 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:58:46,252 [INFO] Retrying request in 0.398036 seconds (retry 1 of 2)
+2026-10-27 11:58:46,658 [INFO] Retrying request in 0.964833 seconds (retry 2 of 2)
+2026-10-27 11:58:47,627 [ERROR] LLM call failed: Connection error.
+2026-10-27 11:58:47,627 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:58:47,630 [INFO] Retrying request in 0.458666 seconds (retry 1 of 2)
+2026-10-27 11:58:48,093 [INFO] Retrying request in 0.859232 seconds (retry 2 of 2)
+2026-10-27 11:58:48,956 [ERROR] LLM call failed: Connection error.
+2026-10-27 11:58:48,957 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:58:48,960 [INFO] Retrying request in 0.383616 seconds (retry 1 of 2)
+2026-10-27 11:58:49,348 [INFO] Retrying request in 0.894243 seconds (retry 2 of 2)
+2026-10-27 11:58:50,247 [ERROR] LLM call failed: Connection error.
+2026-10-27 11:58:50,247 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:58:50,251 [INFO] Retrying request in 0.465803 seconds (retry 1 of 2)
+2026-10-27 11:58:50,720 [INFO] Retrying request in 0.920282 seconds (retry 2 of 2)
+2026-10-27 11:58:51,644 [ERROR] LLM call failed: Connection error.
+2026-10-27 11:59:10,668 [INFO] Initializing memory system:
+2026-10-27 11:59:10,668 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 11:59:10,669 [INFO]   Journal: /root/agi-agent/data/data/journal
+2026-10-27 11:59:10,669 [INFO]   Lessons: /root/agi-agent/data/data/lessons.json
+2026-10-27 11:59:10,699 [INFO] Knowledge base initialized: 3 files
+2026-10-27 11:59:10,700 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:59:10,706 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:59:10,707 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:59:10,708 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:59:10,708 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:59:10,709 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:59:10,710 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:59:10,710 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:59:18,973 [INFO] Initializing memory system:
+2026-10-27 11:59:18,973 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 11:59:18,973 [INFO]   Journal: /root/agi-agent/data/data/journal
+2026-10-27 11:59:18,973 [INFO]   Lessons: /root/agi-agent/data/data/lessons.json
+2026-10-27 11:59:19,003 [INFO] Knowledge base initialized: 3 files
+2026-10-27 11:59:19,004 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:59:19,010 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:59:19,011 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:59:19,011 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:59:19,012 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:59:19,013 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:59:19,013 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:59:19,014 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 11:59:19,015 [INFO] Lessons saved: 1 entries
+2026-10-27 13:15:05,095 [INFO] Initializing memory system:
+2026-10-27 13:15:05,096 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 13:15:05,096 [INFO]   Journal: /root/agi-agent/data/data/journal
+2026-10-27 13:15:05,096 [INFO]   Lessons: /root/agi-agent/data/data/lessons.json
+2026-10-27 13:15:05,128 [INFO] Knowledge base initialized: 3 files
+2026-10-27 13:15:05,128 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:15:05,134 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:15:05,135 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:15:05,136 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:15:05,137 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:15:05,138 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:15:05,138 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:15:05,139 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:15:05,140 [INFO] Lessons saved: 1 entries
+2026-10-27 13:15:19,561 [INFO] Initializing memory system:
+2026-10-27 13:15:19,561 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 13:15:19,561 [INFO]   Journal: /root/agi-agent/data/data/journal
+2026-10-27 13:15:19,561 [INFO]   Lessons: /root/agi-agent/data/data/lessons.json
+2026-10-27 13:15:19,591 [INFO] Knowledge base initialized: 3 files
+2026-10-27 13:15:19,592 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:15:19,652 [INFO] HTTP Request: POST http://172.17.0.1:3001/chat/completions "HTTP/1.1 200 OK"
+2026-10-27 13:15:19,654 [ERROR] LLM call failed: 'str' object has no attribute 'choices'
+2026-10-27 13:15:19,654 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:15:19,659 [INFO] HTTP Request: POST http://172.17.0.1:3001/chat/completions "HTTP/1.1 200 OK"
+2026-10-27 13:15:19,660 [ERROR] LLM call failed: 'str' object has no attribute 'choices'
+2026-10-27 13:15:19,660 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:15:19,665 [INFO] HTTP Request: POST http://172.17.0.1:3001/chat/completions "HTTP/1.1 200 OK"
+2026-10-27 13:15:19,666 [ERROR] LLM call failed: 'str' object has no attribute 'choices'
+2026-10-27 13:15:43,439 [INFO] Initializing memory system:
+2026-10-27 13:15:43,440 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 13:15:43,440 [INFO]   Journal: /root/agi-agent/data/data/journal
+2026-10-27 13:15:43,440 [INFO]   Lessons: /root/agi-agent/data/data/lessons.json
+2026-10-27 13:15:43,473 [INFO] Knowledge base initialized: 3 files
+2026-10-27 13:15:43,474 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:15:43,537 [INFO] HTTP Request: POST http://172.17.0.1:3001/chat/completions "HTTP/1.1 200 OK"
+2026-10-27 13:15:43,540 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:15:43,542 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:15:43,550 [INFO] HTTP Request: POST http://172.17.0.1:3001/chat/completions "HTTP/1.1 200 OK"
+2026-10-27 13:15:43,551 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:15:43,552 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:15:43,556 [INFO] HTTP Request: POST http://172.17.0.1:3001/chat/completions "HTTP/1.1 200 OK"
+2026-10-27 13:15:43,558 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:16:01,766 [INFO] Initializing memory system:
+2026-10-27 13:16:01,766 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 13:16:01,767 [INFO]   Journal: /root/agi-agent/data/data/journal
+2026-10-27 13:16:01,767 [INFO]   Lessons: /root/agi-agent/data/data/lessons.json
+2026-10-27 13:16:01,797 [INFO] Knowledge base initialized: 3 files
+2026-10-27 13:16:01,798 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:16:01,886 [INFO] HTTP Request: POST http://172.17.0.1:3001/chat/completions "HTTP/1.1 200 OK"
+2026-10-27 13:16:01,887 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:16:01,888 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:16:01,897 [INFO] HTTP Request: POST http://172.17.0.1:3001/chat/completions "HTTP/1.1 200 OK"
+2026-10-27 13:16:01,899 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:16:01,900 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:16:01,906 [INFO] HTTP Request: POST http://172.17.0.1:3001/chat/completions "HTTP/1.1 200 OK"
+2026-10-27 13:16:01,907 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:16:17,708 [INFO] Initializing memory system:
+2026-10-27 13:16:17,708 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 13:16:17,708 [INFO]   Journal: /root/agi-agent/data/data/journal
+2026-10-27 13:16:17,709 [INFO]   Lessons: /root/agi-agent/data/data/lessons.json
+2026-10-27 13:16:17,739 [INFO] Knowledge base initialized: 3 files
+2026-10-27 13:16:17,739 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:16:28,251 [INFO] HTTP Request: POST http://172.17.0.1:3001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-27 13:16:28,260 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:16:28,261 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:16:28,913 [INFO] HTTP Request: POST http://172.17.0.1:3001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-27 13:16:28,915 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:16:28,916 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 13:16:45,182 [INFO] HTTP Request: POST http://172.17.0.1:3001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-27 13:16:45,184 [INFO] Journal saved: /root/agi-agent/data/data/journal/2026-10-27.md
+2026-10-27 16:41:21,779 [INFO] Initializing memory system:
+2026-10-27 16:41:21,779 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 16:41:21,779 [INFO]   Journal: /root/agi-agent/data/data/journal
+2026-10-27 16:41:21,779 [INFO]   Lessons: /root/agi-agent/data/data/lessons.json
+2026-10-27 16:41:21,809 [INFO] Knowledge base initialized: 3 files
+2026-10-27 16:41:21,809 [INFO] ==================================================
+2026-10-27 16:41:21,809 [INFO] 探索者-α 启动，进入自主进化模式
+2026-10-27 16:41:21,809 [INFO] 目标: 赚钱。没有金额限制，没有时间限制。用一切合法手段最大化利润。
+2026-10-27 16:41:21,809 [INFO] 每 30 分钟自主行动一次
+2026-10-27 16:41:21,809 [INFO] ==================================================
+2026-10-27 16:41:21,809 [INFO] 自主进化循环启动，间隔 30 分钟
+2026-10-27 16:41:21,810 [INFO] [探索 #1 2026-10-27 16:41:21] 开始探索
+2026-10-27 16:41:21,951 [INFO] HTTP Request: GET https://api.coingecko.com/api/v3/simple/price?vs_currencies=usd&ids=bitcoin%2Cethereum%2Csolana&include_24hr_change=true&include_24hr_vol=true "HTTP/1.1 200 OK"
+2026-10-27 16:41:22,154 [INFO] HTTP Request: GET https://api.alternative.me/fng/?limit=2 "HTTP/1.1 200 OK"
+2026-10-27 16:41:22,155 [INFO] [探索 #1 2026-10-27 16:41:21] 市场感知完成: ['prices', 'fng']
+2026-10-27 16:41:25,021 [INFO] HTTP Request: POST http://172.17.0.1:3001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-27 16:41:25,037 [INFO] [探索 #1 2026-10-27 16:41:21] LLM 响应 3790 字符
+2026-10-27 16:41:25,038 [INFO] [探索 #1 2026-10-27 16:41:21] 探索完成
+2026-10-27 17:04:04,359 [INFO] 收到停止信号
+2026-10-27 17:07:40,376 [INFO] Initializing memory system:
+2026-10-27 17:07:40,377 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 17:07:40,377 [INFO]   Journal: /root/agi-agent/data/journal
+2026-10-27 17:07:40,377 [INFO]   Lessons: /root/agi-agent/data/lessons.json
+2026-10-27 17:07:40,408 [INFO] Knowledge base initialized: 3 files
+2026-10-27 17:07:40,409 [INFO] ==================================================
+2026-10-27 17:07:40,409 [INFO] 探索者-α 启动，进入自主进化模式
+2026-10-27 17:07:40,409 [INFO] 目标: 赚钱。没有金额限制，没有时间限制。用一切合法手段最大化利润。
+2026-10-27 17:07:40,409 [INFO] 每 30 分钟自主行动一次
+2026-10-27 17:07:40,409 [INFO] ==================================================
+2026-10-27 17:07:40,409 [INFO] 自主进化循环启动，间隔 30 分钟
+2026-10-27 17:07:40,409 [INFO] [探索 #1 2026-10-27 17:07:40] 开始探索
+2026-10-27 17:07:40,616 [INFO] HTTP Request: GET https://api.coingecko.com/api/v3/simple/price?vs_currencies=usd&ids=bitcoin%2Cethereum%2Csolana&include_24hr_change=true&include_24hr_vol=true "HTTP/1.1 200 OK"
+2026-10-27 17:07:40,834 [INFO] HTTP Request: GET https://api.alternative.me/fng/?limit=2 "HTTP/1.1 200 OK"
+2026-10-27 17:07:40,835 [INFO] [探索 #1 2026-10-27 17:07:40] 市场感知完成: ['prices', 'fng']
+2026-10-27 17:07:45,541 [INFO] HTTP Request: POST http://172.17.0.1:3001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-27 17:07:45,549 [INFO] [探索 #1 2026-10-27 17:07:40] LLM 响应 3894 字符
+2026-10-27 17:07:45,550 [ERROR] 探索循环错误: name 're' is not defined
+2026-10-27 17:11:05,568 [INFO] Initializing memory system:
+2026-10-27 17:11:05,568 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 17:11:05,568 [INFO]   Journal: /root/agi-agent/data/journal
+2026-10-27 17:11:05,568 [INFO]   Lessons: /root/agi-agent/data/lessons.json
+2026-10-27 17:11:05,601 [INFO] Knowledge base initialized: 3 files
+2026-10-27 17:11:05,601 [INFO] ==================================================
+2026-10-27 17:11:05,601 [INFO] 探索者-α 启动，进入自主进化模式
+2026-10-27 17:11:05,601 [INFO] 目标: 赚钱。没有金额限制，没有时间限制。用一切合法手段最大化利润。
+2026-10-27 17:11:05,601 [INFO] 每 30 分钟自主行动一次
+2026-10-27 17:11:05,601 [INFO] ==================================================
+2026-10-27 17:11:05,601 [INFO] 自主进化循环启动，间隔 30 分钟
+2026-10-27 17:11:05,601 [INFO] [探索 #1 2026-10-27 17:11:05] 开始探索
+2026-10-27 17:11:05,753 [INFO] HTTP Request: GET https://api.coingecko.com/api/v3/simple/price?vs_currencies=usd&ids=bitcoin%2Cethereum%2Csolana&include_24hr_change=true&include_24hr_vol=true "HTTP/1.1 200 OK"
+2026-10-27 17:11:05,956 [INFO] HTTP Request: GET https://api.alternative.me/fng/?limit=2 "HTTP/1.1 200 OK"
+2026-10-27 17:11:05,960 [INFO] [探索 #1 2026-10-27 17:11:05] 市场感知完成: ['prices', 'fng']
+2026-10-27 17:11:12,883 [INFO] HTTP Request: POST http://172.17.0.1:3001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-27 17:11:12,898 [INFO] [探索 #1 2026-10-27 17:11:05] LLM 响应 8766 字符
+2026-10-27 17:11:12,953 [INFO] [探索 #1 2026-10-27 17:11:05] RUN 输出已存档: run_20261027_171112.txt
+2026-10-27 17:18:28,202 [INFO] Initializing memory system:
+2026-10-27 17:18:28,203 [INFO]   DB: /root/agi-agent/data/agent.db
+2026-10-27 17:18:28,203 [INFO]   Journal: /root/agi-agent/data/journal
+2026-10-27 17:18:28,203 [INFO]   Lessons: /root/agi-agent/data/lessons.json
+2026-10-27 17:18:28,273 [INFO] Knowledge base initialized: 3 files
+2026-10-27 17:18:28,273 [INFO] ==================================================
+2026-10-27 17:18:28,274 [INFO] 探索者-α 启动，进入自主进化模式
+2026-10-27 17:18:28,274 [INFO] 目标: 赚钱。没有金额限制，没有时间限制。用一切合法手段最大化利润。
+2026-10-27 17:18:28,274 [INFO] 每 30 分钟自主行动一次
+2026-10-27 17:18:28,274 [INFO] ==================================================
+2026-10-27 17:18:28,274 [INFO] 自主进化循环启动，间隔 30 分钟
+2026-10-27 17:18:28,275 [INFO] [探索 #1 2026-10-27 17:18:28] 开始探索
+2026-10-27 17:18:28,534 [INFO] HTTP Request: GET https://api.coingecko.com/api/v3/simple/price?vs_currencies=usd&ids=bitcoin%2Cethereum%2Csolana&include_24hr_change=true&include_24hr_vol=true "HTTP/1.1 200 OK"
+2026-10-27 17:18:28,749 [INFO] HTTP Request: GET https://api.alternative.me/fng/?limit=2 "HTTP/1.1 200 OK"
+2026-10-27 17:18:28,751 [INFO] [探索 #1 2026-10-27 17:18:28] 市场感知完成: ['prices', 'fng']
+2026-10-27 17:18:31,176 [INFO] HTTP Request: POST http://172.17.0.1:3001/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-27 17:18:31,190 [INFO] [探索 #1 2026-10-27 17:18:28] LLM 响应 5744 字符
+2026-10-27 17:18:31,237 [INFO] [探索 #1 2026-10-27 17:18:28] RUN 输出已存档: run_20261027_171831.txt

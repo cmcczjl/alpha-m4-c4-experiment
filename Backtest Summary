@@ -1,0 +1,54 @@
+")
+    print(f"Final capital: ${results['capital']:.2f}")
+    print(f"Total return: {results['return_pct']:+.2f}%")
+    print(f"Total trades: {results['total_trades']}")
+    print(f"Win rate: {results['win_rate']*100:.2f}%")
+    print(f"Max drawdown: {results['max_drawdown_pct']:.2f}%")
+    print(f"\nTrade log written to {TRADE_LOG}")
+    print(f"Summary written to {SUMMARY_FILE}")
+
+if __name__ == "__main__":
+    main()
+---
+knowledge/ema_atr_strategy.md
+---
+# EMA + ATR Strategy for BTC/USDT
+
+## Overview
+- **Entry:** EMA10 crosses above EMA50 (bullish signal).
+- **Position Size:** 100% of available equity (no leverage used).
+- **Stop‑Loss:** 1.5 × ATR(14) below entry price.
+- **Take‑Profit:** 3.0 × ATR(14) above entry price.
+- **Exit Conditions:**
+  - Hit stop‑loss → close position.
+  - Hit take‑profit → close position.
+  - End of data → close remaining position at last close price.
+
+## Rationale
+- **EMA** reacts faster than SMA, capturing trend shifts earlier.
+- **ATR** measures market volatility, providing dynamic risk limits.
+  - 1.5×SL ensures a risk/reward ratio ≈ 1:2 (when TP=3×ATR).
+- **Long‑only** strategy reduces exposure to short‑selling risks.
+
+## Backtest Results (1‑year data, 2025‑10‑01 to 2026‑09‑30)
+| Metric | Value |
+|--------|-------|
+| Final Capital | $X,XXX |
+| Total Return | +Y.YY% |
+| Total Trades | N |
+| Win Rate | Z.ZZ% |
+| Max Drawdown | -W.WW% |
+
+*(Results pending after code execution.)*
+
+## Lessons Learned
+- EMA crossover alone may generate many false signals in sideways markets.
+- ATR‑based SL/TP adapt to volatility, preventing over‑trading during low‑volatility periods.
+- No shorting avoids losses during sharp downward corrections.
+
+## Next Steps
+- Optimize SL/TP multipliers via grid search.
+- Add trailing stop for extended trend capture.
+- Compare with SMA crossover baseline.
+
+---

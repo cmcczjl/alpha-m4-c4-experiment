@@ -1,0 +1,13 @@
+We need to output observations only, no judgments. Must list:
+
+1. 环境状态：服务器资源、可用工具、账户状态. Must verify via real commands [RUN]. We need to execute commands to get info: maybe `whoami`, `id`, `df -h`, `free -h`, `ls /usr/bin`? Also check available tools like python3, etc. Use [RUN] blocks.
+
+2. 上轮结果: already given.
+
+3. 外部信号: market/community/competitor new dynamics. We cannot fabricate; must check maybe internet? Not allowed. So we have no real external data. We can state none observed (no new info). But must not guess.
+
+4. 当前卡点: what prevents progress. Must state factual based on observed data: e.g., missing whitelist file? But that's from previous reflection, not confirmed. Should verify if file exists. Use [RUN] to check. Also check if read_whitelist.py exists, etc.
+
+We need to avoid speculation, only state facts.
+
+Let's run commands.[RUN] whoami

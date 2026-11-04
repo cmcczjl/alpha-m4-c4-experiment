@@ -1,0 +1,21 @@
+$ python3 work/diagnose_m4.py
+
+[OK] 已读取 work/package_deliverable.py，共 73 行
+[INFO] 找到 1 处 M4_output 引用:
+  L55:     source_dir = Path("work/M4_output")
+[DIAG] 脚本中未发现任何 makedirs/mkdir 调用 → 根因：脚本缺目录创建逻辑
+[INFO] import os: True | import pathlib: True
+
+============================================================
+[VERDICT] 脚本缺 os.makedirs → 一行修复：在写入前加 os.makedirs(m4_output_dir, exist_ok=True)
+============================================================
+
+[CONTEXT] M4_output 相关上下文（±3行）:
+     L52: 
+     L53: def main():
+     L54:     # 1. 定位 M4 已完成产出目录（如果不存在则提示并退出）
+ >>> L55:     source_dir = Path("work/M4_output")
+     L56:     if not source_dir.is_dir():
+     L57:         print(f"❌ 错误：找不到 M4 产出目录 {source_dir.resolve()}")
+     L58:         return
+

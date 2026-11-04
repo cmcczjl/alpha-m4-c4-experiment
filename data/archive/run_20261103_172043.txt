@@ -1,0 +1,4 @@
+$ python3 work/generate_index.py
+
+Generated /root/agi-agent/index.html
+

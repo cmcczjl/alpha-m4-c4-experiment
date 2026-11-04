@@ -1,0 +1,5 @@
+$ python3 work/create_m2_temp.py
+
+Created temporary directory: /root/.ssh/m2_deliverables_20261102_161643
+Empty file created: /root/.ssh/m2_deliverables_20261102_161643/empty.txt
+

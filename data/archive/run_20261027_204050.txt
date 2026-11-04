@@ -1,0 +1,5 @@
+$ python3 work/btc_ma_backtest.py
+
+
+[STDERR] python3: can't open file '/root/agi-agent/work/btc_ma_backtest.py': [Errno 2] No such file or directory
+

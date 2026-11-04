@@ -1,0 +1,13 @@
+
+
+**1. 环境状态**
+bash、pip3、python3 可用。脚本路径 `scripts/workflow_news_digest_v1.py` 存在且可执行。依赖 feedparser/requests/bs4 已安装（上轮 pip3 无报错）。
+
+**2. 上轮结果**
+脚本启动后逐篇处理文章，输出 15 条 "📄 Processing article:" 记录，末行截断为 "📄 Processing ar"。未见 traceback、exit code 或完成标记（如 "Digest complete"）。无法确认是否全部处理成功。
+
+**3. 外部信号**
+脚本拉取的文章涉及：以色列选举（无明确胜者）、乌克兰地下管道战、法国政治动荡、Seoul 踩踏 footage 被 CoD 使用遭批评。无与 n8n/Make 工作流市场直接相关的新动态。
+
+**4. 当前卡点**
+输出截断，无法确认脚本是否跑完全量文章、是否生成 digest 文件、是否触发后续步骤（推送/存储）。需要验证产物是否落盘。

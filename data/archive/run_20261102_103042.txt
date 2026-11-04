@@ -1,0 +1,5 @@
+$ python3 work/generate_m2_sample.py
+
+Generated sample data file: data/form_result.csv
+All required sample files have been created.
+

@@ -1,0 +1,2 @@
+This is the first sample document for the RAG corpus.
+It contains example text data.

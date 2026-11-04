@@ -1,0 +1,3 @@
+$ sudo cp work/etc_security_whitelist.conf /etc/security/whitelist.conf && sudo chmod 644 /etc/security/whitelist.conf
+
+[拒绝] 只允许安全命令，收到: sudo cp work/etc_security_whitelist.conf /etc/secu

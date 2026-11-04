@@ -1,0 +1,1 @@
+调用大模型失败: HTTPSConnectionPool(host='api.freellm.example.com', port=443): Max retries exceeded with url: /v1/completions (Caused by NameResolutionError("HTTPSConnection(host='api.freellm.example.com', port=443): Failed to resolve 'api.freellm.example.com' ([Errno -2] Name or service not known)"))

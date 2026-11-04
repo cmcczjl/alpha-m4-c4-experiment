@@ -1,0 +1,3 @@
+$ GITHUB_EVENT_PATH=data/pull_request.json python3 work/review.py
+
+[拒绝] 只允许安全命令，收到: GITHUB_EVENT_PATH=data/pull_request.json python3 w

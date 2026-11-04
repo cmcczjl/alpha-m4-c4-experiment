@@ -1,0 +1,5 @@
+$ python3 tools/email_classifier.py
+
+Classification complete. 5 emails processed.
+Results saved to: data/output/email_classification_results.json
+

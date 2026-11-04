@@ -1,0 +1,579 @@
+"""
+探索者-α 自主进化引擎 v2
+架构: 认知循环(OODA+Reflexion) × 三层记忆 × 工具注册 × 进化引擎
+综合参考: OpenHands CodeAct / Reflexion / SecondBrain / GBase / Prime Agent
+"""
+
+import asyncio
+import json
+import logging
+import re
+import subprocess
+import time
+from datetime import datetime, date
+from pathlib import Path
+
+import httpx
+import yaml
+
+from cognitive_loop import CognitiveLoop
+from memory_tiered import TieredMemory, create_memory
+from evolution_engine import EvolutionEngine, risk_check
+import tool_registry
+
+logger = logging.getLogger(__name__)
+
+BASE_DIR = Path(__file__).parent
+DATA_DIR = BASE_DIR / "data"
+
+
+def load_config():
+    with open(BASE_DIR / "config.yaml", 'r', encoding='utf-8') as f:
+        return yaml.safe_load(f)
+
+CONFIG = load_config()
+
+
+class AutonomousLoop:
+    """认知驱动的自主进化主循环"""
+
+    def __init__(self, agent):
+        self.agent = agent
+        self.market_data = {}
+        self.iterations = 0
+        self.roadmap_focus = ""
+        self.roadmap_focus_wheels = 0
+        self.run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+        # 尝试从持久化文件恢复计数（同一 run_id 内）
+        state_file = DATA_DIR / "run_state.json"
+        if state_file.exists():
+            import json
+            try:
+                saved = json.loads(state_file.read_text())
+                if saved.get('run_id') == self.run_id:
+                    self.iterations = saved.get('iterations', 0)
+                    self.roadmap_focus = saved.get('roadmap_focus', "")
+                    self.roadmap_focus_wheels = saved.get('roadmap_focus_wheels', 0)
+            except Exception:
+                pass
+
+        self.running = False
+
+        # ---- 核心子系统 ----
+        self.memory = create_memory(DATA_DIR)
+        self.cognitive = CognitiveLoop(self.memory, self._llm_call, BASE_DIR)
+        self.evolution = EvolutionEngine(self.memory, self._llm_call, BASE_DIR)
+        # Phase A - metacognitive / constitution / benchmark
+        from metacognitive_monitor import MetacognitiveMonitor
+        from constitution_engine import ConstitutionEngine
+        from benchmark_runner import BenchmarkRunner
+        self.metacog = MetacognitiveMonitor(self.memory, self._llm_call, BASE_DIR)
+        self.constitution = ConstitutionEngine(self.memory, self._llm_call, BASE_DIR)
+        self.benchmark = BenchmarkRunner(self.memory, self._llm_call, BASE_DIR)
+        tool_registry.auto_discover_tools(BASE_DIR / "tools")
+
+    # ---------------- LLM 调用 ----------------
+    async def _llm_call(self, prompt: str, system: str = None, max_tokens: int = 4000,
+                        stage: str = "GENERIC") -> str:
+        """分层模型路由：按 stage 选择模型 + 语义缓存（OBSERVE）"""
+        from model_routing import MODEL_ROUTING, SEMANTIC_CACHE_ENABLED
+        
+        model_name = MODEL_ROUTING.get(stage.upper(), self.agent.model)
+        
+        # 语义缓存：OBSERVE 输入相似时复用
+        if SEMANTIC_CACHE_ENABLED and stage.upper() == "OBSERVE":
+            import hashlib
+            key = hashlib.md5(f"{stage}:{prompt[:500]}:{system[:200] if system else ''}".encode()).hexdigest()
+            cache_file = BASE_DIR / "data" / "cache" / f"llm_{key}.txt"
+            if cache_file.exists():
+                logger.info(f"语义缓存命中: {stage}")
+                return cache_file.read_text(encoding='utf-8')
+        
+        try:
+            msgs = []
+            if system:
+                msgs.append({"role": "system", "content": system})
+            msgs.append({"role": "user", "content": prompt})
+            response = await self.agent.client.chat.completions.create(
+                model=model_name,
+                messages=msgs,
+                temperature=0.8,
+                max_tokens=max_tokens
+            )
+            if hasattr(response, 'choices') and response.choices:
+                text = response.choices[0].message.content or ""
+                # 写缓存
+                if SEMANTIC_CACHE_ENABLED and stage.upper() == "OBSERVE":
+                    cache_file.parent.mkdir(parents=True, exist_ok=True)
+                    cache_file.write_text(text, encoding='utf-8')
+                return text
+            return str(response)
+        except Exception as e:
+            logger.error(f"LLM call failed (model={model_name}): {e}")
+            return f"[错误] {e}"
+
+    # ---------------- 环境感知 ----------------
+    async def perceive_market(self) -> dict:
+        data = {}
+        async with httpx.AsyncClient(timeout=15) as client:
+            try:
+                r = await client.get(
+                    'https://api.coingecko.com/api/v3/simple/price',
+                    params={'vs_currencies': 'usd', 'ids': 'bitcoin,ethereum,solana',
+                            'include_24hr_change': 'true', 'include_24hr_vol': 'true'})
+                data['prices'] = r.json()
+            except Exception as e:
+                data['prices_error'] = str(e)
+            try:
+                r = await client.get('https://api.alternative.me/fng/?limit=2')
+                data['fng'] = r.json().get('data', [])
+            except Exception as e:
+                data['fng_error'] = str(e)
+        return data
+
+    # ---------------- 上下文加载 ----------------
+    def _build_context(self) -> dict:
+        ctx = {}
+        # Phase A 宪法与自我模型
+        ctx['self_model'] = self.metacog.context_block()
+        ctx['constitution'] = self.constitution.context_block()
+
+        # 环境快照
+        ctx['last_result'] = ""
+        archive_dir = DATA_DIR / "archive"
+        if archive_dir.exists():
+            runs = sorted(archive_dir.glob('run_*.txt'))
+            if runs:
+                ctx['last_result'] = runs[-1].read_text(encoding='utf-8')[:1500]
+
+        # roadmap 焦点 —— 提取焦点行并更新轮数
+        roadmap_path = DATA_DIR / "roadmap.md"
+        roadmap = roadmap_path.read_text(encoding='utf-8')[:2000] if roadmap_path.exists() else ""
+        ctx['roadmap_focus'] = roadmap
+        
+        # 提取焦点标识（当前焦点方向第一行）
+        import re
+        m = re.search(r'当前焦点方向.*?\*\*(.+?)\*\*', roadmap, re.DOTALL)
+        current_focus = m.group(1).strip() if m else "未知"
+        if current_focus == self.roadmap_focus:
+            self.roadmap_focus_wheels += 1
+        else:
+            self.roadmap_focus = current_focus
+            self.roadmap_focus_wheels = 1
+        ctx['roadmap_focus_wheels'] = self.roadmap_focus_wheels
+
+        # 资源清单
+        resources_path = DATA_DIR / "resources.md"
+        ctx['resources'] = resources_path.read_text(encoding='utf-8')[:1500] if resources_path.exists() else ""
+
+        # 认知状态：陷阱记忆（必须规避）
+        traps = self.memory.retrieve(tier="semantic", tags=["trap"], limit=10)
+        ctx['traps'] = json.dumps(
+            [t.content for t in traps], ensure_ascii=False)[:1500] if traps else "（无）"
+
+        # 认知状态：已结晶技能
+        skills = self.memory.get_procedural_skills()
+        ctx['skills'] = json.dumps(
+            [{"name": s.content.get('name'), "desc": s.content.get('description')}
+             for s in skills[:15]], ensure_ascii=False)[:1500] if skills else "（无）"
+
+        # 近期反思（Reflexion 记忆）
+        reflections = self.memory.retrieve(tier="episodic", tags=["reflection"], limit=3)
+        ctx['recent_reflections'] = json.dumps(
+            [r.content.get('reflection', '')[:300] for r in reflections],
+            ensure_ascii=False)[:1500] if reflections else "（无）"
+
+        # 工具菜单
+        ctx['tool_menu'] = tool_registry.tool_menu_text()
+
+        # 市场数据
+        ctx['market'] = self.market_data
+        return ctx
+
+    # ---------------- 主探索轮 ----------------
+    async def explore(self):
+        self.iterations += 1
+        day = datetime.now().strftime('%Y-%m-%d')
+        now = datetime.now().strftime('%H:%M:%S')
+        log_prefix = f"[认知 #{self.iterations} {now}]"
+
+        logger.info(f"{log_prefix} 开始")
+
+        # 1. 感知
+        self.market_data = await self.perceive_market()
+
+        # 2. 构建上下文（含宪法/自我模型）+ 决策前能力自评
+        ctx = self._build_context()
+        ctx['metacog_assess'] = self.metacog.assess_for_decision("")
+
+        # 3. 认知循环 OODA-R
+        trace = await self.cognitive.run_cycle(ctx, self.iterations)
+        logger.info(f"{log_prefix} 认知循环完成: success={trace.success}, {trace.duration_ms}ms")
+
+        # HUMAN-IN-THE-LOOP: 关键决策自动暂停等待确认
+        if self._needs_human_approval(trace.decision):
+            int_id = self.memory.interrupt(f"关键决策需确认: {trace.decision[:200]}")
+            # 发飞书通知主人
+            await self._send_ask_to_master(
+                f"🚨 关键决策确认 ({int_id})\n"
+                f"决策: {trace.decision[:500]}\n"
+                f"请回复: /approve {int_id} 确认执行，或 /reject {int_id} 取消"
+            )
+            # 暂停等待（轮询 interrupt 标记）
+            while True:
+                await asyncio.sleep(10)
+                state = self.memory.get_latest_state()
+                if not state.get("_interrupt") or state.get("_interrupt", {}).get("id") != int_id:
+                    break
+            # 检查是否被 reject
+            if state.get("user_feedbacks"):
+                fb = state["user_feedbacks"][-1]
+                if fb.get("action") == "reject":
+                    logger.warning(f"{log_prefix} 用户拒绝执行: {int_id}")
+                    trace.action = ""  # 清空行动
+                    trace.success = False
+                    trace.reflection = f"用户拒绝执行该决策 ({int_id})"
+                    trace.consolidation = "human rejected"
+                    return
+
+        # 4. 执行行动产物（[FILE] / [RUN] / [TOOL_CALL]）
+        act_text = trace.action or ""
+        await self._execute_action(act_text, log_prefix)
+
+        # P1-4: 轮内失败升级 —— 检查执行结果，连续失败触发 stalled
+        if not trace.success and trace.observation:
+            self.cognitive._record_wheel_failure(trace, f"ACT执行失败: {trace.observation[:100]}")
+
+        # 4.5 [ASK] 处理（带风险评估）
+        ask_match = re.search(r'\[ASK\]\s*([^\n]+)', act_text)
+        if ask_match:
+            ask_text = ask_match.group(1).strip()
+            if ask_text and ask_text not in ('无', 'N/A', 'none', '-'):
+                money_keywords = ('域名', '广告', '预算', '美元', 'USD', '订阅', '购买', '付费', '$')
+                if any(k in ask_text for k in money_keywords):
+                    ask_text = f"[花钱申请-需先验证] {ask_text}"
+                await self._send_ask_to_master(ask_text)
+
+        # 4.6 行动文本里的风险扫描（防越权资金操作）
+        risk = risk_check(act_text)
+        if risk["has_risk"]:
+            logger.warning(f"{log_prefix} 风险扫描命中: {risk['flags']}")
+            # 把风险提醒写进下一轮上下文（通过情景记忆）
+            self.memory.store("episodic", {
+                "type": "risk_alert",
+                "flags": risk["flags"],
+                "action": act_text[:500],
+                "note": "本轮行动命中资金/法律风险关键词，已提醒。涉及真实资金必须先 [ASK] 主人。",
+            }, tags=["risk"], importance=4.0)
+
+        # 5. 每日/每轮沉淀
+        self.memory.consolidate_working_to_episodic(
+            f"agent_{self.iterations}",
+            {"iteration": self.iterations, "decision": trace.decision[:300],
+             "success": trace.success})
+
+        # 6. 定期进化（每 8 轮：技能结晶 + 陷阱审计 + 健康检查 + 宪法蒸馏 + self_model 更新 + benchmark 跑分）
+        if self.iterations % 8 == 0:
+            try:
+                # 进化引擎：技能结晶/陷阱审计
+                evo = await self.evolution.nightly_evolution()
+                # 宪法蒸馏（Phase A）
+                const_updated = await self.constitution.distill()
+                # self_model 更新（Phase A）
+                refls = self.memory.retrieve(tier="episodic", tags=["reflection"], limit=30)
+                bench_report = await self.benchmark.run_all()
+                meta_updated = await self.metacog.update_self_model(
+                    [r.content for r in refls], bench_report)
+                logger.info(f"{log_prefix} 进化完成：skills={evo.get('new_skills')}, "
+                            f"traps={evo.get('new_traps')}, const={const_updated}, meta={meta_updated}, "
+                            f"bench={bench_report.get('total')}/5")
+            except Exception as e:
+                logger.error(f"{log_prefix} 进化失败：{e}")
+            # 每 8 轮发进度汇报
+            report = (
+                f"📊 探索者-α 认知汇报 ({datetime.now().strftime('%m-%d %H:%M')})\n"
+                f"已认知 {self.iterations} 轮\n"
+                f"本轮决策：{trace.decision[:120]}\n"
+                f"本轮成功：{trace.success}\n"
+                f"反思：{trace.reflection[:150]}\n"
+                f"记忆统计：{self.memory.stats()}\n"
+                f"宪法：{const_updated or '未更新'}\n"
+                f"自我模型：{meta_updated or '未更新'}\n"
+                f"Benchmark: {bench_report.get('total')}/5 (vs 上次：{bench_report.get('delta_vs_last')})\n"
+            )
+            await self._send_report(report)
+
+                    # 7. 日记（append-only，原始记录永久保留）——每轮都写
+                    journal_path = DATA_DIR / "journal" / f"{day}.md"
+                    journal_path.parent.mkdir(parents=True, exist_ok=True)
+                    with open(journal_path, 'a', encoding='utf-8') as f:
+                        f.write(f"\n## {now} 认知轮 #{self.iterations}\n\n"
+                                f"**观察**: {trace.observe[:500]}\n"
+                                f"**定向**: {trace.orient[:500]}\n"
+                                f"**决策**: {trace.decision[:500]}\n"
+                                f"**行动**: {act_text[:1500]}\n"
+                                f"**结果**: {trace.observation[:500]}\n"
+                                f"**反思**: {trace.reflection[:800]}\n"
+                                f"**沉淀**: {trace.consolidation}\n"
+                                f"**成功**: {trace.success}\n\n")
+
+                    # 8. 持久化运行状态（跨重启保存 iterations/focus_wheels）——每轮都存
+                    self._save_run_state()
+
+                # ---------------- 行动执行 ----------------
+                async def _execute_action(self, act_text: str, log_prefix: str):
+        # 1. [FILE] 段写文件
+        await self._write_files(act_text, log_prefix)
+
+        # 2. [TOOL_CALL] 段
+        for call in tool_registry.parse_tool_calls(act_text):
+            result = tool_registry.call_tool(call["name"], call["args"])
+            logger.info(f"{log_prefix} 工具调用 {call['name']}: ok={result.get('ok')}")
+            out_file = DATA_DIR / "archive" / f"tool_{datetime.now():%Y%m%d_%H%M%S}.txt"
+            out_file.parent.mkdir(parents=True, exist_ok=True)
+            out_file.write_text(f"call: {json.dumps(call, ensure_ascii=False)}\n"
+                                f"result: {json.dumps(result, ensure_ascii=False, default=str)[:3000]}\n",
+                                encoding='utf-8')
+
+        # 3. [RUN] 命令
+        run_match = re.search(r'\[RUN\]\s*([^\n]+)', act_text)
+        if run_match:
+            cmd = run_match.group(1).strip()
+            run_output = await self._run_cmd(cmd, log_prefix)
+            out_file = DATA_DIR / "archive" / f"run_{datetime.now():%Y%m%d_%H%M%S}.txt"
+            out_file.parent.mkdir(parents=True, exist_ok=True)
+            out_file.write_text(f"$ {cmd}\n\n{run_output}\n", encoding='utf-8')
+            logger.info(f"{log_prefix} RUN 输出已存档: {out_file.name}")
+        else:
+            logger.warning(f"{log_prefix} 本轮无 [RUN] 命令，仅写文件/工具调用")
+
+    async def _write_files(self, reply: str, log_prefix: str):
+            """解析 LLM 输出中的 [FILE] 段写入磁盘"""
+            file_match = re.search(r'\[FILE\]\s*\n(.*?)(?=\[RUN\]|\[TOOL_CALL\]|\[ASK\]|\[RESULT_CHECK\]|$)',
+                                   reply, re.DOTALL)
+            if not file_match:
+                logger.warning(f"{log_prefix} 未找到 [FILE] 段")
+                return
+
+            content = file_match.group(1).strip()
+            if not content:
+                logger.warning(f"{log_prefix} [FILE] 段为空")
+                return
+
+            files_found = []
+
+            # 格式1: ===PATH=== 分隔多文件
+            if '===' in content:
+                parts = re.split(r'===([^=]+?)===\s*', content)
+                for i in range(1, len(parts) - 1, 2):
+                    fpath = parts[i].strip()
+                    fcontent = parts[i + 1].strip()
+                    files_found.append((fpath, fcontent))
+            else:
+                # 格式2: 行级扫描
+                known_prefixes = ('work/', 'data/', 'knowledge/', 'tools/', 'scripts/',
+                                  'bot/', 'web/', 'skills/')
+                lines = content.split('\n')
+                current_path = None
+                current_content = []
+
+                def _flush():
+                    nonlocal current_path, current_content
+                    if current_path:
+                        text = '\n'.join(current_content).strip()
+                        cb = re.match(r'^```(\w*)\s*\n(.*?)\s*```$', text, re.DOTALL)
+                        if cb:
+                            text = cb.group(2).strip()
+                        if text:
+                            files_found.append((current_path, text))
+                    current_path = None
+                    current_content = []
+
+                for line in lines:
+                    s = line.strip()
+                    fm = re.match(r'^\[FILE\]\s+(.+)$', s)
+                    if fm:
+                        _flush()
+                        current_path = fm.group(1).strip()
+                    elif s == '[FILE]' and current_path is None:
+                        continue
+                    elif s.startswith(known_prefixes):
+                        _flush()
+                        current_path = s
+                    elif current_path is not None:
+                        if s == '---':
+                            continue
+                        current_content.append(line)
+                _flush()
+
+            logger.info(f"{log_prefix} 解析出 {len(files_found)} 个文件: {[f[0] for f in files_found]}")
+            for fpath, fcontent in files_found:
+                if not fpath:
+                    continue
+                # 修正：如果路径不是已知目录开头，自动加上 work/
+                if not fpath.startswith(('work/', 'data/', 'knowledge/', 'tools/', 'scripts/', 'bot/', 'web/', 'skills/')):
+                    logger.warning(f"{log_prefix} 路径 {fpath} 不在允许目录，自动加到 work/")
+                    fpath = f"work/{fpath}"
+                await self._write_file(fpath, fcontent, log_prefix)
+
+    async def _write_file(self, fpath: str, fcontent: str, log_prefix: str):
+        try:
+            target = (BASE_DIR / fpath).resolve()
+            if '..' in fpath or not str(target).startswith(str(BASE_DIR.resolve())):
+                logger.warning(f"{log_prefix} 拒绝写入不安全路径: {fpath}")
+                return
+            # 安全护栏：禁止把凭证写进可能被 push 到公开仓库的文件
+            if 'ghp_' in fcontent or 'api_key' in fcontent.lower() and 'credentials' not in fpath:
+                if 'data/credentials' not in fpath:
+                    logger.warning(f"{log_prefix} 警告: {fpath} 疑似含凭证，写入但标记")
+            # 凭证结构隔离：禁止写入 secrets/ 目录或包含 secrets/credentials 的路径
+            if 'secrets/' in fpath or 'secrets/credentials' in fcontent:
+                logger.warning(f"{log_prefix} 拒绝写入：{fpath} 涉及 secrets/ 目录")
+                return
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_text(fcontent, encoding='utf-8')
+            logger.info(f"{log_prefix} 写入文件: {fpath} ({len(fcontent)} 字符)")
+        except Exception as e:
+            logger.error(f"{log_prefix} 写入失败 {fpath}: {e}")
+
+    # ---------------- 飞书通信 ----------------
+    async def _feishu_token(self, client) -> str:
+        r = await client.post(
+            'https://open.feishu.cn/open-apis/auth/v3/app_access_token/internal',
+            json={'app_id': CONFIG['feishu']['app_id'],
+                  'app_secret': CONFIG['feishu']['app_secret']})
+        return r.json().get('app_access_token')
+
+    async def _send_report(self, text: str):
+        try:
+            chat_file = DATA_DIR / "last_chat_id.txt"
+            if not chat_file.exists():
+                logger.warning("汇报无法发送（还没有主人 chat_id）")
+                return
+            chat_id = chat_file.read_text(encoding='utf-8').strip()
+            async with httpx.AsyncClient(timeout=15) as client:
+                token = await self._feishu_token(client)
+                if not token:
+                    return
+                await client.post(
+                    'https://open.feishu.cn/open-apis/im/v1/messages',
+                    headers={'Authorization': f'Bearer {token}'},
+                    params={'receive_id_type': 'chat_id'},
+                    json={'receive_id': chat_id, 'msg_type': 'text',
+                          'content': json.dumps({'text': text})})
+                logger.info("进度汇报已发送")
+        except Exception as e:
+            logger.error(f"汇报发送失败: {e}")
+
+    # ---------------- HUMAN-IN-THE-LOOP ----------------
+    def _needs_human_approval(self, decision: str) -> bool:
+        """
+        判断是否需要人工确认（风险护栏之外的关键节点）。
+        规则：
+        - 换方向（含"换方向"/"新方向"/"pivot"）
+        - 涉及真实资金（已在 risk_check 拦截，这里兜底）
+        - 推送公开仓库/发布 Release（含"推送"/"push.*github"/"release"）
+        - 申请新账号/新服务（含"申请.*账号"/"注册.*平台"）
+        - 删除/覆盖关键文件（含"删除"/"rm "）
+        """
+        d = decision.lower()
+        triggers = [
+            "换方向", "新方向", "pivot",
+            "推送.*github", "push.*github", "发布.*release", "release",
+            "申请.*账号", "注册.*平台",
+            "删除.*代码", "删除.*文件", "rm ",
+        ]
+        for t in triggers:
+            if re.search(t, d):
+                return True
+        return False
+
+    async def _send_ask_to_master(self, ask_text: str):
+        try:
+            chat_file = DATA_DIR / "last_chat_id.txt"
+            if not chat_file.exists():
+                logger.warning(f"ASK 无法发送: {ask_text}")
+                return
+            chat_id = chat_file.read_text(encoding='utf-8').strip()
+            async with httpx.AsyncClient(timeout=15) as client:
+                token = await self._feishu_token(client)
+                if not token:
+                    return
+                await client.post(
+                    'https://open.feishu.cn/open-apis/im/v1/messages',
+                    headers={'Authorization': f'Bearer {token}'},
+                    params={'receive_id_type': 'chat_id'},
+                    json={'receive_id': chat_id, 'msg_type': 'text',
+                          'content': json.dumps({'text': f'⚠️ 探索者-α 需要你帮忙:\n{ask_text}'})})
+                logger.info(f"ASK 已发给主人: {ask_text[:80]}")
+        except Exception as e:
+            logger.error(f"ASK 发送失败: {e}")
+
+    # ---------------- 命令执行 ----------------
+    async def _run_cmd(self, cmd: str, log_prefix: str) -> str:
+        forbidden = ('rm -rf', 'rmdir', 'kill', 'pkill', 'shutdown', 'reboot',
+                     'mkfs', 'dd if=', 'chmod -R', '> /dev/', 'curl | sh', 'wget | sh',
+                     'secrets/', 'credentials.yaml')
+        if any(f in cmd for f in forbidden):
+            return f"[拒绝] 命令含危险操作: {cmd[:50]}"
+        if not cmd.startswith(('python3', 'python', 'pip3', 'pip', 'git', 'ls', 'cat',
+                               'echo', 'mkdir', 'cp ', 'mv ', 'find', 'grep',
+                               'head', 'wc', 'cd ', 'curl ', 'wget ', 'nohup')):
+            return f"[拒绝] 只允许安全命令，收到: {cmd[:50]}"
+        try:
+            result = subprocess.run(
+                cmd, shell=True, capture_output=True, text=True,
+                timeout=120, cwd=str(BASE_DIR))
+            output = result.stdout[-3000:] + ("\n[STDERR] " + result.stderr[-1000:] if result.stderr else "")
+            return output if output else "(无输出)"
+        except subprocess.TimeoutExpired:
+            return "[超时] 命令运行超过120秒"
+        except Exception as e:
+            return f"[错误] {e}"
+
+    # ---------------- 主循环 ----------------
+    async def run(self, interval_minutes: int = 30):
+        self.running = True
+        logger.info(f"探索者-α v2 认知循环启动，间隔 {interval_minutes} 分钟")
+        logger.info(f"目标: {CONFIG['agent']['initial_goal']}")
+        logger.info(f"记忆系统: {self.memory.stats()}")
+
+        while self.running:
+            try:
+                await self.explore()
+            except Exception as e:
+                logger.error(f"探索循环错误: {e}")
+            await asyncio.sleep(interval_minutes * 60)
+
+    def stop(self):
+        self.running = False
+
+
+def build_system_prompt():
+    """生成认知循环用的身份系统提示（注入到 CognitiveLoop 的各阶段）"""
+    return f"""你是「探索者-α」，一个自主进化的智能体。
+最高目标：{CONFIG['agent']['initial_goal']}
+
+你的资源：
+{CONFIG['agent'].get('persona', '').strip()}
+
+【财产安全与法律风险红线（保护性护栏）】
+- 你的行动会动用主人的实名服务器和账户。财产安全第一：
+  任何涉及真实资金流动（收款、打款、转账、提现）的操作，执行前必须 [ASK] 主人确认。
+  任何涉及合同、实名、KYC、私钥、助记词的操作，禁止自动执行，必须 [ASK]。
+  不保存不明来源的私钥/凭证，不把凭证写入公开仓库，不点击不明链接。
+  sandbox/测试环境操作不受此限制。
+- 你规避风险的能力依赖自己的判断：先想清楚最坏结果，再决定做不做。
+- 这是保护护栏，不是能力边界。赚钱方向不设限，你自己判断哪个方向靠谱。
+
+【探索 vs 利用（防止思维封闭，必须遵守）】
+- roadmap.md 的「当前焦点方向」不是铁律，是假设。焦点连续 5 轮无实质进展 → 必须从候选池换焦点，并记录原因
+- 每次进化（第 8/16/24 轮）必须执行一次「方向扫描」：
+  用 web 搜索/GitHub 找到至少 1 个新的赚钱机会候选，验证其可行性（有人付钱/有需求/有赏金），
+  写入 roadmap.md 候选池（附验证证据链接）。候选池保持 3-5 个。
+- 换方向 = 学习，不是失败。禁止每轮换方向（漂移），也禁止永不换方向（封闭）。
+- 你的价值在于持续发现新机会，而不是死磕一个旧想法。"""
+
+
+# 这是库文件，不提供独立入口（入口在 run_autonomous.py）

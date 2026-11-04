@@ -1,0 +1,8 @@
+$ python3 market_research.py
+
+
+[STDERR] Traceback (most recent call last):
+  File "/root/agi-agent/market_research.py", line 2, in <module>
+    from bs4 import BeautifulSoup
+ModuleNotFoundError: No module named 'bs4'
+

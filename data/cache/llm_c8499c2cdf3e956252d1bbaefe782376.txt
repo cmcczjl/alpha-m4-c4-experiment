@@ -1,0 +1,7 @@
+
+
+[RUN] df -h && free -h && whoami && ls -la && which python3 && python3 -c "import n8n, make; print('n8n/make modules available')" 2>/dev/null || echo "n8n/make check failed"
+
+[RUN] cat data/market_leads.json | head -20 && cat work/search_bounty.py | head -30
+
+[RUN] curl -s http://example.com/bounty-feed 2>/dev/null | head -5 || echo "External feed check failed"

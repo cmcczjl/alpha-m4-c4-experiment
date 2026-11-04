@@ -1,0 +1,6 @@
+$ python3 work/validate_m2.py 2>&1 | tee logs/validate_m2_output.txt
+
+M2 validation started
+Python version check passed: 3.11.15
+M2 validation completed successfully
+

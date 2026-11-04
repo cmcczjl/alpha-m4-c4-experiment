@@ -1,0 +1,4 @@
+$ python3 work/market_research.py
+
+Successfully wrote 3 market insights to requirements.md
+

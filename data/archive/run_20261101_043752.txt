@@ -1,0 +1,6 @@
+$ python3 scripts/workflow_news_digest.py
+
+Saved summary to data/output/20261101_043752_1_Shops_looted_as_German_cost_of.txt
+Saved summary to data/output/20261101_043752_2_Laura_Kuenssberg__Healey_risks.txt
+Saved summary to data/output/20261101_043752_3__We_came_back_from_hell___say_.txt
+

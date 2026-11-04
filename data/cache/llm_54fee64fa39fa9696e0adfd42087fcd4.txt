@@ -1,0 +1,7 @@
+We need to produce OBSERVE stage output: list environment status, last round result, external signals, current blocker. Must not make assumptions, must use [RUN] commands to verify any statements about environment, tools, account status. We can run commands like ls, cat, etc. We need to check server resources? maybe use `free -m`, `df -h`, `uptime`. Also list available tools: maybe we have python3, bash, curl? We can test. Also account status: maybe whoami, id.
+
+We need to avoid speculation. Provide factual statements.
+
+We need to run commands to gather info. Let's execute.
+
+[RUN] whoami

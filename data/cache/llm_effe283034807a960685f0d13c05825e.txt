@@ -1,0 +1,4 @@
+1. 环境状态：未执行任何查询，无法确定服务器资源、可用工具、账户状态。  
+2. 上轮结果：[STDERR] work/run_search.sh: line 2: search_repos: command not found  
+3. 外部信号：无记录的市场/社区/竞品新动态。  
+4. 当前卡点：缺少 search_repos 命令导致脚本运行失败。

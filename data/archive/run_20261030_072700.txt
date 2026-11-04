@@ -1,0 +1,3 @@
+$ bash tools/run_act.sh
+
+[拒绝] 只允许安全命令，收到: bash tools/run_act.sh

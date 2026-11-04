@@ -1,0 +1,38 @@
+{
+  "feed": "HackerNews-Frontpage",
+  "source": "https://hnrss.org/frontpage",
+  "generated_at": "2026-11-01T06:08:31.719701+00:00",
+  "item_count": 5,
+  "items": [
+    {
+      "title": "Model Aero Engines Free Manufacturable Plans/Blueprints",
+      "summary": "<p>Article URL: <a href=\"https://outerzone.co.uk/plans.asp?cat=Engines\">https://outerzone.co.uk/plans.asp?cat=Engines</a></p>\n<p>Comments URL: <a href=\"https://news.ycombinator.com/item?id=50322994\">h...",
+      "date": "Sun, 01 Nov 2026 05:43:13 +0000",
+      "link": "https://outerzone.co.uk/plans.asp?cat=Engines"
+    },
+    {
+      "title": "Brazilian Court Sanctions Lawyers for Prompt Injection in Court Filing",
+      "summary": "<p>Article URL: <a href=\"https://jetstream.security/insights/brazilian-court-sanctions-prompt-injection-filing/\">https://jetstream.security/insights/brazilian-court-sanctions-prompt-injection-filing/<...",
+      "date": "Sun, 01 Nov 2026 02:19:53 +0000",
+      "link": "https://jetstream.security/insights/brazilian-court-sanctions-prompt-injection-filing/"
+    },
+    {
+      "title": "Leaking Secrets from Air-Gap Computers by Spelling Radio Signals from RAM",
+      "summary": "<p>Article URL: <a href=\"https://arxiv.org/abs/2409.02292\">https://arxiv.org/abs/2409.02292</a></p>\n<p>Comments URL: <a href=\"https://news.ycombinator.com/item?id=50322022\">https://news.ycombinator.co...",
+      "date": "Sun, 01 Nov 2026 01:46:29 +0000",
+      "link": "https://arxiv.org/abs/2409.02292"
+    },
+    {
+      "title": "Show HN: BBRouter – Ben Eater's 8-bit computer, simulated on 3D breadboards",
+      "summary": "<p>Hi HN,<p>I kept wiring Ben Eater's 8-bit computer wrong, so I built a realistic virtual breadboard editor.<p>Some of the nice features are side-by-side diff, scope, schematics auto-sync, auto-route...",
+      "date": "Sun, 01 Nov 2026 00:10:30 +0000",
+      "link": "https://bbrouter.com/bbrouter/ben-eater-sap-1"
+    },
+    {
+      "title": "Constructing a Quine from Kleene's Second Recursion Theorem",
+      "summary": "<p>Article URL: <a href=\"https://emarzion.github.io/KSRT/\">https://emarzion.github.io/KSRT/</a></p>\n<p>Comments URL: <a href=\"https://news.ycombinator.com/item?id=50321436\">https://news.ycombinator.co...",
+      "date": "Sat, 31 Oct 2026 23:55:21 +0000",
+      "link": "https://emarzion.github.io/KSRT/"
+    }
+  ]
+}

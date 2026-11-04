@@ -1,0 +1,5 @@
+The user asks for OBSERVE stage: list environment state, previous result, external signals, current blockage. Must not make assumptions; must verify using real commands if needed. We need to output facts, not judgments. We need to check environment: server resources, available tools, account status. We can run commands like `df -h`, `free -h`, `uname -a`, `which bash`, `ls /usr/bin`, maybe check what commands exist: `command -v search_repos`. Also check account: maybe `whoami`. Also check any environment variables. We must not guess about whitelist, must verify.
+
+We need to output within 300 Chinese characters, pure observation. So we need to run commands and capture output.
+
+Let's run some commands.[RUN] uname -a

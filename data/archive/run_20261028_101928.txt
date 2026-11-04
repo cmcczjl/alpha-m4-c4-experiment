@@ -1,0 +1,4 @@
+$ python3 tools/convert_csv_to_json.py
+
+✅ JSON written to /root/agi-agent/trending_repos.json
+

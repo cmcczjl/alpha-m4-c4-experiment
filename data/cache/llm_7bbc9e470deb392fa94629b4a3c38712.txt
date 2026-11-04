@@ -1,0 +1,1 @@
+We need to produce observation: list environment state, last round result, external signals, current blockers. Must not make assumptions; any unknown must be verified via [RUN] commands. We can run commands to get environment info: maybe we can list files, check python version, etc. Let's run commands.We need to use [RUN] tags.[RUN] ls -R .

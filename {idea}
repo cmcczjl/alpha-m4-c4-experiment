@@ -1,0 +1,15 @@
+\\n")
+            f.write(f"Search query: {query}\\n")
+            try:
+                results = search_duckduckgo(query)
+                f.write(f"Found {len(results)} results (top titles):\\n")
+                for i, r in enumerate(results, 1):
+                    f.write(f\"{i}. {r['title']}\\n   {r['link']}\\n\")
+                f.write("\\n")
+            except Exception as e:
+                f.write(f"Error during search: {e}\\n\\n")
+    print(f\"Results saved to {out_path}\")
+
+if __name__ == "__main__":
+    main()
+---

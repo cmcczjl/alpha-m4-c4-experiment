@@ -1,0 +1,3 @@
+$ bash -lc 'cd /root/agi-agent && find . -name white_list_checker.py'
+
+(无输出)

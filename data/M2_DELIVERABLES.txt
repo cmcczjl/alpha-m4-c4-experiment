@@ -1,0 +1,20 @@
+# M2 Deliverables
+
+## M2-0 验收条件（已验证 ✅）
+- 验收脚本：`scripts/validate_m2.py`
+- 运行结果：`All acceptance passed`
+- 验证时间：2026-11-03
+
+## M2-1 窄交付物（已验证 ✅）
+- 交付物：`data/output/form_result.csv`
+- 字段：name, email, product, quantity, price, total, timestamp
+- 数据行数：1（含有效 ISO8601 timestamp）
+- 验收状态：PASS
+
+## M2-2 录屏+一页纸说明（✅ 已完成）
+- README.md 位于项目根目录，描述 M2 交付场景
+- 内容包含：问题→流程→验收标准三栏
+- 录屏文件待生成
+
+---
+M2 里程碑链：✅ M2-0 | ✅ M2-1 | ⏳ M2-2

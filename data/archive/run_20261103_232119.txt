@@ -1,0 +1,33 @@
+$ python3 work/m1_search_bounties.py
+
+[SEARCH] AI agent automation label:bounty
+  → 60 results, 60 new (total: 60)
+[SEARCH] AI agent automation label:need-help
+  → 0 results, 0 new (total: 60)
+[SEARCH] AI agent label:bounty
+  → 60 results, 58 new (total: 118)
+[SEARCH] automation agent label:bounty
+  → 60 results, 24 new (total: 142)
+[SEARCH] LLM agent label:bounty
+  → 59 results, 51 new (total: 193)
+[SEARCH] AI agent label:"help wanted"
+  → 60 results, 60 new (total: 253)
+[SEARCH] AI agent automation label:"help wanted"
+  → 60 results, 59 new (total: 312)
+[SEARCH] agent automation label:need-help
+  → 0 results, 0 new (total: 312)
+[SEARCH] AI agent label:bounties
+  → 6 results, 6 new (total: 318)
+[SEARCH] autonomous agent label:bounty
+  → 60 results, 33 new (total: 351)
+
+[INFO] Total unique bounty issues: 351
+[OK] Written to data/market_research/requirements.md
+[OK] Bounty entries: 351
+[OK] Priced entries: 150
+  [1] N/A | Make the agent counts in README.md match the files
+  [2] N/A | Add bounty operator controls and gate funded activation
+  [3] $500.0 | [Bounty: $500] Critical: system.beforeEvents.startup Throws CommandReg
+  [4] $850.0 | [Bounty] [Bounty: $850] Hitbox Collision Dropout during Rapid Contrapt
+  [5] $3.04 | Generate qualifying GMV for Highest externally funded canonical GMV — 
+

@@ -1,0 +1,4 @@
+$ python3 scripts/collect_rag_corpus.py
+
+Successfully collected 3 documents to scripts/rag_corpus
+

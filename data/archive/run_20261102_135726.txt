@@ -1,0 +1,4 @@
+$ python3 -c "import json; f=open('data/output/form_to_csv.json'); json.load(f); print('JSON is valid')"
+
+JSON is valid
+

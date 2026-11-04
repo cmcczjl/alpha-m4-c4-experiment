@@ -1,0 +1,43 @@
+$ python3 work/ai_review.py
+
+该 diff 展示了将函数名从 `add` 改为 `add_numbers`，并添加了文档字符串和参数间的空格。以下是代码审查意见：
+
+### 代码质量反馈
+- **命名清晰性提升**：`add_numbers` 比 `add` 更具描述性，明确了操作对象是数字。
+- **文档字符串**：添加 docstring 是良好实践，有助于 IDE 提示和文档生成。
+- **格式化**：参数间添加空格（`a, b`）符合 PEP 8 风格规范。
+
+### 潜在问题/缺陷
+- **向后兼容性破坏**：如果项目中有其他模块调用了 `from example import add`，此重命名将导致 `ImportError` 或 `AttributeError`。建议在发布前检查所有调用点。
+- **缺乏类型提示**：未使用类型注解（如 `int`, `float`），不利于静态分析工具（如 mypy）检测错误。
+
+### 改进建议与最佳实践
+1. **添加类型提示**：
+   ```python
+   def add_numbers(a: int | float, b: int | float) -> int | float:
+       """Add two numbers."""
+       return a + b
+   ```
+   （Python 3.10+ 语法；若兼容旧版本，使用 `Union[int, float]`）
+
+2. **输入验证（可选）**：若严格要求“数字”，可加入类型检查：
+   ```python
+   def add_numbers(a, b):
+       """Add two numbers."""
+       if not all(isinstance(x, (int, float)) for x in (a, b)):
+           raise TypeError("Both arguments must be numbers")
+       return a + b
+   ```
+
+3. **迁移策略**：若需兼容旧代码，可保留别名：
+   ```python
+   def add(a, b):
+       import warnings
+       warnings.warn("add is deprecated, use add_numbers", DeprecationWarning)
+       return add_numbers(a, b)
+   ```
+
+4. **单元测试**：建议补充测试用例覆盖边界情况（如零、负数、浮点精度）。
+
+此变更整体为积极改进，但需确保无破坏性影响再合并。
+

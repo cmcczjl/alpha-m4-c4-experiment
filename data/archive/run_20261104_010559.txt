@@ -1,0 +1,29 @@
+$ cat data/m1_service_package/template.yaml
+
+# Cross‑border arbitrage workflow template
+trigger:
+  type: schedule
+  cron: "0 0 * * *"   # run daily at midnight UTC
+
+steps:
+  - name: fetch_market_data
+    action: fetch
+    params:
+      source: "https://api.example.com/markets"
+      markets: ["USD", "EUR", "CNY"]
+  - name: analyze_arbitrage
+    action: analyze
+    params:
+      strategy: "cross-border"
+      threshold: 0.02
+  - name: execute_trade
+    action: trade
+    params:
+      platform: "exchangeX"
+      order_type: "limit"
+
+outputs:
+  - name: trade_id
+    type: string
+  - name: profit
+    type: number

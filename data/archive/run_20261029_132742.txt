@@ -1,0 +1,5 @@
+$ python3 work/review.py
+
+
+[STDERR] Error: GITHUB_EVENT_PATH environment variable is not set.
+

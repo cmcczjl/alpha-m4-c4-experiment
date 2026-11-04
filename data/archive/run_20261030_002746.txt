@@ -1,0 +1,10 @@
+$ python3 work/setup_env.py
+
+.env file not found. Creating placeholder at /root/agi-agent/work/.env
+Placeholder .env created. Edit it with your actual credentials.
+
+Loaded environment variables:
+GITHUB_TOKEN=YOUR_GITHUB_TOKEN
+GITHUB_REPOSITORY=YOUR_GITHUB_REPOSITORY
+OPENAI_API_KEY=YOUR_OPENAI_API_KEY
+

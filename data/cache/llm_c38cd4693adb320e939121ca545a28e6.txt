@@ -1,0 +1,3 @@
+我需要先执行真实命令验证环境，不能脑补。
+
+[RUN] `ls -la work/ deliverable.zip 2>&1; echo "---"; pwd; echo "---"; whoami; echo "---"; python3 --version; echo "---"; which curl node npx git 2>&1`

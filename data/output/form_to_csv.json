@@ -1,0 +1,74 @@
+{
+  "name": "Form to CSV",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "Data Collection Form",
+        "formFields": {
+          "values": [
+            {
+              "fieldName": "Name",
+              "fieldType": "text",
+              "required": true
+            },
+            {
+              "fieldName": "Email",
+              "fieldType": "email",
+              "required": true
+            },
+            {
+              "fieldName": "Message",
+              "fieldType": "textarea",
+              "required": false
+            }
+          ]
+        },
+        "options": {
+          "respondUrl": ""
+        }
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": "1",
+      "position": [250, 300],
+      "id": "form-trigger",
+      "name": "Form Trigger"
+    },
+    {
+      "parameters": {
+        "operation": "appendRow",
+        "fileName": "/data/output/form_responses.csv",
+        "columns": {
+          "matchingColumn": "0",
+          "value": "Name,Email,Message,Submitted At"
+        },
+        "row": {
+          "matchingColumn": "1",
+          "value": "={{ $json.Name }},={{ $json.Email }},={{ $json.Message }},={{ $now }}"
+        }
+      },
+      "type": "n8n-nodes-base.csv",
+      "typeVersion": "1",
+      "position": [500, 300],
+      "id": "csv-writer",
+      "name": "Write to CSV"
+    }
+  ],
+  "connections": {
+    "Form Trigger": {
+      "main": [
+        [
+          {
+            "node": "Write to CSV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": []
+}

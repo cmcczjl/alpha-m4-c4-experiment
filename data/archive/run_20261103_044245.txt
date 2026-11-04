@@ -1,0 +1,10 @@
+$ cat data/pricing.md
+
+# Service Pricing
+
+| Plan          | Price (USD) | Description                      |
+|---------------|-------------|----------------------------------|
+| **Entry**     | $45         | Basic access to core features.   |
+| **Standard**  | $120        | Includes additional modules.     |
+| **Advanced**  | $270        | Full-featured premium plan.      |
+| **Care Plan** | $90/month   | Ongoing support and maintenance. |
